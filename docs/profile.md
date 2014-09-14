@@ -11,9 +11,9 @@ inSPIRE is founded by six recently discovered CS geniuses. Each individual has u
 +    **Vision:** A new student portal for course planning with social media-like functionalities. This will be an upgrade to the SPIRE site, containing a visualization of CS tracks and interactive ARR by semesters. Potentially scale expansion into other majors, school, colleges.
 
 +    **Target Audience:** 
-1.    *Initial Target:* UMass Computer Science undergraduates
-2.    *Near Future:* UMass Students in all majors, and department administrators
-3.    *Long-term:* All students and administrators
+        +*Initial Target:* UMass Computer Science undergraduates
+        +*Near Future:* UMass Students in all majors, and department administrators
+        +*Long-term:* All students and administrators
 
 +    **The Problems We Solve:** 
     +    No standard way of viewing course graduation paths (all schools, not just Umass CS)
