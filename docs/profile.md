@@ -3,7 +3,7 @@
 <br><i>“inSPIRE A trail for success” </i>
 Company Bio
 ===========
-inSPIRE is founded by six recently discovered CS geniuses. Each individual has unique talents that contribute to the enormous success of the company. The company focuses on simple platform solutions that visually guide students on their course planning and enrollment. Students can advertise their profile to employers or post on career websites. At the end of their school journey, students will be able to share their experience on the series of classes they took. Upcoming new students inspired by the author can bump and follow their path to success. Administrators on the other hand, would be able to leverage this platform to create the relational class map, and anticipate the number of students interested in certain classes based on the sum of student profiles. 
+inSPIRE was founded by six recently discovered CS geniuses. Each individual has unique talents that contribute to the enormous success of the company. The company focuses on simple platform solutions that visually guide students on their course planning and enrollment. Students can advertise their profile to employers or post on career websites. At the end of their school journey, students will be able to share their experience on the series of classes they took. Upcoming new students inspired by the author can bump and follow their path to success. Administrators on the other hand, would be able to leverage this platform to create the relational class map, and anticipate the number of students interested in certain classes based on the sum of student profiles. 
 
 +    **Goal:** We want to help students understand what courses and timeline they need to complete their CS degree. To ease their course planning process, we will be creating an interactive "Critical Path Analysis” web platform tool.
 
@@ -70,13 +70,13 @@ Non-CS courses: I took introduction to Media Programming and Institutions as an 
 
 Khanh Nguyen
 --------------------
-Currently, I am a senior who has a lot of experiences with competitive programming. Recently, I have decided to shift my career from studying theoretical algorithms to building real-world applications. I am highly motivated by the idea of using redundantly available data in the internet to build models that are capable of discovering hidden social phenomenon and predicting their future behaviors. Joining inSPIRE team, I wish to apply this idea to tackle numerous problems in academic environment. 
+I am a senior CS student at UMASS, who has a lot of experiences with competitive programming. Recently, I have decided to shift my career from studying theoretical algorithms to building real-world applications. I am highly motivated by the idea of using redundantly available data in the Internet to build models that are capable of discovering hidden social phenomenon and predicting their future behaviors. Joining inSPIRE team, I wish to apply this idea to tackle numerous problems in academic environment. 
 
-Fun fact: I love to sing, but is very sad since I’m not great at it, therefore I came to college instead!
+Fun fact: I love to sing but I am too shy to sing aloud in public. 
 
 CS courses taken: 121, 187, 197u, 220, 230, 240, 250, 383, 670, 688, 689
 
-Non-CS courses: The courses that had most impact on me is WRITING 121, which taught me to write more effectively after I came to the US. My second course MATH 455 (abstract algebra), I enjoyed learning the concepts that explain and link together the different areas of math such as geometry, number theory and combinatorics.  
+Non-CS courses: One of the courses that had most impact on me was WRITING 121, which taught me to write more effectively in English. Another course was MATH 455 (abstract algebra), in which I enjoyed learning the concepts that explained and linked together the different areas of math such as geometry, number theory and combinatorics.  
 
 Josh Bearor
 -----------------
