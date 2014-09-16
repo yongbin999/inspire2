@@ -1,9 +1,8 @@
+
+<img src ="inspire logo.jpg" width =30% align ="middle"> 
+<br><i>“inSPIRE A trail for success” </i>
 Company Bio
 ===========
-inSPIRE: “inSPIRE A trail for success”
-        
-Description
----------------
 inSPIRE is founded by six recently discovered CS geniuses. Each individual has unique talents that contribute to the enormous success of the company. The company focuses on simple platform solutions that visually guide students on their course planning and enrollment. Students can advertise their profile to employers or post on career websites. At the end of their school journey, students will be able to share their experience on the series of classes they took. Upcoming new students inspired by the author can bump and follow their path to success. Administrators on the other hand, would be able to leverage this platform to create the relational class map, and anticipate the number of students interested in certain classes based on the sum of student profiles. 
 
 +    **Goal:** We want to help students understand what courses and timeline they need to complete their CS degree. To ease their course planning process, we will be creating an interactive "Critical Path Analysis” web platform tool.
