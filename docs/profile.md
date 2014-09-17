@@ -72,7 +72,7 @@ Khanh Nguyen
 --------------------
 I am a senior CS student at UMASS, who has a lot of experiences with competitive programming. Recently, I have decided to shift my career from studying theoretical algorithms to building real-world applications. I am highly motivated by the idea of using redundantly available data in the Internet to build models that are capable of discovering hidden social phenomenon and predicting their future behaviors. Joining inSPIRE team, I wish to apply this idea to tackle numerous problems in academic environment. 
 
-Fun fact: I love to sing but I am too shy to sing aloud in public. 
+Fun fact: I love to sing but am too shy to sing aloud in public. 
 
 CS courses taken: 121, 187, 197u, 220, 230, 240, 250, 383, 670, 688, 689
 
