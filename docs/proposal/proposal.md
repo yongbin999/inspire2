@@ -99,7 +99,7 @@ Server Lead Team
 
 | DATE        		| GOAL                                                                                                 |
 |-------------------|------------------------------------------------------------------------------------------------------|
-| 09/15-09/28 		| Determine problem statement and product overview + Hire competent employees and determine salaries |
+| 09/15-09/28 		| Determine problem statement and product overview													   |
 | 09/29-10/5  		| Create project proposal                                                                              |
 | 10/06-10/12 		| User research and UX design specification                                                            |
 | 10/13-10/19 		| Software design specification                                                                        |
