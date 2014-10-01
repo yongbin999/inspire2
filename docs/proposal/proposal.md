@@ -5,6 +5,8 @@
 
 ###Yong Liang
 ####Bio
+
+fsdaf
 Prior to studying CS, I was a Financial Analyst at EMC headquarter. During my time there, I worked closely with project managers and developers in our financial reporting tools. To my interest, I wrote several excel VBs to automate the monthly manual setups of our management reports package for the CEO. Being at the core of budget planning and street guidance, it’s astonishing to see where the investments are heading in the SaaS industry. The reason I joined the inSPIRE is because this will be a potential for real investments!
 
 CS class taken: 121,187
