@@ -51,6 +51,7 @@ CS courses taken: 121, 187, 220, 250
 Non-CS courses: I took introduction to Media Programming and Institutions as an elective my freshman year. This class gave me a great understanding of the culture, business, legal and political aspects of everyday media. I learned a lot more about the television, music and internet industries. Another class I enjoyed was Biology of Cancer and AIDS, which taught me to use my head and really changed my outlook on the two diseases.
 
 ####Role
+Andrew will be most concerned with front-end work and the interface. The goal is to have a very easy to use and visually satisfying program that cooperates well with the back-end and database. 
 
 
 ###Khanh Nguyen
