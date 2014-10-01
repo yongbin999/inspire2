@@ -41,7 +41,7 @@ Non-CS courses: Abstract algebra ( I really enjoyed the challenge and I find the
 
 ###Andrew Marchetti
 ####Bio
-As a tennis prodigy, life seemed easy. By age 17 I was already on the professional tour. 2004 was the best year of my life. Winning Wimbledon and the US Open in the same year was a dream come true. Then came my accident. On a rainy day, when the match should have been delayed, I tried to return a serve from my opponent, and good friend, Andre Agassi. I lost my footing and fell to the floor. Torn ACL. I spent the next year rehabbing, but my knee wasn’t the same. There was no way I could compete on the tour, my career was over. Then came programming. I was introduced to it in 2007 and I fell in love with application development. I’ve been searching for a team I believe in for quite some time now. I’m glad I finally found the inSPIRE team. I believe these people are motivated and talented enough to create a real world application that will help hundreds of hard-working and deserving students.
+After starting off at UMASS as an undeclared student, I finally found programming. In my third semester as a CS major, I'm hoping to find if my passion is front end or back end. I’m glad I finally found the inSPIRE team. I believe these people are motivated and talented enough to create a real world application that will help hundreds of hard-working and deserving students. I feel this project will also give me a better feel for my interest in either back or front end development, as we will be doing a whole lot of each. 
 
 
 CS courses taken: 121, 187, 220, 250
