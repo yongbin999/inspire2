@@ -97,19 +97,19 @@ Server Lead Team
 
 ## Timeline
 
-| DATE        | GOAL                                                                                                 |
-|-------------|------------------------------------------------------------------------------------------------------|
-| 09/15-09/28 | Determine problem statement and product overview + Hire competent employees and determine salaries |
-| 09/29-10/5  | Create project proposal                                                                              |
-| 10/06-10/12 | User research and UX design specification                                                            |
-| 10/13-10/19 | Software desgin specification                                                                        |
-| 10/20-10/26 | Database structure                                                                                   |
-| 10/27-11/02 | Data modeling and populating the database                                                            |
-| 11/03-11/09 | Server-side implementation                                                                           |
-| 11/10-11/16 | Client-side implementation                                                                           |
-| 11/17-11/23 | User interface design                                                                                |
-| 11/24-11/30 | Debugging and product refinement                                                                     |
-| 12/01-12/07 | Presentation                                                                                         |
+| DATE        		| GOAL                                                                                                 |
+|-------------------|------------------------------------------------------------------------------------------------------|
+| 09/15-09/28 		| Determine problem statement and product overview + Hire competent employees and determine salaries |
+| 09/29-10/5  		| Create project proposal                                                                              |
+| 10/06-10/12 		| User research and UX design specification                                                            |
+| 10/13-10/19 		| Software design specification                                                                        |
+| 10/20-10/26 		| Database structure                                                                                   |
+| 10/27-11/02 		| Data modeling and populating the database                                                            |
+| 11/03-11/09 		| Server-side implementation                                                                           |
+| 11/10-11/16 		| Client-side implementation                                                                           |
+| 11/17-11/23 		| User interface design                                                                                |
+| 11/24-11/30 		| Debugging and product refinement                                                                     |
+| 12/01-12/07 		| Presentation                                                                                         |
 
 
 ## Expenses
