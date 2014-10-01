@@ -6,7 +6,7 @@
 ###Yong Liang
 ####Bio
 
-fsdaf
+
 Prior to studying CS, I was a Financial Analyst at EMC headquarter. During my time there, I worked closely with project managers and developers in our financial reporting tools. To my interest, I wrote several excel VBs to automate the monthly manual setups of our management reports package for the CEO. Being at the core of budget planning and street guidance, it’s astonishing to see where the investments are heading in the SaaS industry. The reason I joined the inSPIRE is because this will be a potential for real investments!
 
 CS class taken: 121,187
@@ -27,7 +27,7 @@ CS Courses Taken: (at previous college): C Programming, Intro to Networking, Obj
 Non-CS courses: *19th-Century Philosophy* (a class involving Hegel, Nietzsche, and Schopenhauer that presented really cool grand ideas and existentialism and the general direction of the human race), and *Jazz Improvisation Theory* (this class really had an impact on my skill as a musician). 
 
 ####Role- Design Research and Server Implementation
-Sam will be conducting the user research from both the student perspective and the administrator perspective. This process involves iterations of UX Design, prototyping, and user testing. The goal here is to solidify our idea and make sure out features are validated. In addition to that he will be part of the team that designs and implements the cloud code in the way it transfers data from the server to the client. 
+Sam will be conducting the user research from both the student perspective and the administrator perspective. This process involves iterations of UX Design, prototyping, and user testing. The goal here is to solidify our idea and make sure our features are validated. In addition to that he will be part of the team that designs and implements the cloud code in the way it processes and transfers data from the server to the client. 
 
 
 ###Alex Revello 
@@ -43,7 +43,7 @@ Non-CS courses: Abstract algebra ( I really enjoyed the challenge and I find the
 
 ###Andrew Marchetti
 ####Bio
-As a tennis prodigy, life seemed easy. By age 17 I was already on the professional tour. 2004 was the best year of my life. Winning Wimbledon and the US Open in the same year was a dream come true. Then came my accident. On a rainy day, when the match should have been delayed, I tried to return a serve from my opponent, and good friend, Andre Agassi. I lost my footing and fell to the floor. Torn ACL. I spent the next year rehabbing, but my knee wasn’t the same. There was no way I could compete on the tour, my career was over. Then came programming. I was introduced to it in 2007 and I fell in love with application development. I’ve been searching for a team I believe in for quite some time now. I’m glad I finally found the inSPIRE team. I believe these people are motivated and talented enough to create a real world application that will help hundreds of hard-working and deserving students.
+After starting off at UMASS as an undeclared student, I finally found programming. In my third semester as a CS major, I'm hoping to find if my passion is front end or back end. I’m glad I finally found the inSPIRE team. I believe these people are motivated and talented enough to create a real world application that will help hundreds of hard-working and deserving students. I feel this project will also give me a better feel for my interest in either back or front end development, as we will be doing a whole lot of each. 
 
 
 CS courses taken: 121, 187, 220, 250
@@ -51,6 +51,7 @@ CS courses taken: 121, 187, 220, 250
 Non-CS courses: I took introduction to Media Programming and Institutions as an elective my freshman year. This class gave me a great understanding of the culture, business, legal and political aspects of everyday media. I learned a lot more about the television, music and internet industries. Another class I enjoyed was Biology of Cancer and AIDS, which taught me to use my head and really changed my outlook on the two diseases.
 
 ####Role
+Andrew will be most concerned with front-end work and the interface. The goal is to have a very easy to use and visually satisfying program that cooperates well with the back-end and database. 
 
 
 ###Khanh Nguyen
@@ -75,17 +76,57 @@ Currently at UMass I have taken Introduction to Programming in Java, Data Struct
 Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
 ####Role
+UI Design Lead Team
+
+Server Lead Team
+
 
 
 ## Problem Statement
-
++	No standard way of viewing course graduation paths (all schools, not just Umass CS)
++	Hierarchy of prerequisite classes is confusing on paper, and unavailable in other forms
++	SPIRE does not present the classes relevant to your path during enrollment. The burden is on the user to tailor class searches to themselves, which is an irritating process of navigating back and forth in the portal.
++	No simple way to account for courses only being offered in Fall/Spring in SPIRE portal, students sometimes do not graduate on time due to poor planning capabilities for required classes.
++	Difficult to compare different paths and majors side-by-side, similarities and differences are not obvious
++	Currently in career profiles, users are just listing their relevant classes. It’s hard to tell what those classes really mean, without seeing the trail of pre-req leading to that class.
++	New incoming students are clueless about pre-reqs and classpaths, and seek guidance from the advisors who might not be the best resource. It’s difficult find and talk to juniors and seniors for the review for their class paths.
++	SPIRE provides no compatibility with career resources like Career Connect of LinkedIn
 
 ## Our Product
 
 
 ## Timeline
 
+| DATE        | GOAL                                                                                                 |
+|-------------|------------------------------------------------------------------------------------------------------|
+| 09/15-09/28 | Determine problem statement and product overview + Hire competent employees and determine salaries |
+| 09/29-10/5  | Create project proposal                                                                              |
+| 10/06-10/12 | User research and UX design specification                                                            |
+| 10/13-10/19 | Software desgin specification                                                                        |
+| 10/20-10/26 | Database structure                                                                                   |
+| 10/27-11/02 | Data modeling and populating the database                                                            |
+| 11/03-11/09 | Server-side implementation                                                                           |
+| 11/10-11/16 | Client-side implementation                                                                           |
+| 11/17-11/23 | User interface design                                                                                |
+| 11/24-11/30 | Debugging and product refinement                                                                     |
+| 12/01-12/07 | Presentation                                                                                         |
+
 
 ## Expenses
+|    Charge   |       Rate      |
+|:-----------:|:---------------:|
+|   Hardware  |      $8000      |
+|     Rent    |  $10,000/month  |
+|  Furniture  |      $2000      |
+|    Wages    | $3,000,000/year |
+|    Domain   |    $10/month    |
+|    Lawyer   |  $30,000/month  |
+|    Travel   |  $100,000/year  |
+|  Union Fee  |   $50,000/year  |
+|  Insurance  |   $20,000/year  |
+| Food Budget |   $30,000/year  |
+
+Total: $3,250,120 Year 1
+       $3,240,120 Years 2+
 
 
