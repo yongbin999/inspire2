@@ -125,8 +125,7 @@ Server Lead Team
 |  Union Fee  |   $50,000/year  |
 |  Insurance  |   $20,000/year  |
 | Food Budget |   $30,000/year  |
-
-Total: $3,250,120 Year 1
-       $3,240,120 Years 2+
+| Year 1 Cost |    $3,250,120   |
+|Years 2+ Cost|    $3,240,120   |
 
 
