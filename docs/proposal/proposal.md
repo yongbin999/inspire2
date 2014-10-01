@@ -85,5 +85,18 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 
 
 ## Expenses
+|    Charge   |       Rate      |
+|:-----------:|:---------------:|
+|   Hardware  |      $8000      |
+|     Rent    |  $10,000/month  |
+|  Furniture  |      $2000      |
+|    Wages    | $3,000,000/year |
+|    Domain   |    $10/month    |
+|    Lawyer   |  $30,000/month  |
+|    Travel   |  $100,000/year  |
+|  Union Fee  |   $50,000/year  |
+|  Insurance  |   $20,000/year  |
+| Food Budget |   $30,000/year  |
+|    Total	  | $3,250,120/year |
 
 
