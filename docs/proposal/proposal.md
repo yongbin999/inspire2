@@ -24,7 +24,7 @@ CS Courses Taken: (at previous college): C Programming, Intro to Networking, Obj
 
 Non-CS courses: *19th-Century Philosophy* (a class involving Hegel, Nietzsche, and Schopenhauer that presented really cool grand ideas and existentialism and the general direction of the human race), and *Jazz Improvisation Theory* (this class really had an impact on my skill as a musician). 
 
-####Role- Design Research and Cloud Code Development
+####Role- Design Research and Server Implementation
 Sam will be conducting the user research from both the student perspective and the administrator perspective. This process involves iterations of UX Design, prototyping, and user testing. The goal here is to solidify our idea and make sure out features are validated. In addition to that he will be part of the team that designs and implements the cloud code in the way it transfers data from the server to the client. 
 
 
