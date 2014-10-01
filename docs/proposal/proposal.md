@@ -6,7 +6,7 @@
 ###Yong Liang
 ####Bio
 
-fsdaf
+
 Prior to studying CS, I was a Financial Analyst at EMC headquarter. During my time there, I worked closely with project managers and developers in our financial reporting tools. To my interest, I wrote several excel VBs to automate the monthly manual setups of our management reports package for the CEO. Being at the core of budget planning and street guidance, it’s astonishing to see where the investments are heading in the SaaS industry. The reason I joined the inSPIRE is because this will be a potential for real investments!
 
 CS class taken: 121,187
@@ -75,10 +75,21 @@ Currently at UMass I have taken Introduction to Programming in Java, Data Struct
 Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
 ####Role
+UI Design Lead Team
+
+Server Lead Team
+
 
 
 ## Problem Statement
-
++	No standard way of viewing course graduation paths (all schools, not just Umass CS)
++	Hierarchy of prerequisite classes is confusing on paper, and unavailable in other forms
++	SPIRE does not present the classes relevant to your path during enrollment. The burden is on the user to tailor class searches to themselves, which is an irritating process of navigating back and forth in the portal.
++	No simple way to account for courses only being offered in Fall/Spring in SPIRE portal, students sometimes do not graduate on time due to poor planning capabilities for required classes.
++	Difficult to compare different paths and majors side-by-side, similarities and differences are not obvious
++	Currently in career profiles, users are just listing their relevant classes. It’s hard to tell what those classes really mean, without seeing the trail of pre-req leading to that class.
++	New incoming students are clueless about pre-reqs and classpaths, and seek guidance from the advisors who might not be the best resource. It’s difficult find and talk to juniors and seniors for the review for their class paths.
++	SPIRE provides no compatibility with career resources like Career Connect of LinkedIn
 
 ## Our Product
 
