@@ -12,5 +12,5 @@ Main folders:
 2.1. proposal: details of the project   
 + proposal.md: fine-grained implementation description of the app and roles of the members.
 + proposal.pdf: presentation slides of the project.  
-     
+         
 3. notes: bug list, outline of plans, unofficial documents that are not appropriate to put in 'docs'.
