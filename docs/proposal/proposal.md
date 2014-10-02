@@ -15,7 +15,7 @@ Capstone Business Strategies - This class taught me the sphere of opportunity an
 Game Theory Economics - This is one of the most interesting class that studies group behavior when face with cost/benefit decision. It quite useful to learn to plan accordingly since Nash equilibrium over the long term will almost always arrive at the predicted outcome.
 
 ######Role
-Yong's role in the team will be facilitate the progress of the releases cycles. He also will be looking into the database design and intergration with the server host.
+Yong's role in the team will be to facilitate the progress of the releases cycles. He also will be looking into the database design and intergration with the server host.
 
 
 #####Sam Fox
@@ -96,7 +96,7 @@ In fact, there is no standard way of viewing your own graduation path other than
 +	With this front end production, we can also introduce a product for the school/department admins to modify the class pre-reqs relationships.The admins would easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
 
 ###### Social media 
-+	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
++	To build on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
 +	Another aspect of social media we like to implement is student experiences, comments on the path of classes they took. This will be available to other and be rated/ranked. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
 
 ###### Services
