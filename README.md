@@ -13,4 +13,4 @@ Implementation of the app
 - proposal.md: fine-grained implementation description of the app and roles of the members.
 - proposal.pdf: pdf version of proposal.md
 
-3. notes:
+3. notes: bug list, outline of plans, unofficial documents that are not appropriate to put in 'docs'
