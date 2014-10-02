@@ -37,7 +37,7 @@ CS courses taken: 121, 187, 220, 230, 240, 250, 197C, 197U
 Non-CS courses: Abstract algebra ( I really enjoyed the challenge and I find the subject very interesting since I want to study more about encryption) Comic Art in North America ( I love comics and learning about the history of them and being forced to read them for grades was pretty awesome)
 
 ####Role
-
+Alex is going to be doing the server side programming. He will optimize the server such that it runs quickly and efficiently. There will be no bugs and no way to hack in once he is finished.
 
 ###Andrew Marchetti
 ####Bio
