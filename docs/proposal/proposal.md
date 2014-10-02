@@ -64,6 +64,7 @@ CS courses taken: 121, 187, 197u, 220, 230, 240, 250, 383, 670, 688, 689
 Non-CS courses: One of the courses that had most impact on me was WRITING 121, which taught me to write more effectively in English. Another course was MATH 455 (abstract algebra), in which I enjoyed learning the concepts that explained and linked together the different areas of math such as geometry, number theory and combinatorics.  
 
 ######Role
+Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried. 
 
 
 #####Josh Bearor
@@ -83,14 +84,8 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 
 
 ## Problem Statement
-+	No standard way of viewing course graduation paths (all schools, not just Umass CS) Every departments has their own format of graduation planning sheet.
-+	Hierarchy of prerequisite classes is confusing on paper, and unavailable in other forms
-+	SPIRE does not present the classes relevant to your path during enrollment. The burden is on the user to tailor class searches to themselves, which is an irritating process of navigating back and forth in the portal.
-+	No simple way to account for courses only being offered in Fall/Spring in SPIRE portal, students sometimes do not graduate on time due to poor planning capabilities for required classes.
-+	Difficult to compare different paths and majors side-by-side, similarities and differences are not obvious
-+	Currently in career profiles, users are just listing their relevant classes. It’s hard to tell what those classes really mean, without seeing the trail of pre-req leading to that class.
-+	New incoming students are clueless about pre-reqs and classpaths, and seek guidance from the advisors who might not be the best resource. It’s difficult find and talk to juniors and seniors for the review for their class paths.
-+	SPIRE provides no compatibility with career resources like Career Connect of LinkedIn
+\tIf you ask 100 UMass students what they think of the SPIRE portal for course enrollment, you’re likely to get less than a handful of positive reviews. The system is very difficult to navigate, and a student enrolling in classes has to refer elsewhere to make sure that selected courses are true to his or her degree path. Information about courses such as prerequisites, major relevancy, and semester offerings is all scattered in different places and hard to find (not to mention the fact that you have to navigate away from the page you are looking at to find a page with a different piece of information). An example of an unfortunate outcome of this is when a student has to take an extra semester just because that last class he needed for graduation was only offered in the fall. Or perhaps that student was unaware of a GE course that was missing. The way SPIRE is currently, it is very difficult to enroll in classes with the necessary foresight to avoid this kind of thing. The burden is on the student to manage his or her path, but SPIRE tries to organize classes by non-intuitive course numbers. And there are no means for viewing available courses in the context of degree requirements. 
+\tIn fact, there is no standard way of viewing your own graduation path other than on a piece of paper with something scribbled on it by your counselor, whom you only see once per semester. The hierarchy of prerequisite classes is sometimes confusing on paper, and in a lot of cases it changes frequently. And good luck trying to switch majors when there is no way to compare majors side-by-side in SPIRE either. SPIRE is not compatible with career services like CareerConnect or LinkedIn, which is functionality that would be very useful for employers trying to find people with the right skills. The problem staring us all in the face a lack of clarity, seamlessness, and consolidation of necessary information. Time spent dealing with these difficulties is time wasted. The process should be as painless as possible for students so that they can focus on what is actually important- their schoolwork. 
 
 
 
