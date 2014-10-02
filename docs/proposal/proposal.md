@@ -65,10 +65,7 @@ CS courses taken: 121, 187, 197u, 220, 230, 240, 250, 383, 670, 688, 689
 Non-CS courses: One of the courses that had most impact on me was WRITING 121, which taught me to write more effectively in English. Another course was MATH 455 (abstract algebra), in which I enjoyed learning the concepts that explained and linked together the different areas of math such as geometry, number theory and combinatorics.  
 
 ######Role
-<<<<<<< HEAD
-Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried. 
-
-=======
+Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried.
 I will help with designing programs, factoring and testing code. I will also help with debugging errors. My main focus is to make the app run more efficiently in term of both memory and time. Another goal is to revise code style to strengthen the maintainability aspect of the app.   
 
 #####Josh Bearor
@@ -81,9 +78,7 @@ Currently at UMass I have taken Introduction to Programming in Java, Data Struct
 Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
 ######Role
-
-
-
+Josh's role will be maintaining the back-end designs, intergrration of the server/client, and database setup.
 
 
 
