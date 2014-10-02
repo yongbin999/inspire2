@@ -5,9 +5,7 @@
 
 ###Yong Liang
 ####Bio
-
-
-Prior to studying CS, I was a Financial Analyst at EMC headquarter. During my time there, I worked closely with project managers and developers in our financial reporting tools. To my interest, I wrote several excel VBs to automate the monthly manual setups of our management reports package for the CEO. Being at the core of budget planning and street guidance, it’s astonishing to see where the investments are heading in the SaaS industry. The reason I joined the inSPIRE is because this will be a potential for real investments!
+Prior to studying CS, I was a Financial Analyst at tech company. Being at the core of budget planning and street guidance, it’s astonishing to see where the investments are heading in the IT SaaS industry. The reason I joined the inSPIRE is because this is a potential for real investments!
 
 CS class taken: 121,187
 Non-CS classes: 
@@ -15,7 +13,7 @@ Capstone Business Strategies - This class taught me the sphere of opportunity an
 Game Theory Economics - This is one of the most interesting class that studies group behavior when face with cost/benefit decision. It quite useful to learn to plan accordingly since Nash equilibrium over the long term will almost always arrive at the predicted outcome.
 
 ####Role
-
+Yong's role in the team will be facilitate the progress of the releases cycles. He also will be looking into the database design and intergration with the server host.
 
 
 ###Sam Fox
@@ -45,7 +43,6 @@ Non-CS courses: Abstract algebra ( I really enjoyed the challenge and I find the
 ####Bio
 After starting off at UMASS as an undeclared student, I finally found programming. In my third semester as a CS major, I'm hoping to find if my passion is front end or back end. I’m glad I finally found the inSPIRE team. I believe these people are motivated and talented enough to create a real world application that will help hundreds of hard-working and deserving students. I feel this project will also give me a better feel for my interest in either back or front end development, as we will be doing a whole lot of each. 
 
-
 CS courses taken: 121, 187, 220, 250
 
 Non-CS courses: I took introduction to Media Programming and Institutions as an elective my freshman year. This class gave me a great understanding of the culture, business, legal and political aspects of everyday media. I learned a lot more about the television, music and internet industries. Another class I enjoyed was Biology of Cancer and AIDS, which taught me to use my head and really changed my outlook on the two diseases.
@@ -69,11 +66,16 @@ Non-CS courses: One of the courses that had most impact on me was WRITING 121, w
 
 ###Josh Bearor
 ####Bio
-I am currently a Junior CS major with an interest in both mobile app and web design.  I am interested in applications that have complete interaction with the people who use them.  I want to help develop services created specifically for the purpose of helping people grow and learn.  I joined the inSPIRE team to help students, both incoming Freshman, and rising Seniors, take the right path in their college career to get the most out of their education without having to worry if they can take a specific course or not.  I want inSPIRE to have a positive impact on every student that uses the service.
+I am currently a Junior CS major with an interest in both mobile app and web design.  I am interested in applications that have complete interaction with the people who use them.  I want to help develop services created specifically for the purpose of helping people grow and learn.  I joined the inSPIRE team to help students, both incoming Freshman, and rising Seniors, take the right path in their college career to get the most out of their education without having to worry if they can take 
+a specific course or not.  I want inSPIRE to have a positive impact on every student that uses the service.
 
 Currently at UMass I have taken Introduction to Programming in Java, Data Structures, Intro to C programming, Reasoning Under Uncertainty, Programming Methodology, and Intro to Computation.
 
 Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
+
+####Role
+
+
 
 
 
