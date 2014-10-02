@@ -75,15 +75,11 @@ Currently at UMass I have taken Introduction to Programming in Java, Data Struct
 
 Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
-####Role
-UI Design Lead Team
-
-Server Lead Team
 
 
 
 ## Problem Statement
-+	No standard way of viewing course graduation paths (all schools, not just Umass CS)
++	No standard way of viewing course graduation paths (all schools, not just Umass CS) Every departments has their own format of graduation planning sheet.
 +	Hierarchy of prerequisite classes is confusing on paper, and unavailable in other forms
 +	SPIRE does not present the classes relevant to your path during enrollment. The burden is on the user to tailor class searches to themselves, which is an irritating process of navigating back and forth in the portal.
 +	No simple way to account for courses only being offered in Fall/Spring in SPIRE portal, students sometimes do not graduate on time due to poor planning capabilities for required classes.
@@ -92,7 +88,19 @@ Server Lead Team
 +	New incoming students are clueless about pre-reqs and classpaths, and seek guidance from the advisors who might not be the best resource. It’s difficult find and talk to juniors and seniors for the review for their class paths.
 +	SPIRE provides no compatibility with career resources like Career Connect of LinkedIn
 
+
+
 ## Our Product
+# Core product
++	Our main product is the class timeline application that student can select and display the classes they would need to complete their degree.
++	With this front end production, we can also introduce an admin product for the school/department admins to modify the class pre-reqs relationships.
++	The admins would be easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
+# Social media 
++	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or a link on their resume.
++	Another aspect of social media we like to implement is students can comment on a path of classes they took, and get rated by student. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
+# Services
++	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the power to verify the student profile is truely accurate.
++	Alternatively students can have the option to self-verify. This will keep an archive of their profile on our website like a "transcript". They would pay an annual fee for upkeep. This will be useful for any type of job, internship, research, even college applications.
 
 
 ## Timeline
