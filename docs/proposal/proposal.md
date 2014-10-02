@@ -103,6 +103,17 @@ In fact, there is no standard way of viewing your own graduation path other than
 +	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the option to verify accuracy of the student profile.
 +	Alternatively, students can choose self-verify(fee). This will archive their profile on our website like a "transcript". It will be useful for any type of job, internship, research, even college applications.
 
+###### Related Courses
+<u>Computer Science:</u>
+CMPSCI187- This project will invole knowledge of data structures when it comes to the modeling of the entries in our database. We will likely have to use dynamic structures like the ones that we all learned about in this class. Linked lists, binary trees, and hash functions are all things that are very likely going to come into play. 
+
+CMPSCI220- We will also have to think about design patterns. There is always more than one way to implement anything, and we have to make sure to implement our product with flexibility and extendability in mind. CMPSCI220 provided us with exactly this knowledge.
+
+<u>Other Subjects:</u> 
+Electronic Music- The primary difference between SPIRE and inSPIRE is that inSPIRE will feature seamless usability. A direct metaphor is to think about inSPIRE like music editing software, which provides things like cursor tools, keyboard shortcuts, and the ability to split workspaces into multiple windows. If we can make degree planning more like an art project and less like sticking needles in your eyes, we can make a substantial difference in degree planning. 
+
+19th Century Philosophy- In this class Sam studied a book by Marshall McLuhan called "The Medium is the Message". This book talked about the importance of good design as it is what encapsulates the tools we use as extensions of our being. Our opinion is that SPIRE offers bad design and does not work in ways that are intuitive to our being. It is time to improve on this technology. Just as shoes are only effective if they mold to the shape of our feet, a student portal can only be effective if it properly molds to our mental models. 
+
 
 ## Timeline
 | DATE        		| GOAL                                                                                                 |
