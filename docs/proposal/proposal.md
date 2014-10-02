@@ -1,7 +1,8 @@
-# inSPIRE # - 'A Trail For Success'
+# inSPIRE 
+####### - 'A Trail For Success'
+
 
 ## Meet the Team
-==========
 
 ###Yong Liang
 ####Bio
@@ -82,7 +83,6 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 
 
 ## Problem Statement
-==========
 +	No standard way of viewing course graduation paths (all schools, not just Umass CS) Every departments has their own format of graduation planning sheet.
 +	Hierarchy of prerequisite classes is confusing on paper, and unavailable in other forms
 +	SPIRE does not present the classes relevant to your path during enrollment. The burden is on the user to tailor class searches to themselves, which is an irritating process of navigating back and forth in the portal.
@@ -95,21 +95,22 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 
 
 ## Our Product
-==========
+
 ######## Core product
 +	Our main product is the class timeline application that student can select and display the classes they would need to complete their degree.
 +	With this front end production, we can also introduce an admin product for the school/department admins to modify the class pre-reqs relationships.
 +	The admins would be easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
+
 ######## Social media 
 +	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or a link on their resume.
 +	Another aspect of social media we like to implement is students can comment on a path of classes they took, and get rated by student. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
+
 ######## Services
 +	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the power to verify the student profile is truely accurate.
 +	Alternatively students can have the option to self-verify. This will keep an archive of their profile on our website like a "transcript". They would pay an annual fee for upkeep. This will be useful for any type of job, internship, research, even college applications.
 
 
 ## Timeline
-==========
 | DATE        		| GOAL                                                                                                 |
 |-------------------|------------------------------------------------------------------------------------------------------|
 | 09/15-09/28 		| Determine problem statement and product overview													   |
@@ -126,7 +127,6 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 
 
 ## Expenses
-==========
 |    Charge   |       Rate      |
 |:-----------:|:---------------:|
 |   Hardware  |      $8000      |
