@@ -1,5 +1,5 @@
 # inSPIRE
-### A Trail For Success
+'A Trail For Success'
 
 ## Meet the Team
 
