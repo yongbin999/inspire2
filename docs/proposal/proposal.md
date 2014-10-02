@@ -78,7 +78,7 @@ a specific course or not.  I want inSPIRE to have a positive impact on every stu
 
 Currently at UMass I have taken Introduction to Programming in Java, Data Structures, Intro to C programming, Reasoning Under Uncertainty, Programming Methodology, and Intro to Computation.
 
-Two non-CS courses that have impacted not only my education, but my life are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
+Two non-CS courses that have impacted me are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
 ######Role
 
