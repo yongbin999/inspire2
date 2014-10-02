@@ -11,7 +11,7 @@ As described in detail in our proposal, our team consists of Yong Liang, Sam Fox
 In our docs/proposal directory, there is our written proposal both in the form of a markdown file and a PDF presentation. Our proposal includes detailed bios and role descriptions of each member of our team as well as our problem statement, product description, project timeline, and estimated costs. 
 
 
-Structure of the repository:   
+#Structure of the repository:   
 
 Main folders:   
 1. code:   
