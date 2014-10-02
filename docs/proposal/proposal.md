@@ -1,4 +1,5 @@
 # inSPIRE 
+<img src ="../inspire logo.jpg" width =30% align ="middle"> 
 ###### 'A Trail For Success'
 
 
@@ -69,7 +70,6 @@ Khanh's role will be to come up with our data modelling algorithm and database s
 
 =======
 I will help with designing programs, factoring and testing code. I will also help with debugging errors. My main focus is to make the app run more efficiently in term of both memory and time. Another goal is to revise code style to strengthen the maintainability aspect of the app.   
->>>>>>> daf475f043f3b95954a826daff8ae194d3e94e3c
 
 #####Josh Bearor
 ######Bio
