@@ -1,4 +1,5 @@
 # inSPIRE 
+<img src ="../inspire logo.jpg" width =30% align ="middle"> 
 ###### 'A Trail For Success'
 
 
@@ -14,7 +15,7 @@ Capstone Business Strategies - This class taught me the sphere of opportunity an
 Game Theory Economics - This is one of the most interesting class that studies group behavior when face with cost/benefit decision. It quite useful to learn to plan accordingly since Nash equilibrium over the long term will almost always arrive at the predicted outcome.
 
 ######Role
-Yong's role in the team will be facilitate the progress of the releases cycles. He also will be looking into the database design and intergration with the server host.
+Yong's role in the team will be to facilitate the progress of the releases cycles. He also will be looking into the database design and intergration with the server host.
 
 
 #####Sam Fox
@@ -64,12 +65,8 @@ CS courses taken: 121, 187, 197u, 220, 230, 240, 250, 383, 670, 688, 689
 Non-CS courses: One of the courses that had most impact on me was WRITING 121, which taught me to write more effectively in English. Another course was MATH 455 (abstract algebra), in which I enjoyed learning the concepts that explained and linked together the different areas of math such as geometry, number theory and combinatorics.  
 
 ######Role
-<<<<<<< HEAD
-Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried. 
-
-=======
+Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried.
 I will help with designing programs, factoring and testing code. I will also help with debugging errors. My main focus is to make the app run more efficiently in term of both memory and time. Another goal is to revise code style to strengthen the maintainability aspect of the app.   
->>>>>>> daf475f043f3b95954a826daff8ae194d3e94e3c
 
 #####Josh Bearor
 ######Bio
@@ -81,9 +78,7 @@ Currently at UMass I have taken Introduction to Programming in Java, Data Struct
 Two non-CS courses that have impacted me are Linguistic Anthropology and Western Thought to 1600.  These two classes taught me how to actually listen to spoken and written word to get a deeper understanding of the speaker and the world around me.
 
 ######Role
-
-
-
+Josh's role will be maintaining the back-end designs, intergrration of the server/client, and database setup.
 
 
 
@@ -101,7 +96,7 @@ In fact, there is no standard way of viewing your own graduation path other than
 +	With this front end production, we can also introduce a product for the school/department admins to modify the class pre-reqs relationships.The admins would easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
 
 ###### Social media 
-+	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
++	To build on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
 +	Another aspect of social media we like to implement is student experiences, comments on the path of classes they took. This will be available to other and be rated/ranked. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
 
 ###### Services
