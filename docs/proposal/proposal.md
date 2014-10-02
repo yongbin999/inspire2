@@ -97,17 +97,16 @@ Two non-CS courses that have impacted not only my education, but my life are Lin
 ## Our Products
 
 ###### Core product
-+	Our main product is the class timeline application that student can select and display the classes they would need to complete their degree.
-+	With this front end production, we can also introduce an admin product for the school/department admins to modify the class pre-reqs relationships.
-+	The admins would be easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
++	Our main product is a class timeline application, where student can select and display the classes they would need to complete their degree.
++	With this front end production, we can also introduce a product for the school/department admins to modify the class pre-reqs relationships.The admins would easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
 
 ###### Social media 
-+	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or a link on their resume.
-+	Another aspect of social media we like to implement is students can comment on a path of classes they took, and get rated by student. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
++	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
++	Another aspect of social media we like to implement is student experiences, comments on the path of classes they took. This will be available to other and be rated/ranked. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
 
 ###### Services
-+	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the power to verify the student profile is truely accurate.
-+	Alternatively students can have the option to self-verify. This will keep an archive of their profile on our website like a "transcript". They would pay an annual fee for upkeep. This will be useful for any type of job, internship, research, even college applications.
++	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the option to verify accuracy of the student profile.
++	Alternatively, students can choose self-verify(fee). This will archive their profile on our website like a "transcript". It will be useful for any type of job, internship, research, even college applications.
 
 
 ## Timeline
