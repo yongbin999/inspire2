@@ -62,6 +62,14 @@ Non-Goals
 
 **Making ratemyprofessor.com 2.0** - We will have a course rating and review implemented but we will not be making a professor rating system since it has already been done, professors change for courses, and we don't want to end up in any hot water.
 
+Open Issues
+===========
+
+- Web hosting companies are concerned that it will generate too much traffic and they won't be able to handle it
+- Data mining of gen ed courses could be a real pain
+- Making the UI look pretty 
+
+
 Preliminary User Interface
 ==========================
 <img src ="./login.png" align ="middle" height="400px" width="800px"> 
