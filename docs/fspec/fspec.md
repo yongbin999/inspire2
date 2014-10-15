@@ -61,6 +61,9 @@ Non-Goals
 
 Preliminary User Interface
 ==========================
+<img src ="./login.png" align ="middle" height="400px" width="800px"> 
+
+The login page is that page that the admin and user will see when they go to log on. They will input their username and password and be redirected back if they fail to login. Otherwise they will be redirected to the mainpage.
 
 <img src ="./mainpage.png" align ="middle" height="400px" width="800px"> 
 
