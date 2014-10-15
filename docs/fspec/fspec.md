@@ -52,3 +52,10 @@ Scenarios
 7. Melinda is a campus recruiter at Google. She comes across an application for a summer internship in her database and is mildly interested in hiring this student George Butler, but she would like to know more. Since inSPIRE is so awesome that it has been universally adopted as the standard student administration system, she goes to the public UMass inSPIRE page. She is able to look up that student and see that his course history consists of topics that are exactly the skills she is looking for. He has also filled out his optional bio section and attached links to his impressive personal webpage. He’s hired.
 
 8. Jean is entering her last semester at school and she still has 2 computer science electives that she needs to take, but she has no idea what she wants to take or what courses would be interesting. While looking through the courses she can take she sees one that she thinks looks interesting, but when she reads what other students have had to say about that course she decides that it won't be that interesting and she uses the students reviews to choose 2 other classes that she thinks are interesting.
+
+
+
+Non-Goals
+=========
+
+**High levels of Security** - This application is meant as an easy-to-use reference for courses, and a username and password are used only to help users easily access their data.  Therefore, no large security implementation will be used.
