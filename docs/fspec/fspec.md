@@ -63,6 +63,6 @@ Non-Goals
 Preliminary User Interface
 ==========================
 
-<img src ="./mainpage.png" width =30% align ="middle" height=100% width=100%> 
+<img src ="./mainpage.png" width =30% align ="middle" height="800px" width="800px"> 
 
 The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
