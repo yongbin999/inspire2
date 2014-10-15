@@ -66,3 +66,8 @@ Preliminary User Interface
 <img src ="./mainpage.png" align ="middle" height="400px" width="800px"> 
 
 The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
+
+
+<img src ="./admin_main_page.png" align ="middle" height="400px" width="800px"> 
+
+The administrator overview page will be a way for an administrator to visualize what's in the database, and make additions and adjustments to things as needed. 
