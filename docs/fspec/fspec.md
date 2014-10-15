@@ -58,6 +58,10 @@ Non-Goals
 
 **High levels of Security** - This application is meant as an easy-to-use reference for courses, and a username and password are used only to help users easily access their data.  Therefore, no large security implementation will be used.
 
+**Implementing every major** - Implementing every major would take a lot of time and would just be repeating the basic implementation we are demonstrating.
+
+**Making ratemyprofessor.com 2.0** - We will have a course rating and review implemented but we will not be making a professor rating system since it has already been done, professors change for courses, and we don't want to end up in any hot water.
+
 Preliminary User Interface
 ==========================
 <img src ="./login.png" align ="middle" height="400px" width="800px"> 
