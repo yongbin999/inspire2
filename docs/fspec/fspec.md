@@ -40,7 +40,7 @@ I will help with designing programs, factoring and testing code. I will also hel
 
 2. It’s August and the new semester is right around the corner. The computer science department has decided to add a few new course offerings this year, and also update a couple prerequisites and requirement fulfillments that pertain to a couple existing classes. Bob is a UMass administrator in charge of updating this data on on the inSPIRE database. With ease he logs into the website, enters his authentication information, and pulls up a spreadsheet-like window displaying course information in a table. He locates CMPSCI326, scrolls over to the “prerequisites” column, and adds CMPSCI220 as a listed prerequisite. He then finds CMPSCI250, and adds that it now fulfills the G requirement, because it is clearly a class that promotes awareness of global diversity. Finally, to add a new course he clicks on the plus icon and fills out all of the relevant information for the new course CMPSCI999. By clicking "done", this item is painlessly added to the database. His job is done in 5 minutes, and he can go home and take it easy. 
 
-3. Jane is attempting to look up what courses she needs to take next semester in order to graduate on time, but she is getting so frustrated while using spire! She wants to find out what courses she needs to take but there is no way to tell which ones she has the pre-requisites for without tediously searching through each individual courses and then constantly hitting the back button. Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and selects her classes from the recommanded list.
+3. Jane is attempting to planning for courses she needs to take next semester in order to graduate on time, but she is getting so frustrated while using spire! She wants to find out what courses she needs to take but there is no way to tell which ones she has the pre-requisites for without tediously searching through each individual courses and then constantly hitting the back button. Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and selects her classes from the recommanded list.
 
 4. Cory and Derek are both general Computer Science majors. They are chatting about the requirements they need to fulfill the major. Derek tells Cory that they need to take 9 credits at the 400 level, or higher. Cory doesn't know any classes above the 400 level. He logs on to inSPIRE and goes to his requirements where it lists all the options for the 400+ level courses. He clicks on each of the classes, and a description comes up. The description tells him who teaches the class and provides a summary of the class. This helps Cory pick out 3 courses, and he's ready to cross these requirements off his list.
 
@@ -67,8 +67,3 @@ The login page is that page that the admin and user will see when they go to log
 <img src ="./mainpage.png" align ="middle" height="400px" width="800px"> 
 
 The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
-
-
-<img src ="./admin_main_page.png" align ="middle" height="400px" width="800px"> 
-
-The administrator overview page will be a way for an administrator to visualize what's in the database, and make additions and adjustments to things as needed. 
