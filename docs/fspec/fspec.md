@@ -73,3 +73,7 @@ The main page is the page that the user will see once they log on. They will be 
 <img src ="./admin_main_page.png" align ="middle" height="400px" width="800px"> 
 
 The administrator overview page will be a way for an administrator to visualize what's in the database, and make additions and adjustments to things as needed. 
+
+<img src ="./course_enrollment.png" align ="middle" height="400px" width="800px">
+
+The course enrollment page is a live portal that can be accessed during course enrollment time. It has the functionality to show scheduled courses, add different courses to a dynamic watchlist on the fly, and suggest courses based on missing geneds, prereqs, interests, etc. The search bar brings up courses in an easy pull-down bar, and lets you add or enroll in those courses without having to navigate away from the page. 
