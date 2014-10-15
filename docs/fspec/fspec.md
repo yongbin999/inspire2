@@ -59,3 +59,10 @@ Non-Goals
 =========
 
 **High levels of Security** - This application is meant as an easy-to-use reference for courses, and a username and password are used only to help users easily access their data.  Therefore, no large security implementation will be used.
+
+Preliminary User Interface
+==========================
+
+<img src ="../mainpage.png" width =30% align ="middle"> 
+
+The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
