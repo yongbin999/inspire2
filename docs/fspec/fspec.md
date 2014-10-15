@@ -46,4 +46,10 @@ Scenarios
 4. Cory and Derek are both general Computer Science majors. They are chatting about the requirements they need to fulfill the major. Derek tells Cory that they need to take 9 credits at the 400 level, or higher. Cory doesn't know any classes above the 400 level. He logs on to inSPIRE and goes to his requirements where it lists all the options for the 400+ level courses. He clicks on each of the classes, and a description comes up. The description tells him who teaches the class and provides a summary of the class. This helps Cory pick out 3 courses, and he's ready to cross these requirements off his list.
 
 5. Bob is just a general computer science major going into his junior year, but he isn't sure what concentration he wants to go into. With inSPIRE he can look at the courses required for each subplan and then choose which one he thinks looks most interesting and start to plan his future semesters around that.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8a2c3bb5b464ec9d72aa3e7a44c452d20f3904b6
+
+6.  Tim is entering the second semester of his Junior year, and is beginning to think about changing his sub-plan from General Computer Science to either Software Engineering or Security and Privacy, and enjoys both equally.  Tim has taken Algorithms, Operating Systems, Sofware Engineering, and Web Programming.  Using inSPIRE's easy to read interface, he sees that all of these classes are involved in the Software Engineering track, while three are involved with Security and Privacy.  Looking deeper into his course track, Tim notices that Software Enigineering Synthesis, and Analysis & Evaluation are offered, and fit into his schedule with the classes from his minor, while Security classes conflict with his necessary minor courses.  Tim decides that the Software Engineering track is the best for him.
+>>>>>>> 762f78718a584473e4a036e946837d358bbca094
