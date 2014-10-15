@@ -94,7 +94,7 @@ The administrator overview page will be a way for an administrator to visualize 
 
 The course enrollment page is a live portal that can be accessed during course enrollment time. It has the functionality to show scheduled courses, add different courses to a dynamic watchlist on the fly, and suggest courses based on missing geneds, prereqs, interests, etc. The search bar brings up courses in an easy pull-down bar, and lets you add or enroll in those courses without having to navigate away from the page. 
 
-<img src ="./calander.png" align="middle" height="400px" width="800px">
+<img src ="./calander.png" align="middle" height="700px" width="1000px">
 
 The calander is a page that the user can use to view and interact with their schedule.  The user can add information to the calander, such as club meetings, and gen ed classes.
 
