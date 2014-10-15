@@ -42,7 +42,7 @@ Scenarios
 
 4. Jane is attempting to look up what courses she needs to take next semester in order to graduate on time, but she is getting so frustrated while using spire! She wants to find out what courses she needs to take but there is no way to tell which ones she has the pre-requisites for without tediously searching through courses instead of hitting the back button. Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and how they all fit into the big picture.
 
-<<<<<<< HEAD
+
 6. Cory and Derek are both general Computer Science majors. They are chatting about the requirements they need to fulfill the major. Derek tells Cory that they need to take 9 credits at the 400 level, or higher. Cory doesn't know any classes above the 400 level. He logs on to inSPIRE and goes to his requirements where it lists all the options for the 400+ level courses. He clicks on each of the classes, and a description comes up. The description tells him who teaches the class and provides a summary of the class. This helps Cory pick out 3 courses, and he's ready to cross these requirements off his list.
 
 =======
