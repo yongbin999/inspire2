@@ -80,15 +80,15 @@ The flowchart above shows how the site is structured. The main page has multiple
 
 <img src ="./login.png" align ="middle" height="600px" width="800px"> 
 
-The login page is that page that the admin and user will see when they go to log on. They will input their username and password and be redirected back if they fail to login. Otherwise they will be redirected to the mainpage.
+The login page is that page that the admin and user/employers will see when they go to log on. They will input their username and password and be redirected back if they fail to login. Otherwise they will be redirected to the mainpage with their specialized views.
 
 <img src ="./mainpage.png" align ="middle" height="400px" width="800px"> 
 
-The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
+The main page is the default page that all users will see. Once student logs on, they will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
 
 <img src ="./admin_main_page.png" align ="middle" height="400px" width="800px">
 
-The administrator overview page will be a way for an administrator to visualize what's in the database, and make additions and adjustments to things as needed. 
+The administrator overview page will be a way for an administrator to visualize what's in the database, and make additions and adjustments to course relationships as needed. 
 
 <img src ="./course_enrollment.png" align ="middle" height="400px" width="800px">
 
