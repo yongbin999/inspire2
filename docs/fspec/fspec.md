@@ -33,8 +33,8 @@ I will help with designing programs, factoring and testing code. I will also hel
 +	Alternatively, students can choose self-verify(fee). This will archive their profile on our website like a "transcript". It will be useful for any type of job, internship, research, even college applications.
 
 
-Scenarios 
-=========
+##Scenarios 
+===============
 
 1. Joe is a computer science major at UMass Amherst and he has been so busy that he forgot to register for courses and he needs to do it quickly before more people can register and he won't be able to get a spot! He doesn't need to worry though because thanks to the new inSPIRE he can quickly compare the list of courses on the website. He can see details such as eligiblity, and which ones he needs to take inorder to complete his degree. Being able to see all of these on one convenient page will save Joe time and help him get in class before those pesky freshman get a chance to register.
 
@@ -51,4 +51,17 @@ Scenarios
 
 7. Melinda is a campus recruiter at Google. She comes across an application for a summer internship in her database and is mildly interested in hiring this student George, but she would like to know more about his academic background. Since inSPIRE is so awesome that it has been universally adopted as the standard student administration system, she goes to the public UMass inSPIRE page. She is able to look up that student profile and see that his course history. Reading the details of the course descriptions, Melinda has a good idea about the core skills that he had mastered. George filled out his optional bio section and attached links to his impressive personal webpage. Melinda said to her self, "He’s halfway hired!".
 
-8. Jean is entering her last semester at school and she still has 2 computer science electives that she needs to take, but she has no idea which courses would be more interesting to learn. She saw a cs500 class aviable to signup While looking through the reviews and thoughts from other students who had previously taken the course, after read though the comments, she decides that it won't help her careerpath, and she uses the students reviews to choose 2 other classes that she thinks are interesting.
+8. Jean is entering her last semester at school and she still has 2 computer science electives that she needs to take, but she has no idea what courses would be more interesting to learn. She saw a CS500 class avilable to signup. While looking through the reviews and thoughts from other students who had previously taken the course, she decides that this class won't help her in her careerpath. She continues searching for classes and reading students reviews, and finally found her ideal 2 elective classes.
+
+
+Non-Goals
+=========
+
+**High levels of Security** - This application is meant as an easy-to-use reference for courses, and a username and password are used only to help users easily access their data.  Therefore, no large security implementation will be used.
+
+Preliminary User Interface
+==========================
+
+<img src ="./mainpage.png" align ="middle" height="400px" width="800px"> 
+
+The main page is the page that the user will see once they log on. They will be able to go to their classes, see their gen ed requirements, view a course database, and log out. It will also display the courses they have previously taken, which ones they are taken, and have a quick and easy way to look for new courses.
