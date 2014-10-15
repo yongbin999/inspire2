@@ -78,7 +78,7 @@ Preliminary User Interface
 The flowchart above shows how the site is structured. The main page has multiple tabs, some of which are dropdown menus. The chart is color coded and differentiated by shapes, as denoted on the right.
 
 
-<img src ="./login.png" align ="middle" height="400px" width="800px"> 
+<img src ="./login.png" align ="middle" height="600px" width="800px"> 
 
 The login page is that page that the admin and user will see when they go to log on. They will input their username and password and be redirected back if they fail to login. Otherwise they will be redirected to the mainpage.
 
