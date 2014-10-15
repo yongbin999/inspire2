@@ -44,3 +44,5 @@ Scenarios
 
 4. Jane is attempting to look up what courses she needs to take next semester in order to graduate on time, but she is getting so frustrated while using spire! She wants to find out what courses she needs to take but there is no way to tell which ones she has the pre-requisites for without tediously searching through courses instead of hitting the back button. Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and how they all fit into the big picture.
 
+
+7. Melinda is a campus recruiter at Google. She comes across an application for a summer internship in her database and is mildly interested in hiring this student George Butler, but she would like to know more. Since inSPIRE is so awesome that it has been universally adopted as the standard student administration system, she goes to the public UMass inSPIRE page. She is able to look up that student and see that his course history consists of topics that are exactly the skills she is looking for. He has also filled out his optional bio section and attached links to his impressive personal webpage. He’s hired. 
