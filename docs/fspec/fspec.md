@@ -36,11 +36,11 @@ I will help with designing programs, factoring and testing code. I will also hel
 ##Scenarios 
 ===============
 
-1. Joe is a computer science major at UMass Amherst and he has been so busy that he forgot to register for courses and he needs to do it quickly before more people can register and he won't be able to get a spot! He doesn't need to worry though because thanks to the new inSPIRE he can quickly compare the list of courses on the website. From his basket of todo classes, he can see details such as eligiblity, and highlighted ones he must to take inorder to complete his degree/track. Being able to see all of these on one convenient page will save Joe time and help him get in class before those pesky freshman get a chance to register.
+1. Joe is a computer science major at UMass Amherst and he has been so busy that he forgot to register for courses and he needs to do it quickly before more people can register and he won't be able to get a spot! He doesn't need to worry anymore, because thanks to the new inSPIRE, he can quickly compare the list of courses on the website. From his basket of todo classes from his previous planning session, he can see details such as eligiblity, and highlighted classes that remind him he must to take inorder to complete his degree/track. Being able to see all of these info on one convenient page will save Joe time and help him get in class before those pesky freshman get a chance to register.
 
 2. It’s August and the new semester is right around the corner. The computer science department has decided to add a few new course offerings this year, and also update a couple prerequisites and requirement fulfillments that pertain to a couple existing classes. Bob is a UMass administrator in charge of updating this data on on the inSPIRE database. With ease he logs into the website, enters his authentication information, and pulls up a spreadsheet-like window displaying course information in a table. He locates CMPSCI326, scrolls over to the “prerequisites” column, and adds CMPSCI220 as a listed prerequisite. He then finds CMPSCI250, and adds that it now fulfills the G requirement, because it is clearly a class that promotes awareness of global diversity. Finally, to add a new course he clicks on the plus icon and fills out all of the relevant information for the new course CMPSCI999. By clicking "done", this item is painlessly added to the database. His job is done in 5 minutes, and he can go home and take it easy. 
 
-3. Jane is attempting to planning for courses she needs to take next semester in order to graduate on time, but she is getting so frustrated while using spire! She wants to find out what courses she needs to take but there is no way to tell which ones she has the pre-requisites for without tediously searching through each individual courses and then constantly hitting the back button. Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and selects her classes from the recommanded list.
+3. Jane is attempting to planning for courses that she needs to take next semester in order to graduate on time, but she is getting so frustrated while using Spire! The problem Spire is each course has an individual page, and you dont know the pre-reqs without tediously opening each individual page and constantly hitting the back button. By using  ones she is qualified given her completed pre-requisites.  Fortunately thanks to inSPIRE she can see which courses she qualifies to take next and selects her classes from the recommanded list.
 
 4. Cory and Derek are both general Computer Science majors. They are chatting about the requirements they need to fulfill the major. Derek tells Cory that they need to take 9 credits at the 400 level, or higher. Cory doesn't know any classes above the 400 level. He logs on to inSPIRE and goes to his requirements where it lists all the options for the 400+ level courses. He clicks on each of the classes, and a description comes up. The description tells him who teaches the class and provides a summary of the class. This helps Cory pick out 3 courses, and he's ready to cross these requirements off his list.
 
@@ -72,7 +72,13 @@ Open Issues
 
 Preliminary User Interface
 ==========================
-<img src ="./login.png" align ="middle" height="400px" width="800px"> 
+
+<img src ="./flowchart.png" align="middle" height="400px" width="800px">
+
+The flowchart above shows how the site is structured. The main page has multiple tabs, some of which are dropdown menus. The chart is color coded and differentiated by shapes, as denoted on the right.
+
+
+<img src ="./login.png" align ="middle" height="600px" width="800px"> 
 
 The login page is that page that the admin and user will see when they go to log on. They will input their username and password and be redirected back if they fail to login. Otherwise they will be redirected to the mainpage.
 
