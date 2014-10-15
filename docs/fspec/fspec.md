@@ -45,6 +45,5 @@ Scenarios
 
 6. Cory and Derek are both general Computer Science majors. They are chatting about the requirements they need to fulfill the major. Derek tells Cory that they need to take 9 credits at the 400 level, or higher. Cory doesn't know any classes above the 400 level. He logs on to inSPIRE and goes to his requirements where it lists all the options for the 400+ level courses. He clicks on each of the classes, and a description comes up. The description tells him who teaches the class and provides a summary of the class. This helps Cory pick out 3 courses, and he's ready to cross these requirements off his list.
 
-=======
 6. Bob is just a general computer science major going into his junior year, but he isn't sure what concentration he wants to go into. With inSPIRE he can look at the courses required for each subplan and then choose which one he thinks looks most interesting and start to plan his future semesters around that.
->>>>>>> 8a2c3bb5b464ec9d72aa3e7a44c452d20f3904b6
+
