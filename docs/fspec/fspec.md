@@ -20,7 +20,7 @@ I will help with designing programs, factoring and testing code. I will also hel
 
 ## Overview
 
-###### Core produc
+###### Core product
 +	Our main product is a class timeline application, where student can select and display the classes they would need to complete their degree.
 +	With this front end production, we can also introduce a product for the school/department admins to modify the class pre-reqs relationships.The admins would easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
 
