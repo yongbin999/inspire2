@@ -25,8 +25,8 @@ He will help with designing programs, factoring and testing code. He will also h
 +	With this front end production, we can also help the school/department admins modify classes' pre-reqs relationships. The admins would easily get an instant summary of student plans, which can help schedule ahead assignments of professors and classrooms. 
 
 ###### Social media 
-+	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
-+	Another aspect of social media we like to implement is student experiences, comments on the path of classes they took. This will be available to other and be rated/ranked. This will be useful for new students to read, it will be like getting advising from a former student's perspective, which is difficult to do for most new students. 
++	In addition to the timeline, we'd like to add a social media aspect to the application, where students can publish their class histories and plans on other websites, or as a link from their resumes.
++	Other social media functionalities we'd like to implement are student experiences and comments on the path of classes they took. They will be rated/ranked and made available to other students. This will be useful for new students to read, since it offers a service similar to getting advices from a former student, which is inaccessible for most new students. 
 
 ###### Services
 +	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the option to verify accuracy of the student profile.
