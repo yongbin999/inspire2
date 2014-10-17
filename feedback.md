@@ -11,7 +11,12 @@ http://smashingmagazine.com
 For back-end stuff, you might find the tutorials on this website cool / useful:
 http://scotch.io
 
+WHAT YOU WERE MISSING: Research into other applications that are similar, or at least shown that you've tried to search for already existing versions of your idea. Additionally, you guys also missed where you have to add who on the team wrote the sections.
+
+
 Great Job on the proposal and great job on the slides. Looking forward to seeing the finished produect. You've been fully funded; thumbs up!
+
+
 
 
 **Project 1** 
