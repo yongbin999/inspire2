@@ -29,8 +29,8 @@ He will help with designing programs, factoring and testing code. He will also h
 +	Other social media functionalities we'd like to implement are student experiences and comments on the path of classes they took. They will be rated/ranked and made available to other students. This will be useful for new students to read, since it offers a service similar to getting advices from a former student, which is inaccessible for most new students. 
 
 ###### Services
-+	3rd party companies and employeer can submit request(fee) for student verification to the school admins on our site. This will be noted in the terms of service, that anyone will have the option to verify accuracy of the student profile.
-+	Alternatively, students can choose self-verify(fee). This will archive their profile on our website like a "transcript". It will be useful for any type of job, internship, research, even college applications.
++	From our site, 3rd party companies and employers can submit requests (fee) for student qualification verification to the school admins. This will be noted in the terms of service that anyone will have an option to verify accuracy of the student profile.
++	On the other hand, students can choose to self-verify(fee). This will produce an archive their profile on our website, which functions as a "transcript". It will be useful for any type of jobs, internships, research, even college applications.
 
 
 ##Scenarios 
