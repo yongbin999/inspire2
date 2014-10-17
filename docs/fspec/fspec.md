@@ -14,15 +14,15 @@
 + Andrew will be most concerned with front-end work and the interface. The goal is to have a very easy to use and visually satisfying program that cooperates well with the back-end and database. 
 
 + Khanh's role will be to come up with our data modelling algorithm and database structure. He will be in charge of the way our data looks when being queried.
-I will help with designing programs, factoring and testing code. I will also help with debugging errors. My main focus is to make the app run more efficiently in term of both memory and time. Another goal is to revise code style to strengthen the maintainability aspect of the app.   
+He will help with designing programs, factoring and testing code. He will also help with debugging errors. His main focus is to make the app run more efficiently in term of both memory and time. Another goal is to revise code style to strengthen the maintainability aspect of the app.   
 
 + Josh's role will be maintaining the back-end designs, intergrration of the server/client, and database setup.
 
 ## Overview
 
 ###### Core product
-+	Our main product is a class timeline application, where student can select and display the classes they would need to complete their degree.
-+	With this front end production, we can also introduce a product for the school/department admins to modify the class pre-reqs relationships.The admins would easily get an estimate summary of total student plans, which can help them plan ahead in assigning professors and classrooms. 
++	Our main product is a class timeline application, where students can select and display classes needed to complete their degrees.
++	With this front end production, we can also help the school/department admins modify classes' pre-reqs relationships. The admins would easily get an instant summary of student plans, which can help schedule ahead assignments of professors and classrooms. 
 
 ###### Social media 
 +	To built on the student timeline application, we like to add in the social media aspect, where students can publish their class histories and plans on other websites, or as a link on their resume.
