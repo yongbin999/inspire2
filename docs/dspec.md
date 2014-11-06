@@ -23,7 +23,13 @@ login ->> admin
 
 #Components
 
-database
+database: 
+
+- Functionality: store students' information (username, password, student ID, course history), existing classes' information (prerequisites, term, instructor). Only admins can modify content of the database (add/remove classes, create users). 
+- Implementation: javascript module that includes methods to access the database:
++ add/remove/customized search user;
++ add/remove/customized search classes;
+
 
 server routes
 
@@ -31,3 +37,6 @@ client views
 
 
 #Challenges
+
+
+
