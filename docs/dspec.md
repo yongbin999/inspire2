@@ -14,8 +14,20 @@
 
 #Birds-eye View
 
+details of how it works
+login ->> main
+
+
+login ->> admin
+
 
 #Components
+
+database
+
+server routes
+
+client views
 
 
 #Challenges
