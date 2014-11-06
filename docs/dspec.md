@@ -14,11 +14,14 @@
 
 #Birds-eye View
 
-details of how it works
-login ->> main
+Login Page
+* If a User enters username/password and logs in:
+	* Routed to user main page
+		* Depending on what is selected, user can then be routed to 'Track My Courses', 'Track My Gen Ed Courses', 'My Schedule', 'Computer Science Course List', 'Settings', or 'Log out'(routes back to login page)
 
-
-login ->> admin
+* If an admin enters username/password and logs in:
+	* Routed to admin page
+		* Depending on what is selected, admin can then be routed to 'Create user', 'CS courses', or 'Log out'(routes back to login page)
 
 
 #Components
