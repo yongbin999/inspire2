@@ -26,7 +26,13 @@ Login Page
 
 #Components
 
-database
+database: 
+
+- Functionality: store students' information (username, password, student ID, course history), existing classes' information (prerequisites, term, instructor). Only admins can modify content of the database (add/remove classes, create users). 
+- Implementation: javascript module that includes methods to access the database:
++ add/remove/customized search user;
++ add/remove/customized search classes;
+
 
 server routes
 
@@ -34,6 +40,11 @@ client views
 
 
 #Challenges
+<<<<<<< HEAD
+
+
+
+=======
 - We have little experience with UI's and making it all look good could prove difficult
 - AJAX requests to populate shopping cart might be a pain to figure out
 - Avoiding procrastination
@@ -41,3 +52,4 @@ client views
 - Getting data for all the courses and tracks
 - How to make students and their data easy to keep track of and store
 - Dividing up work evenly and making it all work together on time
+>>>>>>> ee6a73f3f87746ad8d7f77c24776ea9fdcd4fb1d
