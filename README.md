@@ -14,6 +14,7 @@ In our docs/proposal directory, there is our written proposal both in the form o
 #Structure of the repository:   
 
 Main folders:   
+
 1. code:   
 2. docs:    
 + profile.md: summary of the project's goal and members' bios.
