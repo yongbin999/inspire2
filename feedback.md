@@ -1,3 +1,11 @@
+**Project 3**
+This was a great submission. You were very detailed in each section. I liked the extra explanation in your screen-by-screens. It seems you know what you want you do, so keep up the good work.
+
+I have noticed that Khanh, you have missed all group meetings; I recommend that you start going to them so I can better see your contributions to the group when it comes to developing the idea. So far it looks like you haven’t been apart of the development of the specifications and other documents. It is good to see you’ve contributed something to github though.
+
+Your team notes were detailed as well and everyones roles were clearly outlined. Overall, great submission.
+
+
 **Project 2** 
 ---
 I actually really like this idea. It's really useful. If you can get the design looking great and have your core features working properly, this could gain some traction with the students here.
