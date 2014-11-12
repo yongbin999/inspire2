@@ -40,13 +40,8 @@ server routes
 client views
 - User begins at a login page. After logging in the user is taken to the main page, at which point he/she can look at class schedules, GE requirements, degree paths, etc. Admin users will instead be taken to a page that allows them to view and update course offerings. 
 
-<<<<<<< HEAD
-#Challenges
-
-
-
-=======
 - Views will be .ejs files and navigation will be organised using express. Details such as drop down menus and other DOM manipulation will be handled in JQuery. We will use AJAX for features like adding classes to your "shopping cart" which require server requests without re-rendering the page. Visualization of degree paths and class schedules will be done using D3.js.
+
 
 #Challenges
 - We have little experience with UI's and making it all look good could prove difficult
@@ -57,4 +52,3 @@ client views
 - How to make students and their data easy to keep track of and store
 - Dividing up work evenly and making it all work together on time
 - Integrate jquery with ejs 
->>>>>>> 5e11c85f6b0eb4efb32ebd6d804a29a31296a558
