@@ -1,6 +1,6 @@
 var http = require('http');
 var url  = require('url');
-var m = require('./lib/db');
+var m = require('./db');
 var userData; //Stores all user data in one string
 var users; //Array that stores each user's data separately
 
