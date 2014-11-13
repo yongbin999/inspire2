@@ -54,3 +54,11 @@ client views
 - How to make students and their data easy to keep track of and store
 - Dividing up work evenly and making it all work together on time
 - Integrate jquery with ejs 
+
+#Who is doing what
+- Sam: Server
+- Yong: Database
+- Josh: Routes
+- Drew: Front-end views
+- Alex: Front-end functionality
+- Khanh: Graphic design
