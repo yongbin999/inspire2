@@ -16,9 +16,11 @@
 
 details of how it works
 login ->> main
+- The student logs in and is taken to a page where he/she sees a table showing the courses taken so far, currently, and planned to take in the future. There are also navigation tools for displaying gen ed requirements, class search, and current class schedule. This interacts with the server by pulling the appropriate data for the user that is signed in, in the form of JSON objects. Except for times of course enrollment, the student is mostly pulling data from the server and not pushing anything to the server.
 
 
 login ->> admin
+- The admin, on the other hand, has the power to adjust things and push data to the server and database. When an admin logs on her/she can see an entire list of courses offered and be able to make adjustments to any field, which update on the server (not dynamically, there will be a "submit changes" button). The admin can also pull and adjust student data for logging grades, fixing errors, etc. 
 
 
 #Components
