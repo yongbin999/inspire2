@@ -2,7 +2,7 @@
 
 
 #Revision History
-
+- Changing the "Login" tab to be the main page when you access the site.
 
 #External Libraries Used
 - Express.js to organize the routes and views
