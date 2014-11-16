@@ -10,11 +10,7 @@ function getAllUsers(callback) {
       callback(err);
     }
     else {
-      client.query('select U.uid, U.fname, U.lname, U.password, U.age, A.city, ' +
-              'A.aid, A.street, A.city, A.state, A.zipcode ' +
-          'from address A, users U, lives L ' +
-          'where U.uid = L.uid ' +
-            'and A.aid = L.aid;'
+      client.query('select * from students;'
           , function (err, result) {
         done();
         client.end();
