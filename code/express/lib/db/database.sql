@@ -14,6 +14,7 @@ drop table if exists lives;
 create type level as enum ('freshman', 'sophomore', 'junior', 'senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
 create type sem as enum ('Fall', 'Spring', 'Summer');
+create type offered as enum ('fall', 'spring', 'summer', 'fall/spring', 'fall/summer', 'spring/summer', 'fall/spring/summer');
 
 create table admins (
 	adminid varchar(16),
@@ -32,20 +33,16 @@ create table students (
 	primary key (id)
 );
 
-create table reportcard (
-	foreign key (id) references students,
-	foreign key (coursenumber) references offeredcourses,
-	coursegrade grade,
-);
-
 create table coursecatalog (
 	coursenumber int,
 	coursename varchar(50),
 	credits int,
 	prerequisites int, /*Make this other courses?*/
+	semestersoffered offered,
 	primary key (coursenumber)
 );
 
+/*Might not need this...*/
 create table offeredcourses (
 	foreign key (coursenumber) references coursecatalog,
 	capacity int,
@@ -55,6 +52,12 @@ create table offeredcourses (
 	semester sem,
 	year int,
 	primary key (coursenumber) /*Is this legal?*/
+);
+
+create table reportcards (
+	foreign key (id) references students,
+	foreign key (coursenumber) references offeredcourses,
+	coursegrade grade,
 );
 
 /*create table address (
@@ -75,13 +78,8 @@ create table lives (
 	unique(uid,aid)
 );*/
 
-/*insert into users values (1, 'John', 'Doe', 'xxxx', 27);
-insert into users values (2, 'Jane', 'Doe', 'yyyy', 28);
-insert into users values (3, 'Bill', 'Flood', 'aaaa', 29);
-insert into users values (4, 'Veb', 'Nordhagen', 'bbbb', 30);
-insert into users values (5, 'Hazel', 'Nutting', 'cccc', 4);
-insert into users values (6, 'Caleb', 'Manu', 'dddd', 7);
-insert into users values (7, 'Aiden', 'Hall', 'eeee', 19);*/
+insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
+insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
 
 insert into students values ('samfox', 'password', 'Sam', 'Fox', 'senior', 4.0);
 insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'junior', 4.0);
@@ -90,10 +88,18 @@ insert into students values ('joshbearor', 'password', 'Josh', 'Bearor', 'freshm
 insert into students values ('drewmarchetti', 'password', 'Drew', 'Marchetti', 'senior', 4.0);
 insert into students values ('khanhnguyen', 'password', 'Khanh', 'Nguyen', 'freshman', 4.0);
 
-insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
-insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
+insert into coursecatalog values (105, 'Computer Literacy', 3, 0, 'fall/spring/summer');
+insert into coursecatalog values (119, 'Introduction to Programming', 3, 0, 'fall/spring');	
+insert into coursecatalog values (121, 'Introduction to Problem Solving With Computers', 4, 0, 'fall/spring');
 
 
+/*insert into users values (1, 'John', 'Doe', 'xxxx', 27);
+insert into users values (2, 'Jane', 'Doe', 'yyyy', 28);
+insert into users values (3, 'Bill', 'Flood', 'aaaa', 29);
+insert into users values (4, 'Veb', 'Nordhagen', 'bbbb', 30);
+insert into users values (5, 'Hazel', 'Nutting', 'cccc', 4);
+insert into users values (6, 'Caleb', 'Manu', 'dddd', 7);
+insert into users values (7, 'Aiden', 'Hall', 'eeee', 19);*/
 
 /*insert into address values (1, '1 mallard drive', 'cambridge', 'MA', '34567');
 insert into address values (2, '21 jump street', 'new york', 'NY', '98765');
