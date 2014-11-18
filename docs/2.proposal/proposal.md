@@ -1,5 +1,4 @@
 # inSPIRE 
-<img src ="../inspire logo.jpg" width =30% align ="middle"> 
 ###### 'A Trail For Success'
 
 
