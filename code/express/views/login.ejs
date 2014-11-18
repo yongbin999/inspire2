@@ -1,18 +1,19 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-<div class="box">
-</div>
-<div class="login">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div><%= message %></div><br>
+
     <form method="post" action="/user/auth">
-      <input type="text" name="username" placeholder="Username"> <br>
-<p></p>      
-<input type="password" name="password" placeholder="Password"> <br>
+      User Name: <input type="text" name="username"> <br>
+      Password:  <input type="password" name="password"> <br>
       <button>Login</button>
     </form>
-</div>
   </body>
 </html>

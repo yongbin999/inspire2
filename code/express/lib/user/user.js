@@ -9,6 +9,7 @@ function User(username, password, uid,type) {
   this.isAdmin = (type || false);
 }
 var userid = 5;
+var online = {};
 
 // This is our stub database until we look at a real database!
 var userdb = [

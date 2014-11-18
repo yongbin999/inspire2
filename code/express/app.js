@@ -16,10 +16,18 @@ var cookieParser	= require('cookie-parser');
 var bodyParser		= require('body-parser');
 
 // Our user-defined routes/middleware:
-var users		= require('./routes/users');
+var users	= require('./routes/users');
 var admin       = require('./routes/admin');
+var home       = require('./routes/home');
+
 // Create the express application:
 var app			= express();
+
+
+
+
+
+
 
 // Setup the view engine:
 app.set('views', path.join(__dirname, 'views'));
@@ -47,10 +55,10 @@ app.use(flash());
 // Using our routes/middleware:
 app.use('/user', users);
 app.use('/admin', admin);  // <<<added
+app.use('/', home);
 
-app.get('/', function (req, res) {
-  res.redirect('/user/login');
-});
+//app.get('/', function (req, res) {
+//  res.redirect('/login');});
 
 
 
