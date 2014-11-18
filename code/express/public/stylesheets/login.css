@@ -1,0 +1,19 @@
+.login{
+  text-align:center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#881c1c;
+  padding:7%;
+}
+
+.login > input{
+  padding: 5px;
+  text-align:center;
+  background-color:white;
+}
+
+body{
+  background-color:#333;
+}
