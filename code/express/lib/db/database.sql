@@ -48,7 +48,7 @@ create table offeredcourses (
 create table reportcards (
 	foreign key (id) references students,
 	foreign key (coursenumber) references offeredcourses,
-	coursegrade grade,
+	coursegrade grade
 );
 
 insert into admins values ('timrichards', 'password', 'Tim', 'Richards');

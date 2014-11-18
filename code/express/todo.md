@@ -2,14 +2,18 @@
 updates needed in the /lib/db
 need to gather data for the list of classes with prereq, offer term,
 
-create db in prosgress, 
+create db in prosgress, - how to treat 2 prereq and ++ prereq
 create query to retrieve data, and export the methods as module.
 
+do we need to use callbacks on all methods?
+what about methods that only the server will use.
 
 
 
 
 updates needed in the /views
+
+bootstrap?
 
 improve the design views using jquery, ajex frams, and javascipts
 ?use js to include the logo / top menu bar into every ejs
