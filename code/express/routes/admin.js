@@ -4,7 +4,7 @@ var router = express.Router();
 var userlib = require('../lib/user');
 
 // A logged in "database":
-var online = {};
+var online = userlib.online;
 
 // # User Server-Side Routes
 
@@ -16,12 +16,12 @@ var user = req.session.user;
 
   if (user === undefined) {
     req.flash('auth', 'Not logged in!');
-    res.redirect('/user/login');
+    res.redirect('/login');
   }
 	else if (user.isAdmin === true){
     	res.render('admin', { title   : 'admin page',
-                         	    users : user, 
-				         message : 'admins route'});
+                         	users : user, 
+				message : 'admins route'});
 	}
 
 	});

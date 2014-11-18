@@ -57,8 +57,6 @@ app.use('/user', users);
 app.use('/admin', admin);  // <<<added
 app.use('/', home);
 
-//app.get('/', function (req, res) {
-//  res.redirect('/login');});
 
 
 

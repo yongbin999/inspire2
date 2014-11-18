@@ -19,12 +19,16 @@ router.get('/login', function(req, res){
   // and the `online[userid]` are undefined. The reason is that
   // the cookie may still be stored on the client even if the
   // server has been restarted.
-  if (user !== undefined && online[user.uid] !== undefined) {
+  if (user !== undefined && userlib.checkonline(user.username) !== undefined) {
+	if (user.isAdmin === true){
+      	req.flash('auth', 'admin' );
+      	res.redirect('/admin');
+      	}
     res.redirect('/user/main');
   }
   else {
     // Render the login view if this is a new login.
-    res.render('login', { title   : 'User Login',
+    res.render('login', { title   : 'Login Page',
                           message : authmessage });
   }
 });
@@ -36,7 +40,11 @@ router.post('/auth', function(req, res) {
   var user = req.session.user;
 
   // TDR: do the check as described in the `exports.login` function.
-  if (user !== undefined && online[user.uid] !== undefined) {
+  if (user !== undefined && userlib.checkonline(user.username) !== undefined) {
+	if (user.isAdmin === true){
+      	req.flash('auth', 'admin' );
+      	res.redirect('/admin');
+      	}
     res.redirect('/user/main');
   }
   else {
@@ -54,7 +62,7 @@ router.post('/auth', function(req, res) {
       else {
         req.session.user = user;
         // Store the user in our in memory database.
-        userlib.online[user.uid] = user;
+        userlib.addonline(user);
         // Redirect to main.
         res.redirect('/user/main');
       }
@@ -67,14 +75,14 @@ router.post('/auth', function(req, res) {
 // Deletes user info & session - then redirects to login.
 router.get('/logout', function(req, res) {
   var user = req.session.user;
-  if (user === undefined || online[user.uid] === undefined) {
+  if (user === undefined || userlib.checkonline(user.username) === undefined) {
     req.flash('auth', 'Not logged in!');
     res.redirect('/login');
     return;
   }
 
-  if (userlib.online[user.uid] !== undefined) {
-    delete online[user.uid];
+  if (userlib.checkonline(user.username) !== undefined) {
+    //delete userlib.online[user.uid];
   }
 
   delete req.session.user;
@@ -84,13 +92,7 @@ router.get('/logout', function(req, res) {
 // ## main
 // The main user view.
 router.get('/', function(req, res) {
-  // TDR: added session support
-  var user = req.session.user;
-  if (user === undefined) {
-    req.flash('auth', 'Not logged in!');
-	user = 'public';
-  }
-      	    res.render('homeview', { title   : 'Homepage',
+      	    res.render('homepage', { title   : 'Homepage',
                                message : 'Welcome to inSpire'
                                });
  

@@ -1,5 +1,9 @@
 // # User Library
 
+var userid = 5; //default should update
+var online = {};
+
+
 // ## User Objects
 function User(username, password, uid,type) {
   this.username = username;
@@ -8,8 +12,6 @@ function User(username, password, uid,type) {
   this.uid      = uid;
   this.isAdmin = (type || false);
 }
-var userid = 5;
-var online = {};
 
 // This is our stub database until we look at a real database!
 var userdb = [
@@ -19,6 +21,23 @@ var userdb = [
   new User('admin', 'admin', 4,true),
   new User('yong', 'yong', 5,true)
 ];
+
+exports.addonline = function(username) {
+  var len = online.length;
+  online[username.id] = username;
+
+}
+exports.checkonline = function(username) {
+  var existed = false;
+      for(var id in online){
+        if (online[id].username === username){
+          existed = true;
+	return username;
+        }
+      }
+	return undefined;
+}
+
 
 // need to add user to the db temp
 exports.adduser = function(username, password, admintype, cb) {
@@ -70,6 +89,29 @@ exports.lookup = function(username, password, cb) {
     }
   }
   cb('user not found');
+}
+
+exports.useronline = function(username, cb) {
+  var len = online.length;
+  for (var i = 0; i < len; i++) {
+    var u = online[i];
+    if (u.username === username) {
+        cb(undefined, u);
+      return;
+    }
+  }
+  cb('user not online');
+}
+
+
+exports.onlinelist = function(cb){
+  var onlinelist= {};
+  var id = 0;
+  for(var userid in online) {
+               onlinelist[id] = online[userid];
+               id++;
+    }
+    cb(onlinelist);
 }
 
 exports.adminlist = function(cb){
