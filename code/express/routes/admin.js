@@ -27,39 +27,19 @@ var user = req.session.user;
 	});
 
 
-// create new user
-
-router.post('/newuser', function(req, res) {
-  var user = req.session.user;
-
-  // TDR: do the check as described in the `exports.login` function.
-  if (user !== undefined && user.isAdmin === true) {
-    var username = req.body.username;
-    var password = req.body.password;
-    var admintype = req.body.admintype;
-    // Perform the user lookup. now its add
-    userlib.adduser(username, password, admintype, function(error, user) {
-	   
-      if(error){
-        res.render('schooladmin/admin', { title   : 'Admin page',
-                              users : user, 
-                              message :  error});
-      }
-      else{
-      res.render('schooladmin/admin', { title   : 'Admin page',
-                              users : user, 
-                              message : 'User ' +username + ' user created! ' +
-                              'logout and relogin with the new login info.'});
-      }
-      });
-  }
-  else{
-	req.flash('auth', 'You are not admin!');
-    	res.redirect('/user/main');
-  }
+router.post('/newgroup', function(req, res) {
   
-  
+    var groupname = req.body.groupname;
+    var parentgroup = req.body.parentgroup;
+var user = req.session.user ||username;
+
+        res.render('schooladmin/admin', { title   : 'not implemented yet',
+                              users : user, 
+                              message :  'error or not setup yet'});
+      
 });
+
+
 
 
 

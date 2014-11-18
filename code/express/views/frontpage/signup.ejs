@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+<div><%= message %></div><br>
+
+<p>Signup for a new users </p>
+<form method="post" action="/signup/newuser">
+      User Name: <input type="text" name="username"> <br>
+      Password :<input type="password" name="password"> <br>
+      Admin User?:<input type="checkbox" name="admintype" value ="true"> <br>
+	School/Org Name: <input type="text" name="orgname"> <br>
+      <button>Create User</button>
+    </form>
+
+  </body>
+</html>

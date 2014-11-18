@@ -55,7 +55,7 @@ router.post('/auth', function(req, res) {
     userlib.lookup(username, password, function(error, user) {
       if (error) {
         // If there is an error we "flash" a message to the
-        // redirected route `/user/login`.
+        // redirected route `/login`.
         req.flash('auth', error);
         res.redirect('/login');
       }
@@ -91,6 +91,39 @@ router.get('/logout', function(req, res) {
   res.redirect('/login');
 });
 
+
+router.get('/signup', function(req, res) {
+      	    res.render('frontpage/signup', { title   : 'Homepage',
+                               message : 'Sign up for an account today!'
+                               });
+});
+
+
+// signup new user
+router.post('/signup/newuser', function(req, res) {
+  
+    var username = req.body.username;
+    var password = req.body.password;
+    var admintype = req.body.admintype;
+    var schoolorg = req.body.schoolorg;
+var user = req.session.user ||username;
+
+    // Perform the user lookup. now its add
+    userlib.adduser(username, password, admintype, function(error, user) {
+      if(error){
+        res.render('frontpage/signup', { title   : 'Check your inputs again',
+                              users : user, 
+                              message :  error});
+      }
+      else{
+      	req.flash('auth', 'Thank You! Your account ' + username + 
+			' had been created! Please login with your info');
+    	res.redirect('/login');
+      }
+
+      });  
+  
+});
 
 
 
