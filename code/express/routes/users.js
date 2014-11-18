@@ -20,24 +20,19 @@ var userlib = require('../lib/user');
 router.get('/main', function(req, res) {
   // TDR: added session support
   var user = req.session.user;
-  if (user === undefined && userlib.checkonline(user.username) !== undefined) {
+  if (user === undefined) {
     req.flash('auth', 'Not logged in!');
     res.redirect('../login');
   }
   else {
       	if (user.isAdmin === true){
-      	req.flash('auth', 'You have logged out of admin' );
+      	req.flash('auth', 'admin' );
       	res.redirect('../admin');
-      	//res.render('admin', { title   : 'admin Main',
-              //                 message : 'Welcome Admin',
-              //                 username : user.username,
-              //                 password : user.password });
-      	}
+	}
       	else{
-      	    res.render('main', { title   : 'User Main',
+      	    res.render('student/main', { title   : 'User Main',
                                message : 'Login Successful',
-                               username : user.username,
-                               password : user.password });
+                               username : user.username });
       	}
   }
 });
@@ -54,7 +49,7 @@ router.get('/online', function(req, res) {
     	if (onlines){
           onlinelist = onlines;
 
-          res.render('online', { title : 'Users Online',
+          res.render('student/online', { title : 'Users Online',
                       adminlist: adminlist,
                          users : onlinelist });
         }

@@ -28,7 +28,7 @@ router.get('/login', function(req, res){
   }
   else {
     // Render the login view if this is a new login.
-    res.render('login', { title   : 'Login Page',
+    res.render('frontpage/login', { title   : 'Login Page',
                           message : authmessage });
   }
 });
@@ -83,16 +83,22 @@ router.get('/logout', function(req, res) {
 
   if (userlib.checkonline(user.username) !== undefined) {
     //delete userlib.online[user.uid];
+
+// not sure how does thus work??
   }
 
   delete req.session.user;
   res.redirect('/login');
 });
 
+
+
+
+
 // ## main
 // The main user view.
 router.get('/', function(req, res) {
-      	    res.render('homepage', { title   : 'Homepage',
+      	    res.render('frontpage/homepage', { title   : 'Homepage',
                                message : 'Welcome to inSpire'
                                });
  

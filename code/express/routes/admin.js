@@ -19,7 +19,7 @@ var user = req.session.user;
     res.redirect('/login');
   }
 	else if (user.isAdmin === true){
-    	res.render('admin', { title   : 'admin page',
+    	res.render('schooladmin/admin', { title   : 'admin page',
                          	users : user, 
 				message : 'admins route'});
 	}
@@ -41,12 +41,12 @@ router.post('/newuser', function(req, res) {
     userlib.adduser(username, password, admintype, function(error, user) {
 	   
       if(error){
-        res.render('admin', { title   : 'Admin page',
+        res.render('schooladmin/admin', { title   : 'Admin page',
                               users : user, 
                               message :  error});
       }
       else{
-      res.render('admin', { title   : 'Admin page',
+      res.render('schooladmin/admin', { title   : 'Admin page',
                               users : user, 
                               message : 'User ' +username + ' user created! ' +
                               'logout and relogin with the new login info.'});

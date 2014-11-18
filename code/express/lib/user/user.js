@@ -28,6 +28,9 @@ exports.addonline = function(username) {
 
 }
 exports.checkonline = function(username) {
+	if(username === undefined){
+		return undefined;
+	}
   var existed = false;
       for(var id in online){
         if (online[id].username === username){

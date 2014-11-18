@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+	<a href="../user/online"> click to see online user list</a>
+    
+
+<div><%= message %></div><br>
+
+<p>Create a new users </p>
+<form method="post" action="/admin/newuser">
+      User Name: <input type="text" name="username"> <br>
+      Password :<input type="password" name="password"> <br>
+      Admin User?:<input type="checkbox" name="admintype" value ="true"> <br>
+      <button>Create User</button>
+    </form>
+
+<br>
+<a href="../logout"> click here to logout</a>
+
+  </body>
+</html>
