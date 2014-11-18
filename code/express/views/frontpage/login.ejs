@@ -5,15 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <div><%= message %></div><br>
-
+<div class = "login">
     <form method="post" action="/auth">
-      User Name: <input type="text" name="username"> <br>
-      Password:  <input type="password" name="password"> <br>
+      <input type="text"  placeholder="Username"> <br>
+      <input type="password" placeholder="Password"> <br>
       <button>Login</button>
     </form>
+    </div>
   </body>
 </html>
