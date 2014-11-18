@@ -5,18 +5,16 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+	<img src ="../images/inspire logo.jpg" width =25% align ="middle"> 
+
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-	<p>hi user! </p>
-	<a href="../user/online"> online user list</a>
-
-
+	<p>hi user <%= username %>! </p>
+	<a href="../user/online"> Here is a current list of online users</a>
+	<br>
 
     <div><%= message %></div><br>
-
-    <p>username: <%= username %></p>
-    <p>password: <%= password %></p>
 	
 <a href="../user/logout"> click here to logout</a>
   </body>
