@@ -2,15 +2,6 @@ drop table if exists students;
 drop table if exists address;
 drop table if exists lives;
 
-/*create table users (
-  uid SERIAL,
-  fname varchar(50),
-  lname varchar(50),
-  password varchar(25),
-  age int,
-  primary key (uid)
-  );*/
-
 create type level as enum ('freshman', 'sophomore', 'junior', 'senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
 create type sem as enum ('Fall', 'Spring', 'Summer');
@@ -60,6 +51,29 @@ create table reportcards (
 	coursegrade grade,
 );
 
+insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
+insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
+
+insert into students values ('samfox', 'password', 'Sam', 'Fox', 'senior', 4.0);
+insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'junior', 4.0);
+insert into students values ('alexrevello', 'password', 'Alex', 'Revello', 'sophomore', 4.0);
+insert into students values ('joshbearor', 'password', 'Josh', 'Bearor', 'freshman', 4.0);
+insert into students values ('drewmarchetti', 'password', 'Drew', 'Marchetti', 'senior', 4.0);
+insert into students values ('khanhnguyen', 'password', 'Khanh', 'Nguyen', 'freshman', 4.0);
+
+insert into coursecatalog values (105, 'Computer Literacy', 3, 0, 'fall/spring/summer');
+insert into coursecatalog values (119, 'Introduction to Programming', 3, 0, 'fall/spring');	
+insert into coursecatalog values (121, 'Introduction to Problem Solving With Computers', 4, 0, 'fall/spring');
+
+/*create table users (
+  uid SERIAL,
+  fname varchar(50),
+  lname varchar(50),
+  password varchar(25),
+  age int,
+  primary key (uid)
+  );*/
+
 /*create table address (
 	aid SERIAL,
 	street varchar(100),
@@ -78,19 +92,6 @@ create table lives (
 	unique(uid,aid)
 );*/
 
-insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
-insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
-
-insert into students values ('samfox', 'password', 'Sam', 'Fox', 'senior', 4.0);
-insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'junior', 4.0);
-insert into students values ('alexrevello', 'password', 'Alex', 'Revello', 'sophomore', 4.0);
-insert into students values ('joshbearor', 'password', 'Josh', 'Bearor', 'freshman', 4.0);
-insert into students values ('drewmarchetti', 'password', 'Drew', 'Marchetti', 'senior', 4.0);
-insert into students values ('khanhnguyen', 'password', 'Khanh', 'Nguyen', 'freshman', 4.0);
-
-insert into coursecatalog values (105, 'Computer Literacy', 3, 0, 'fall/spring/summer');
-insert into coursecatalog values (119, 'Introduction to Programming', 3, 0, 'fall/spring');	
-insert into coursecatalog values (121, 'Introduction to Problem Solving With Computers', 4, 0, 'fall/spring');
 
 
 /*insert into users values (1, 'John', 'Doe', 'xxxx', 27);
