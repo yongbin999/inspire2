@@ -1,20 +1,15 @@
 var url = require('url');
 var http = require('http');
 
-if (process.argv.length < 2) {
-  console.log('usage: node inspire-client.js [url]');
-  process.exit(1);
-}
-
 // The url to connect to:
 var urlStr = process.argv[2] || 'http://localhost:3000';
 
-var url = url.parse(urlStr);
+var u = url.parse(urlStr);
 
 var options = {
-    host: url.hostname,
-    path: url.path,
-    port: url.port || 80,
+    host: u.hostname,
+    path: u.path,
+    port: u.port || 80,
     method: 'GET'
   };
 
@@ -29,7 +24,6 @@ function createResponseHandler (callback) {
       callback(str);
     });
   }
-
   return responseHandler;
 }
 
@@ -40,6 +34,7 @@ var handler = createResponseHandler(function (data) {
 
 console.log(' --> connecting to ' + options.host + ' on port ' + options.port);
 console.log(' --> resource ' + options.path);
+
 var req = http.request(options, handler);
 console.log('\n\nmade it here\n\n');
 req.end();

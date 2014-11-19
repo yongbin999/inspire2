@@ -40,14 +40,8 @@ function cacheTheData(err, data) {
   }
 }
 
-if (process.argv.length < 2) {
-  console.log('usage: node inspire-server.js');
-  process.exit(1);
-}
-
 var server = http.createServer(usersHandler);
 m.getAllUsers(printStuff);
 
-
-server.listen(4000);
+server.listen(3000);
 console.log('Server is listening!');
