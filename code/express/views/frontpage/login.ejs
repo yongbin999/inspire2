@@ -5,10 +5,14 @@
     <link rel='stylesheet' href='/stylesheets/login.css' />
   </head>
   <body>
+
 <div class = "login">
+<h3>Welcome to <%= title %></h3>		
+<p><div><%= message %></div></p>
+
     <form method="post" action="/auth">
-      <input type="text"  placeholder="Username"> <br>
-      <input type="password" placeholder="Password"> <br>
+      <input type="text"  placeholder="Username" name="username"> <br>
+      <input type="password" placeholder="Password" name="password"> <br>
       <button>Login</button>
     </form>
     </div>

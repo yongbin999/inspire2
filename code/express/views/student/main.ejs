@@ -8,21 +8,29 @@
 <div id="one">
   <ul id="tabs">
     <li>
-      <a href = "../class">
-        My Classes
+      <a href = "../">
+        Homepage
       </a>
     </li>
     <li>
-      <a href = "../geneds">
+      <a href = "class">
+        My Classes
+      </a>
+    </li>
+
+    <li>
+      <a href = "geneds">
         GenEd Requirements
       </a>
     </li>
    </ul>
 </div>
+
+
 <div id="two">
    <ul id="tabs2">
     <li>
-      <a href = "../courses">
+      <a href = "courses">
         Courses
       </a>
     </li>
@@ -34,16 +42,19 @@
   </ul>
 </div>
 
-  <img src ="../images/inspirelogo.jpg" width =25% align ="middle"> 
+<div id="header_image">
+  <img src ="images/inspirelogo.jpg" width =5% align ="middle"> 
+</div>
 
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-  <p>hi user <%= username %>! </p>
+<div id='login_message'><%= message %></div>
+  <p> Hi user <%= username %>! </p>
   <a href="../user/online"> Here is a current list of online users</a>
   <br>
 
-    <div><%= message %></div><br>
+    <br>
   
 <a href="../logout"> click here to logout</a>
   </body>
