@@ -24,6 +24,16 @@ For front-end stuff, you might find the tutorials on these websites cool / usefu
 http://tympanus.net/codrops/category/tutorials/
 http://smashingmagazine.com
 
+admin stats view drag drop tables - big data
+https://my.infocaptor.com/free_data_visualization.php
+
+tree map hierarchy
+http://bl.ocks.org/robschmuecker/7880033 <zoom inout
+http://mbostock.github.io/d3/talk/20111018/tree.html < simple
+http://bl.ocks.org/mbostock/2966094 <basic
+
+drag drop recognition
+http://bl.ocks.org/mbostock/929623
 
 
 
