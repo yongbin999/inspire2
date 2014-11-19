@@ -49,15 +49,16 @@ create table prerequisites (
 create table offeredcourses (
 	year int,
 	semester sem,
-	foreign key (coursenumber) references coursecatalog,
+	coursenumber int
+	/*foreign key (coursenumber) references coursecatalog
 	capacity int,
 	enrolled int,
-	instructor varchar(50)
+	instructor varchar(50)*/
 );
 
 create table reportcards (
-	foreign key (id) references students,
-	foreign key (coursenumber) references coursecatalog,
+	/*foreign key (id) references students,
+	foreign key (coursenumber) references coursecatalog,*/
 	coursegrade grade
 );
 
@@ -79,10 +80,10 @@ insert into coursecatalog values (187, 'Programming with Data Structures', 'You 
 insert into prerequisites values (187, 105);
 insert into prerequisites values (187, 119);
 
-insert into offeredcourses values (2014, 'Fall', 105, 200, 150, 'Verts');
+/*insert into offeredcourses values (2014, 'Fall', 105, 200, 150, 'Verts');
 insert into offeredcourses values (2014, 'Fall', 119, 120, 91, 'Verts');
 insert into offeredcourses values (2014, 'Fall', 121, 165, 165, 'Anderson, Moll');
 insert into offeredcourses values (2014, 'Fall', 187, 60, 57, 'Barrington');
 
 insert into reportcards values ('samfox', 187, 'F');
-insert into reportcards values ('samfox', 121, 'B+');
+insert into reportcards values ('samfox', 121, 'B+');*/
