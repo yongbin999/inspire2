@@ -1,17 +1,31 @@
 var http = require('http');
 var url  = require('url');
 var m = require('./db');
-var userData;
-var users;
 
-function usersHandler(request, response) {
-  console.log('recieved a request\n');
+function handler(request, response) {
+  console.log('recieved a request');
+
+  //Extract the filepath
+  var path = url.parse(request.url).pathname;
+
   response.writeHead(200, { 'Content-Type' : 'text/json' });
   response.write('Got your request!\n');
-  response.end();
+
+  //Return all students
+  if(path === '/students/all') {
+    m.getAllStudents(function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+        response.write(data);
+      }
+      response.end();
+    });
+  }
 }
 
-//Used as a callback for testing purposes
+//callback for testing purposes
 function printStuff(err, data) {
   if(err) {
     console.log(err);
@@ -21,27 +35,6 @@ function printStuff(err, data) {
   }
 }
 
-//Callback for the getAllUsers module function
-function cacheTheData(err, data) {
-  if(err) {
-    console.log(err);
-  }
-  else {
-    //Set global variable to the data returned from module
-    userData = data;
-    //Split out each user's data into array elements
-    users=userData.split('},');
-    //A couple little fix-ups to make all of the strings uniform...
-    users[0] = users[0].substring(1, users[0].length);
-    users[users.length-1].substring(0, users[users.length-1].length-1);
-    for(var i=0; i<users.length-1; i++) {
-      users[i] += '}';
-    }
-  }
-}
-
-var server = http.createServer(usersHandler);
-m.getAllUsers(printStuff);
-
+var server = http.createServer(handler);
 server.listen(3000);
 console.log('Server is listening!');

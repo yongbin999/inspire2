@@ -2,7 +2,7 @@ var url = require('url');
 var http = require('http');
 
 // The url to connect to:
-var urlStr = process.argv[2] || 'http://localhost:3000';
+var urlStr = process.argv[2] || 'http://localhost:3000/students/all';
 
 var u = url.parse(urlStr);
 
@@ -28,7 +28,6 @@ function createResponseHandler (callback) {
 }
 
 var handler = createResponseHandler(function (data) {
-    console.log('IT WOKED\n\n');
     console.log(data);
 });
 
@@ -36,7 +35,5 @@ console.log(' --> connecting to ' + options.host + ' on port ' + options.port);
 console.log(' --> resource ' + options.path);
 
 var req = http.request(options, handler);
-console.log('\n\nmade it here\n\n');
 req.end();
-console.log('WOOO\n\n');
 
