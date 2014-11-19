@@ -1,5 +1,5 @@
-drop table if exists students;
-drop table if exists coursecatalog;
+drop table if exists students cascade;
+drop table if exists coursecatalog cascade;
 drop table if exists admins;
 drop table if exists prerequisites;
 drop table if exists offeredcourses;
@@ -8,7 +8,7 @@ drop table if exists reportcards;
 drop type if exists level; 
 drop type if exists grade;
 drop type if exists sem;
-drop type if exists offered;
+drop type if exists offered cascade;
 
 create type level as enum ('Freshman', 'Sophomore', 'Junior', 'Senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
@@ -23,7 +23,7 @@ create table admins (
 );
 
 create table students (
-	id varchar(16),
+	id varchar(25),
 	password varchar(25),
 	firstname varchar(50),
 	lastname varchar(50),
@@ -49,16 +49,18 @@ create table prerequisites (
 create table offeredcourses (
 	year int,
 	semester sem,
-	coursenumber int
-	/*foreign key (coursenumber) references coursecatalog
+	coursenumber int,
+	foreign key (coursenumber) references coursecatalog,
 	capacity int,
 	enrolled int,
-	instructor varchar(50)*/
+	instructor varchar(50)
 );
 
 create table reportcards (
-	/*foreign key (id) references students,
-	foreign key (coursenumber) references coursecatalog,*/
+	id varchar(25),
+	coursenumber int,
+	foreign key (id) references students,
+	foreign key (coursenumber) references coursecatalog,
 	coursegrade grade
 );
 
