@@ -4,8 +4,15 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/studentmain.css' />
   </head>
+
   <body>
-<div id="one">
+
+<div id="header_image">
+  <img src ="images/inspirelogo.jpg" width =10%> 
+</div>
+
+
+<div id="menuleft">
   <ul id="tabs">
     <li>
       <a href = "../">
@@ -23,15 +30,21 @@
         GenEd Requirements
       </a>
     </li>
+    <li>
+      <a href = "courses">
+        List of courses
+      </a>
+    </li>
+
    </ul>
 </div>
 
 
-<div id="two">
-   <ul id="tabs2">
+<div id="menuright">
+   <ul id="tabs">
     <li>
-      <a href = "courses">
-        Courses
+      <a href = "settings">
+        Settings
       </a>
     </li>
     <li>
@@ -42,20 +55,20 @@
   </ul>
 </div>
 
-<div id="header_image">
-  <img src ="images/inspirelogo.jpg" width =5% align ="middle"> 
-</div>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<p>
+<h1>Welcome to the Student Homepage</h1>
+<h3>
+<br>   <%= message %>. Hi user <%= username %>!
+<br>   Here we have links to all the info that students will use to help plan your classes for the next few semesters.
+</h3>
+</p>
 
-<div id='login_message'><%= message %></div>
-  <p> Hi user <%= username %>! </p>
+
   <a href="../user/online"> Here is a current list of online users</a>
   <br>
-
-    <br>
+<br>
   
-<a href="../logout"> click here to logout</a>
+<a href="tutorial"> click here to see a tutorial of how this site works</a>
   </body>
 </html>
