@@ -34,7 +34,12 @@
   <% var b = 0 %>
       <% for(var userid in users) { %>
        <% if (users[userid].isAdmin != true){ %>
-          <li><%= users[userid].username %></li>
+		<% if (requser === users[userid].username){%>
+          	<li><%= users[userid].username + " <<<"%></li>
+		<% }%>
+		<% if (requser !== users[userid].username){%>
+		<li><%= users[userid].username %></li>
+		<% }%>
       <% b++ %>
   <% } %>
       <% } %>
