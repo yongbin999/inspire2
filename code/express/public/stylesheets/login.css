@@ -1,3 +1,20 @@
+body {
+font-size: 80%; 
+font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;   
+background-color:#333; 
+color:#FFFAFA; //text <<
+	margin: 1%;
+	padding: 1;
+}
+
+<style>
+a:link    {color:#00BFFF; background-color:transparent; text-decoration:none}
+a:visited {color:#00BFFF; background-color:transparent; text-decoration:none}
+a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
+a:active  {color:#ff0000; background-color:transparent; text-decoration:underline}
+</style>
+
+
 .login{
   text-align:center;
   position: fixed;
@@ -12,8 +29,4 @@
   padding: 5px;
   text-align:center;
   background-color:white;
-}
-
-body{
-  background-color:#333;
 }

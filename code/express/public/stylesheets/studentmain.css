@@ -1,20 +1,12 @@
 
-body {font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;   background-color:#333; color:#FFFAFA;}
-<style>
-a:link    {color:#00BFFF; background-color:transparent; text-decoration:none}
-a:visited {color:#00BFFF; background-color:transparent; text-decoration:none}
-a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
-a:active  {color:#ff0000; background-color:transparent; text-decoration:underline}
-</style>
 
+//later in their settings load their own styles.
+defaults styles will be in teh style.css
 
 
 // tabs styles
 div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
 div.tabContent.hide { display: none; }
-
-#menuleft{position:fixed; top:30px; left:10px;}
-#menuright{position:fixed; top:30px; right:10px;}
 
 ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
 ul#tabs li { display: inline;}

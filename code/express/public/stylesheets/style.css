@@ -1,25 +1,22 @@
-body {font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;   background-color:#333; color:#FFFAFA;}
+body {
+font-size: 80%; 
+font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;   
+background-color:#333; 
+color:#FFFAFA; //text <<
+	margin: 1%;
+	padding: 1;
+}
+
+
+#header_image{position:fixed; top:2%; width:150px;}
+#header_menu{position:fixed; top:8%;}
+#menuleft{position:fixed; }
+#menuright{position:fixed;  right:1%;}
+#content{position:fixed; top:15%;}
+
 <style>
 a:link    {color:#00BFFF; background-color:transparent; text-decoration:none}
 a:visited {color:#00BFFF; background-color:transparent; text-decoration:none}
 a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
 a:active  {color:#ff0000; background-color:transparent; text-decoration:underline}
 </style>
-
-//login box colors
-.login{
-  text-align:center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color:#881c1c;
-  padding:5%;
-}
-
-.login > input{
-  padding: 5px;
-  text-align:center;
-  background-color:white;
-}
-

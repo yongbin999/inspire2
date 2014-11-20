@@ -42,3 +42,6 @@ updates needed in the /routes
 
 post functions that submits data
 get functions that retrieve db
+
+how to impart parts of a header block?  
+sems like can the import function only limited to the /public folder
