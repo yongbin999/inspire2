@@ -23,6 +23,31 @@ function handler(request, response) {
       response.end();
     });
   }
+
+  //Add a new user
+  if(path === '/signup/newuser') {
+    m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
+//Check if a user exists
+  if(path === '/userexists') {
+    m.userExists('samfox', function(err, data) {
+      if(err) {
+        console.log(err);
+      }
+      else {
+        console.log(data);
+      }
+    });
+  }
 }
 
 //callback for testing purposes
@@ -36,5 +61,5 @@ function printStuff(err, data) {
 }
 
 var server = http.createServer(handler);
-server.listen(3000);
+server.listen(4000);
 console.log('Server is listening!');
