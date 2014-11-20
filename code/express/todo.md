@@ -9,12 +9,15 @@ do we need to use callbacks on all methods?
 what about methods that only the server will use.
 
 
+use class example that pull json into display table
+
 
 
 updates needed in the /views
 
-bootstrap?
-
+bootstrap - fade in info box
+http://getbootstrap.com/javascript/
+ 
 improve the design views using jquery, ajex frams, and javascipts
 ?use js to include the logo / top menu bar into every ejs
 
