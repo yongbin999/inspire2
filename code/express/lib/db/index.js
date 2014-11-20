@@ -55,5 +55,33 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
   });
 }
 
+function userExists(id, callback) {
+  pg.connect(connString, function (err, client, done) {
+    if(err) {
+      callback('Server Error: ' + err);
+    }
+    else {
+      client.query('select * from students where id =' + '\"' + id + '\"' + ';' 
+      , function(err, result) {
+        done();
+        client.end();
+        if(err) {
+          callback(err);
+        }
+        else {
+          console.log('HELLO\n\n');
+          if(data === '') {
+            callback(undefined, false)
+          }
+          else {
+            callback(undefined, true);
+          }
+        }
+      });
+    }
+  });
+}
+
 exports.getAllStudents = getAllStudents;
 exports.addNewUser = addNewUser;
+exports.userExists = userExists;

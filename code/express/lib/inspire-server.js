@@ -36,6 +36,18 @@ function handler(request, response) {
       response.end();
     });
   }
+
+//Check if a user exists
+  if(path === '/userexists') {
+    m.userExists('samfox', function(err, data) {
+      if(err) {
+        console.log(err);
+      }
+      else {
+        console.log(data);
+      }
+    });
+  }
 }
 
 //callback for testing purposes

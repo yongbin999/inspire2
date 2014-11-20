@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var userlib = require('../lib/user');
-var inspirelib = require('../lib/db');
+var m = require('../lib/db');
 
 // # User Server-Side Routes
 
@@ -20,19 +20,30 @@ router.get('/login', function(req, res){
   // and the `online[userid]` are undefined. The reason is that
   // the cookie may still be stored on the client even if the
   // server has been restarted.
-  if (user !== undefined && userlib.checkonline(user.username) !== undefined) {
-	if (user.isAdmin === true){
-      	req.flash('auth', 'admin' );
-      	res.redirect('/admin');
-      	}
-    res.redirect('/user/main');
+  if (user === undefined){
+    req.flash('auth', 'not log in yet' );
+      res.render('frontpage/login', { title   : 'Login Page',
+                          message : authmessage });
+
   }
   else {
-    // Render the login view if this is a new login.
-    res.render('frontpage/login', { title   : 'Login Page',
-                          message : authmessage });
+    m.userExists(user.username, function (err, data) {
+      if(err) {
+        req.flash('auth', "error");
+      }
+      else {
+        if (user.isAdmin === true){
+          req.flash('auth', 'admin' );
+          res.redirect('/admin');
+        }
+        else {
+          res.redirect('/user/main');
+        }
+      }
+    });
   }
 });
+
 
 // ## auth
 // Performs **basic** user authentication.
@@ -41,23 +52,19 @@ router.post('/auth', function(req, res) {
   var user = req.session.user;
 
   // TDR: do the check as described in the `exports.login` function.
-  if (user !== undefined && userlib.checkonline(user.username) !== undefined) {
-	if (user.isAdmin === true){
-      	req.flash('auth', 'admin' );
-      	res.redirect('/admin');
-      	}
-    res.redirect('/user/main');
+  if (user !== undefined) {
+  
   }
   else {
     // Pull the values from the form.
     var username = req.body.username;
     var password = req.body.password;
     // Perform the user lookup.
-    userlib.lookup(username, password, function(error, user) {
-      if (error) {
-        // If there is an error we "flash" a message to the
-        // redirected route `/login`.
-        req.flash('auth', error);
+
+    m.userExists(username,function (err, data) {
+      if(err) {
+        console.log("SDFGHJK3(*&#^$HGKFJSHGDKJHFS78O\n");
+        req.flash('auth', "error");
         res.redirect('/login');
       }
       else {
@@ -67,7 +74,9 @@ router.post('/auth', function(req, res) {
         // Redirect to main.
         res.redirect('/user/main');
       }
-    });
+   });
+
+
   }
 });
 
@@ -113,7 +122,7 @@ router.post('/signup/newuser', function(req, res) {
 var user = req.session.user ||username;
 
     // Perform the user lookup. now its add
-    userlib.adduser(username, password, admintype, function(error, user) {
+    /*userlib.adduser(username, password, admintype, function(error, user) {
       if(error){
         res.render('frontpage/signup', { title   : 'Check your inputs again',
                               users : user, 
@@ -125,7 +134,18 @@ var user = req.session.user ||username;
     	res.redirect('/login');
       }
 
-      });  
+      });*/
+
+    m.addNewUser(username, password, fname, lname, false, schoolorg, function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+
+        res.redirect('/login');
+      }
+
+    }); 
   
 });
 
