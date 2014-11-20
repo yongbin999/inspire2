@@ -23,6 +23,19 @@ function handler(request, response) {
       response.end();
     });
   }
+
+  //Add a new user
+  if(path === '/signup/newuser') {
+    m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+        response.write(data);
+      }
+      response.end();
+    });
+  }
 }
 
 //callback for testing purposes

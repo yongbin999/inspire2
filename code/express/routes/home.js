@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var userlib = require('../lib/user');
+var inspirelib = require('../lib/db');
 
 // # User Server-Side Routes
 
@@ -104,8 +105,11 @@ router.post('/signup/newuser', function(req, res) {
   
     var username = req.body.username;
     var password = req.body.password;
+    var fname = req.body.fname;
+    var lname = req.body.lname;
     var admintype = req.body.admintype;
     var schoolorg = req.body.schoolorg;
+
 var user = req.session.user ||username;
 
     // Perform the user lookup. now its add

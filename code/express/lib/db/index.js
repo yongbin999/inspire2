@@ -26,4 +26,34 @@ function getAllStudents(callback) {
   });
 }
 
+function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
+  pg.connect(connString, function (err, client, done) {
+    if(err) {
+      callback('Server Error: ' + err);
+    }
+    else {
+      client.query('insert into students values (\'' + id + '\', \''
+        + password + '\', \''
+        + fname + '\', \''
+        + lname 
+        + '\', \'Senior\', \'' 
+        + schoolorg + '\'' +
+        ', 4.0);'
+        /*client.query('insert into students values (\'samfoy\', \'password\', \'Sam\', \'Fox\', \'Senior\', \'UMass Amherst\', 4.0);'*/
+      , function(err, result) {
+        done();
+        client.end();
+        if(err) {
+          callback(err);
+        }
+        else {
+          console.log('HELLO\n\n');
+          callback(undefined, 'Success!\n');
+        }
+      });
+    }
+  });
+}
+
 exports.getAllStudents = getAllStudents;
+exports.addNewUser = addNewUser;

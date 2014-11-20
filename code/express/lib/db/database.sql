@@ -28,6 +28,7 @@ create table students (
 	firstname varchar(50),
 	lastname varchar(50),
 	year level,
+	schoolorg varchar(100),
 	gpa decimal,
 	primary key (id)
 );
@@ -67,12 +68,12 @@ create table reportcards (
 insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
 insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
 
-insert into students values ('samfox', 'password', 'Sam', 'Fox', 'Senior', 4.0);
-insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'Junior', 4.0);
-insert into students values ('alexrevello', 'password', 'Alex', 'Revello', 'Sophomore', 4.0);
-insert into students values ('joshbearor', 'password', 'Josh', 'Bearor', 'Freshman', 4.0);
-insert into students values ('drewmarchetti', 'password', 'Drew', 'Marchetti', 'Senior', 4.0);
-insert into students values ('khanhnguyen', 'password', 'Khanh', 'Nguyen', 'Freshman', 4.0);
+insert into students values ('samfox', 'password', 'Sam', 'Fox', 'Senior', 'UMass Amherst', 4.0);
+insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'Junior','UMass Amherst', 4.0);
+insert into students values ('alexrevello', 'password', 'Alex', 'Revello', 'Sophomore', 'UMass Amherst', 4.0);
+insert into students values ('joshbearor', 'password', 'Josh', 'Bearor', 'Freshman', 'UMass Amherst', 4.0);
+insert into students values ('drewmarchetti', 'password', 'Drew', 'Marchetti', 'Senior', 'UMass Amherst', 4.0);
+insert into students values ('khanhnguyen', 'password', 'Khanh', 'Nguyen', 'Freshman', 'UMass Amherst', 4.0);
 
 insert into coursecatalog values (105, 'Computer Literacy', 'You learn about shit', 3, 'Fall/Spring/Summer');
 insert into coursecatalog values (119, 'Introduction to Programming', 'You learn about shit', 3, 'Fall/Spring');	
