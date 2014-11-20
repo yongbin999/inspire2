@@ -13,6 +13,7 @@ use class example that pull json into display table
 
 
 
+
 updates needed in the /views
 
 bootstrap - fade in info box
