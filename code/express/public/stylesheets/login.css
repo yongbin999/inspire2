@@ -1,3 +1,4 @@
+
 .login{
   text-align:center;
   position: fixed;
@@ -6,14 +7,11 @@
   transform: translate(-50%, -50%);
   background-color:#881c1c;
   padding:7%;
+border-radius: 15px;
 }
 
 .login > input{
   padding: 5px;
   text-align:center;
   background-color:white;
-}
-
-body{
-  background-color:#333;
 }

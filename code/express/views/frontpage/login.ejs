@@ -3,14 +3,28 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/login.css' />
+<link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+<a href = "../">
+  <img id="header_image" src ="/images/inspirelogo.jpg"> 
+  </a>
+
+<div id ="content">
 <div class = "login">
+<h3>Welcome to the <%= title %></h3>
+<i>
+-studentid: tim pass:mit, <br>
+-adminid: admin pass:admin	
+</i>	
+<p><div><%= message %></div></p>
+
     <form method="post" action="/auth">
-      <input type="text"  placeholder="Username"> <br>
-      <input type="password" placeholder="Password"> <br>
+      <input type="text"  placeholder="Username" name="username"> <br>
+      <input type="password" placeholder="Password" name="password"> <br>
       <button>Login</button>
     </form>
     </div>
+</div>
   </body>
 </html>

@@ -4,7 +4,7 @@ var connString = 'postgres://student:student@localhost/student';
 
 var requestUID;
 
-function getAllUsers(callback) {
+function getAllStudents(callback) {
   pg.connect(connString, function (err, client, done) {
     if (err) {
       callback(err);
@@ -26,4 +26,4 @@ function getAllUsers(callback) {
   });
 }
 
-exports.getAllUsers = getAllUsers;
+exports.getAllStudents = getAllStudents;

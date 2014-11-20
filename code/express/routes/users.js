@@ -5,14 +5,65 @@ var userlib = require('../lib/user');
 
 // # User Server-Side Routes
 
+//routes for getting their stored list of classes planning to take / took
+router.get('/class', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/newpage', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
 
-// routes for getting thier profile
+// routes for getting generd list
+router.get('/geneds', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/newpage', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
+
+// routes for list of courses
+router.get('/courses', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/newpage', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
+
+// routes for changing settings.
+router.get('/settings', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/newpage', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
 
 
-// routes for sending updates
 
 
-// routes for retrievieng classes.
 
 
 // ## main
@@ -40,9 +91,18 @@ router.get('/main', function(req, res) {
 
 //online calls the admin list 
 router.get('/online', function(req, res) {
-  var adminlist;
-  userlib.adminlist(function(data) {
-    if (data){
+	var user = req.session.user;
+	var requser;
+  	var adminlist;
+	
+	if(user === undefined){
+	  requser= "unknown";
+	}
+	else{requser= user.username;}
+
+
+  	userlib.adminlist(function(data) {
+    	if (data){
           adminlist = data;
 
 	userlib.onlinelist(function(onlines) {
@@ -51,7 +111,8 @@ router.get('/online', function(req, res) {
 
           res.render('student/online', { title : 'Users Online',
                       adminlist: adminlist,
-                         users : onlinelist });
+                         users : onlinelist,
+			 requser : requser });
         }
   });
 

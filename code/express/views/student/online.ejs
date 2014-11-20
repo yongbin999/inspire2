@@ -2,9 +2,22 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='/stylesheets/studentmain.css' />
+	<link rel="import" href='/header.html'>
   </head>
+
   <body>
+<div id="header"></div>
+  <script>
+    var link = document.querySelector('link[rel="import"]');
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+    document.querySelector('#header').appendChild(clone);
+  </script>
+
+<div id ="content">
     <h1><%= title %></h1>
 
     <p>admins list </p>
@@ -34,7 +47,12 @@
   <% var b = 0 %>
       <% for(var userid in users) { %>
        <% if (users[userid].isAdmin != true){ %>
-          <li><%= users[userid].username %></li>
+		<% if (requser === users[userid].username){%>
+          	<li><%= users[userid].username + " <<<"%></li>
+		<% }%>
+		<% if (requser !== users[userid].username){%>
+		<li><%= users[userid].username %></li>
+		<% }%>
       <% b++ %>
   <% } %>
       <% } %>
@@ -42,6 +60,7 @@
     <li>no regular users currently online</li>
   <% } %>
     </ul> 
+</div>
 
   </body>
 </html>
