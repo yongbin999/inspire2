@@ -60,7 +60,6 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
           callback(err);
         }
         else {
-          console.log('HELLO\n\n');
           callback(undefined, 'Success!\n');
         }
       });
