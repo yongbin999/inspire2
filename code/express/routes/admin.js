@@ -16,7 +16,7 @@ var user = req.session.user;
 
   if (user === undefined) {
     req.flash('auth', 'Not logged in!');
-    res.redirect('/login');
+    res.redirect('../login');
   }
 	else if (user.isAdmin === true){
     	res.render('schooladmin/admin', { title   : 'admin page',
