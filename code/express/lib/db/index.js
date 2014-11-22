@@ -80,7 +80,7 @@ function getUser(id, callback) {
         client.end();
         if(err) {
           console.log('Error: ' + err);
-          callback("err");
+          callback(err);
         }
         else {
           //NOTE: returns '[]' if user does not exist
