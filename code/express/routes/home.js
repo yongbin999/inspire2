@@ -97,8 +97,7 @@ router.get('/logout', function(req, res) {
   }
 
   if (userlib.checkonline(user.id) !== undefined) {
-    delete userlib.online[userlib.checkonline(user.id).row];
-
+    userlib.deleteonline(user.id);
   }
 
   delete req.session.user;
