@@ -24,7 +24,7 @@ var userdb = [
 
 exports.addonline = function(username) {
   var len = online.length;
-  online[username.id] = username;
+  online[len] = username;
 
 }
 exports.checkonline = function(username) {
