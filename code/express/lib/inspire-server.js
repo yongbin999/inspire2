@@ -25,7 +25,7 @@ function handler(request, response) {
   }
 
   //Add a new user
-  if(path === '/signup/newuser') {
+  else if(path === '/signup/newuser') {
     m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
@@ -37,17 +37,30 @@ function handler(request, response) {
     });
   }
 
-//Check if a user exists
-  if(path === '/userexists') {
-    m.userExists('samfox', function(err, data) {
+  //Query for a specific user
+  else if(path === '/getuser') {
+    m.getUser('khanhnguyen', function(err, data) {
       if(err) {
-        console.log(err);
+        console.log('Error: ' + err);
+        response.write('Error: ' + err);
       }
       else {
-        console.log(data);
+        if(data === '[]') {
+          console.log('User not found');
+        }
+        else {
+          console.log('User found:\n' + data + '\n');
+        }
+        response.write(data);
       }
+      response.end();
     });
   }
+   else {
+    console.log('unknown filepath: ' + path + '\n');
+    response.write('unknown filepath: ' + path + '\n');
+    response.end();
+   }
 }
 
 //callback for testing purposes

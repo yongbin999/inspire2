@@ -2,8 +2,19 @@ var pg = require('../../node_modules/pg');
 
 var connString = 'postgres://student:student@localhost/student';
 
-var requestUID;
 
+//Returns all students in database
+exports.getAllStudents = getAllStudents;
+
+//Adds user to database
+//User info specified by arguments, gpa initialized to 0.0
+exports.addNewUser = addNewUser;
+
+//Returns json for student if exists, or else returns the string '[]'
+exports.getUser = getUser;
+
+
+//Returns all students in database
 function getAllStudents(callback) {
   pg.connect(connString, function (err, client, done) {
     if (err) {
@@ -26,6 +37,8 @@ function getAllStudents(callback) {
   });
 }
 
+//Adds user to database
+//User info specified by arguments, gpa initialized to 0.0
 function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
   pg.connect(connString, function (err, client, done) {
     if(err) {
@@ -38,7 +51,7 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
         + lname 
         + '\', \'Senior\', \'' 
         + schoolorg + '\'' +
-        ', 4.0);'
+        ', 0.0);'
         /*client.query('insert into students values (\'samfoy\', \'password\', \'Sam\', \'Fox\', \'Senior\', \'UMass Amherst\', 4.0);'*/
       , function(err, result) {
         done();
@@ -47,7 +60,6 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
           callback(err);
         }
         else {
-          console.log('HELLO\n\n');
           callback(undefined, 'Success!\n');
         }
       });
@@ -55,33 +67,27 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
   });
 }
 
-function userExists(id, callback) {
+//Returns json for student if exists, or else returns the string '[]'
+function getUser(id, callback) {
   pg.connect(connString, function (err, client, done) {
     if(err) {
       callback('Server Error: ' + err);
     }
     else {
-      client.query('select * from students where id =' + '\"' + id + '\"' + ';' 
+      client.query('select * from students where id=\'' + id + '\';'
       , function(err, result) {
         done();
         client.end();
         if(err) {
+          console.log('Error: ' + err);
           callback(err);
         }
         else {
-          console.log('HELLO\n\n');
-          if(data === '') {
-            callback(undefined, false)
-          }
-          else {
-            callback(undefined, true);
-          }
+          //NOTE: returns '[]' if user does not exist
+          var data = JSON.stringify(result.rows);
+          callback(undefined, data);
         }
       });
     }
   });
 }
-
-exports.getAllStudents = getAllStudents;
-exports.addNewUser = addNewUser;
-exports.userExists = userExists;
