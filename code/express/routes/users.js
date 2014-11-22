@@ -5,6 +5,18 @@ var userlib = require('../lib/user');
 
 // # User Server-Side Routes
 
+router.get('/newpage', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/newpage', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
 //routes for getting their stored list of classes planning to take / took
 router.get('/class', function(req, res) {
 	var user = req.session.user;
@@ -61,6 +73,37 @@ router.get('/settings', function(req, res) {
 	}
 });
 
+//online calls the admin list 
+router.get('/online', function(req, res) {
+	var user = req.session.user;
+	var requser;
+  	var adminlist;
+
+	if(user === undefined){
+	  requser= "unknown";
+	}
+	else{requser= user.id;}
+
+
+  	userlib.adminlist(function(data) {
+    		if (data){
+          	adminlist = data;
+
+			userlib.onlinelist(function(onlines) {
+			    	if (onlines){
+			          onlinelist = onlines;
+			
+			          res.render('student/online', { 
+						title : 'Users Online',
+						adminlist: adminlist,
+						onlinelist : onlinelist,
+						requser : requser });
+	        		}
+  			});
+		}
+	});
+
+});
 
 
 
@@ -82,39 +125,6 @@ router.get('/main', function(req, res) {
                                username : user.id });
       	}
   
-});
-
-
-//online calls the admin list 
-router.get('/online', function(req, res) {
-	var user = req.session.user;
-	var requser;
-  	var adminlist;
-
-	if(user === undefined){
-	  requser= "unknown";
-	}
-	else{requser= user.id;}
-
-
-  	userlib.adminlist(function(data) {
-    	if (data){
-          adminlist = data;
-
-	userlib.onlinelist(function(onlines) {
-    	if (onlines){
-          onlinelist = onlines;
-
-          res.render('student/online', { title : 'Users Online',
-                      adminlist: adminlist,
-                         onlinelist : onlinelist,
-			 requser : requser });
-        }
-  });
-
-}
-});
-
 });
 
 module.exports = router;
