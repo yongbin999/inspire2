@@ -24,12 +24,12 @@
     <ul>
       <% var a = 0 %>
       <% for(var id in adminlist) { %>
-        <% for(var userid in users) { %>
-              <% if (adminlist[id].username === users[userid].username){ %>
-                <li><%= users[userid].username + "[online] <<<"%></li>
+        <% for(var userid in onlinelist) { %>
+              <% if (adminlist[id].username === onlinelist[userid].id){ %>
+                <li><%= users[userid].id + "[online] <<<"%></li>
                      <% a++ %>
               <% } %>
-              <% if (adminlist[id].username !== users[userid].username){ %>
+              <% if (adminlist[id].username !== onlinelist[userid].id){ %>
               <li><%= adminlist[id].username + " [offline]"%></li>
               <% } %>
         <% } %>
@@ -45,16 +45,16 @@
 <p>users currently online</p>
       <ul>
   <% var b = 0 %>
-      <% for(var userid in users) { %>
-       <% if (users[userid].isAdmin != true){ %>
-		<% if (requser === users[userid].username){%>
-          	<li><%= users[userid].username + " <<<"%></li>
+      <% for(var userid in onlinelist) { %>
+       
+		<% if (requser === onlinelist[userid]){%>
+          	<li><%= onlinelist[userid] + " <<<"%></li>
 		<% }%>
-		<% if (requser !== users[userid].username){%>
-		<li><%= users[userid].username %></li>
+		<% if (requser !== onlinelist[userid]){%>
+		<li><%= onlinelist[userid] %></li>
 		<% }%>
       <% b++ %>
-  <% } %>
+
       <% } %>
   <% if (b ===0){ %>
     <li>no regular users currently online</li>

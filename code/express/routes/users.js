@@ -90,11 +90,11 @@ router.get('/online', function(req, res) {
 	var user = req.session.user;
 	var requser;
   	var adminlist;
-	
+
 	if(user === undefined){
 	  requser= "unknown";
 	}
-	else{requser= user.username;}
+	else{requser= user.id;}
 
 
   	userlib.adminlist(function(data) {
@@ -107,7 +107,7 @@ router.get('/online', function(req, res) {
 
           res.render('student/online', { title : 'Users Online',
                       adminlist: adminlist,
-                         users : onlinelist,
+                         onlinelist : onlinelist,
 			 requser : requser });
         }
   });
