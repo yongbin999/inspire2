@@ -41,7 +41,7 @@ router.get('/courses', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/newpage', { title   : 'New page to be made',
+    	res.render('student/courselist', { title   : 'New page to be made',
                          	users : user, 
 				message : 'none yet'});
 	}
@@ -71,21 +71,17 @@ router.get('/settings', function(req, res) {
 router.get('/main', function(req, res) {
   // TDR: added session support
   var user = req.session.user;
+	//console.log(user.id);
   if (user === undefined) {
     req.flash('auth', 'Not logged in!');
     res.redirect('../login');
   }
   else {
-      	if (user.isAdmin === true){
-      	req.flash('auth', 'admin' );
-      	res.redirect('../admin');
-	}
-      	else{
       	    res.render('student/main', { title   : 'User Main',
                                message : 'Login Successful',
-                               username : user.username });
+                               username : user.id });
       	}
-  }
+  
 });
 
 
