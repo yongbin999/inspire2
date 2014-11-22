@@ -26,7 +26,6 @@ router.get('/login', function(req, res){
           res.redirect('/admin');
         }
         else {
-	  req.flash('auth', 'log in successful' );
 	  req.session.user =user;
           res.redirect('/user/main');
         }
@@ -92,19 +91,18 @@ router.post('/auth', function(req, res) {
 // Deletes user info & session - then redirects to login.
 router.get('/logout', function(req, res) {
   var user = req.session.user;
-  if (user === undefined || userlib.checkonline(user.username) === undefined) {
+  if (user === undefined) {
     req.flash('auth', 'Not logged in!');
     res.redirect('/login');
-    return;
   }
 
-  if (userlib.checkonline(user.username) !== undefined) {
-    //delete userlib.online[user.uid];
+  if (userlib.checkonline(user.id) !== undefined) {
+    delete userlib.online[userlib.checkonline(user.id).row];
 
-// not sure how does thus work??
   }
 
   delete req.session.user;
+  req.flash('auth', 'Thanks for visiting inSpire!' );
   res.redirect('/login');
 });
 
