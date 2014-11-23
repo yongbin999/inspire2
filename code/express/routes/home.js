@@ -26,14 +26,13 @@ router.get('/login', function(req, res){
           res.redirect('/admin');
         }
         else {
-	  req.session.user =user;
           res.redirect('/user/main');
         }
       }
     
 });
 
-// ## auth
+// ## auth lookup user info the transfer into to /login again to reroute
 // Performs **basic** user authentication.
 router.post('/auth', function(req, res) {
   // TDR: redirect if logged inconsole.log("user data : " + data);:
@@ -47,9 +46,12 @@ router.post('/auth', function(req, res) {
     // Pull the values from the form.
     var username = req.body.username;
     var password = req.body.password;
-    var adminlogin = req.body.username;
+    var isadmin = req.body.isadmin;
 
     // admin login
+	if( isadmin === true){
+	//m.getUser(username, admintable, function(err, data){}
+	}
 
 
 

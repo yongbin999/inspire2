@@ -122,7 +122,8 @@ router.get('/main', function(req, res) {
   else {
       	    res.render('student/main', { title   : 'User Main',
                                message : 'Login Successful',
-                               username : user.id });
+                               username : user.id,
+				schoolorg:user.schoolorg});
       	}
   
 });
