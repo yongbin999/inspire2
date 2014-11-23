@@ -3,8 +3,25 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="javascripts/content_fadein.js"></script>
   </head>
+
   <body>
+	<div id="header"></div>
+  <script>
+	var link = document.querySelector('link[rel="import"]');
+	var content = link.import;
+	// Grab DOM from warning.html's document.
+	var el = content.querySelector('#headerbanner');
+    	document.body.appendChild(el.cloneNode(true));
+	
+	//var el2 = content.querySelector('#menuright');
+  	//document.body.appendChild(el2.cloneNode(true));
+  </script>
+
+
+<div id ="content" class = "contentview">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
@@ -100,6 +117,6 @@
 
 <br>
 <a href="../logout"> click here to logout</a>
-
+</div>
   </body>
 </html>

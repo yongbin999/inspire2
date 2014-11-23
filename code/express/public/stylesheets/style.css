@@ -10,7 +10,7 @@ overflow-y: auto;
   text-align:left;
   position: fixed;
 	
-	height:60%;
+	height:55%;
 	overflow-y: auto;	
   left: 10%;
   right: 10%;
@@ -26,7 +26,7 @@ overflow-y: auto;
 #header_menu{position:fixed; top:12%; }
 	#menuleft{position:fixed; }
 	#menuright{position:fixed;  right:1%;}
-#content{position:fixed; top:20%; }
+#content{position:fixed; top:20%;  display:none;}
 
 
 <style>

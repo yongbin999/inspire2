@@ -3,30 +3,26 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-		<link rel="import" href='/header.html'>
+	<link rel="import" href='/header.html'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script>
-		$(document).ready(function(){
-		    $("#content").fadeIn("slow");
-		});
-		</script>
+	<script src="javascripts/content_fadein.js"></script>
   </head>
 
   <body>
-<div id="header"></div>
+	<div id="header"></div>
   <script>
-var link = document.querySelector('link[rel="import"]');
-    var content = link.import;
-    // Grab DOM from warning.html's document.
-    var el = content.querySelector('#headerbanner');
-    document.body.appendChild(el.cloneNode(true));
+	var link = document.querySelector('link[rel="import"]');
+	var content = link.import;
+	// Grab DOM from warning.html's document.
+	var el = content.querySelector('#headerbanner');
+    	document.body.appendChild(el.cloneNode(true));
 	
-	//var el2 = content.querySelector('#header_menu');
+	//var el2 = content.querySelector('#menuright');
   	//document.body.appendChild(el2.cloneNode(true));
   </script>
 
 
-<div id ="content" class = "contentview" style="display:none;">
+<div id ="content" class = "contentview">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
