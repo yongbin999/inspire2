@@ -8,15 +8,8 @@
 	<link rel="import" href='/header.html'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="../javascripts/content_fadein.js"></script>
-	<script>
-		function writeList(xs) {
-	        document.write('<ul>');
-		for (var i = 0; i < xs.length; i++) {
-		  document.write('<li>' + xs[i] + '</li>');
-		}
-		document.write('</ul>');
-	      }
-	</script>
+	<script src="../javascripts/displaytable.js"></script>
+
   </head>
 
   <body>
@@ -32,9 +25,19 @@ var link = document.querySelector('link[rel="import"]');
   	document.body.appendChild(el2.cloneNode(true));
   </script>
 
+
+
 <div id = "content" class = "contentview">
+
+
+	<div id="testing" class= "schedule" align ="center">
+	<script >displayTimes(2,5)</script>    
+	</div>
+
+
+
 <!-- get individual users data to display later -->
-<table class="schedule" align="center">
+<table id="testing" class="schedule" align="center">
  <tbody>
   <tr align="center">
    <th>
@@ -103,9 +106,9 @@ var link = document.querySelector('link[rel="import"]');
   </tr>
  </tbody>
 </table>
+
+
 </div>
 
-
-
- </tbody>
-</table>
+ </body>
+</html>
