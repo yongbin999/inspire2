@@ -5,6 +5,25 @@ var userlib = require('../lib/user');
 
 // # User Server-Side Routes
 
+router.get('/testing', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/testview', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet',
+				username : user.id,
+				schoolorg:user.schoolorg});
+	}
+});
+
+
+
+
+
 router.get('/newpage', function(req, res) {
 	var user = req.session.user;
   	if (user === undefined) {
@@ -17,6 +36,8 @@ router.get('/newpage', function(req, res) {
 				message : 'none yet'});
 	}
 });
+
+
 //routes for getting their stored list of classes planning to take / took
 router.get('/class', function(req, res) {
 	var user = req.session.user;
@@ -25,7 +46,7 @@ router.get('/class', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/newpage', { title   : 'New page to be made',
+    	res.render('student/myclasses', { title   : 'New page to be made',
                          	users : user, 
 				message : 'none yet'});
 	}

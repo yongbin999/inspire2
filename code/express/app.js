@@ -19,7 +19,6 @@ var bodyParser		= require('body-parser');
 var users	= require('./routes/users');
 var admin       = require('./routes/admin');
 var home       = require('./routes/home');
-
 // Create the express application:
 var app			= express();
 
@@ -54,7 +53,7 @@ app.use(flash());
 // ADDITION:
 // Using our routes/middleware:
 app.use('/user', users);
-app.use('/admin', admin);  // <<<added
+app.use('/admin', admin); 
 app.use('/', home);
 
 

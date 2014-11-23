@@ -1,0 +1,97 @@
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='/stylesheets/studentmain.css' />
+<link rel="import" href='/header.html'>
+  </head>
+
+  <body>
+<div id="header"></div>
+  <script>
+    var link = document.querySelector('link[rel="import"]');
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+    document.querySelector('#header').appendChild(clone);
+  </script>  </th>
+
+<div id = "content">
+<!-- get individual users data to display later -->
+<table class="schedule" align="center">
+ <tbody>
+  <tr align="center">
+   <th>
+     Monday
+   </th>
+   <th>
+     Tuesday
+   </th>
+   <th>
+     Wednesday
+   </th>
+   <th>
+     Thursday
+   </th>
+   <th>
+     Friday
+   </th>
+  </tr>
+  <tr>
+   <th>
+     class1
+   </th>
+   <th>
+     class4
+   </th>
+   <th>
+     class1
+   </th>
+   <th>
+     class4
+   </th>
+   <th>
+     class1
+   </th>
+  </tr>
+  <tr>
+   <th>
+     class2
+   </th>
+   <th>
+     class5
+   </th>
+   <th>
+     class2
+   </th>
+   <th>
+     class5
+   </th>
+   <th>
+     class2
+  </tr>
+  <tr>
+   <th>
+     class3
+   </th>
+   <th>
+   </th>
+   <th>
+     class3
+   </th>
+   <th>
+   </th>
+   <th>
+     class3
+   </th>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+
+
+ </tbody>
+</table>
