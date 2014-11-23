@@ -3,11 +3,19 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="import" href='/header.html'>
   </head>
+
   <body>
-<a href = "../">
-  <img id="header_image" src ="/images/inspirelogo.jpg"> 
-  </a>
+<div id="header"></div>
+  <script>
+    var link = document.querySelector('link[rel="import"]'); // this is located in /public folder
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+    document.querySelector('#header').appendChild(clone);
+  </script>
+
 
 <div id ="content" class = "contentview">
     <h1><%= title %></h1>
