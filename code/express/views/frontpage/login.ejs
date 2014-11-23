@@ -5,6 +5,12 @@
     	<link rel='stylesheet' href='/stylesheets/login.css' />
 	<link rel='stylesheet' href='/stylesheets/style.css' />
 	<link rel="import" href='/header.html'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		    $("#content").fadeIn("slow");
+		});
+		</script>
   </head>
 
   <body>
@@ -22,7 +28,7 @@ var link = document.querySelector('link[rel="import"]');
 
 
 
-<div id ="content">
+<div id ="content" style="display:none;">
 <div class = "login">
 <h3>Welcome to the <%= title %></h3>
 <i>
@@ -38,6 +44,6 @@ var link = document.querySelector('link[rel="import"]');
       <button>Login</button>
     </form>
     </div>
-</div>
+	</div>
   </body>
 </html>

@@ -6,6 +6,12 @@
 	<link rel='stylesheet' href='/stylesheets/style.css' />
     	<link rel='stylesheet' href='/stylesheets/studentmain.css' />
 	<link rel="import" href='/header.html'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		    $("#content").fadeIn("slow");
+		});
+		</script>
   </head>
 
   <body>
@@ -21,7 +27,7 @@ var link = document.querySelector('link[rel="import"]');
   	document.body.appendChild(el2.cloneNode(true));
   </script>
 
-<div id = "content" class = "contentview">
+<div id = "content" class = "contentview" style="display:none;">
 <!-- get individual users data to display later -->
 <table class="schedule" align="center">
  <tbody>
