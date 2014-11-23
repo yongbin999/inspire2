@@ -5,20 +5,29 @@
     <title><%= title %></title>
 	<link rel='stylesheet' href='/stylesheets/style.css' />
     	<link rel='stylesheet' href='/stylesheets/studentmain.css' />
-<link rel="import" href='/header.html'>
+	<link rel="import" href='/header.html'>
   </head>
 
   <body>
 <div id="header"></div>
   <script>
-    var link = document.querySelector('link[rel="import"]');
-    // Clone the <template> in the import.
-    var template = link.import.querySelector('template');
-    var clone = document.importNode(template.content, true);
-    document.querySelector('#header').appendChild(clone);
-  </script>  </th>
+var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('#headerbanner');
+    document.body.appendChild(el.cloneNode(true));
+	
+	var el2 = content.querySelector('#header_menu');
+  	document.body.appendChild(el2.cloneNode(true));
+  </script>
 
 <div id = "content" class = "contentview">
+<p><h1>My Class Schedule Plan</h1>
+<h3>
+<br>   
+<br>
+
+
 <!-- get individual users data to display later -->
 <table class="schedule" align="center">
  <tbody>

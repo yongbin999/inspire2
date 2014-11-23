@@ -4,17 +4,20 @@
     <title><%= title %></title>
 	<link rel='stylesheet' href='/stylesheets/style.css' />
     	<link rel='stylesheet' href='/stylesheets/studentmain.css' />
-<link rel="import" href='/header.html'>
+	<link rel="import" href='/header.html'>
   </head>
 
   <body>
 <div id="header"></div>
   <script>
-    var link = document.querySelector('link[rel="import"]'); // this is located in /public folder
-    // Clone the <template> in the import.
-    var template = link.import.querySelector('template');
-    var clone = document.importNode(template.content, true);
-    document.querySelector('#header').appendChild(clone);
+var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('#headerbanner');
+    document.body.appendChild(el.cloneNode(true));
+	
+	var el2 = content.querySelector('#header_menu');
+  	document.body.appendChild(el2.cloneNode(true));
   </script>
 
 <div id ="content" class = "contentview">
