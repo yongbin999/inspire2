@@ -3,16 +3,25 @@ font-size: 80%;
 font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;   
 background-color:#333; 
 color:#FFFAFA; //text <<
-	margin: 1%;
-	padding: 1;
+overflow-y: auto;
 }
 
+.contentview{
+  text-align:left;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  transform: translate(00%, 00%);
+  background-color:#881c1c;
+  padding:5%;
+	border-radius: 15px;
+}
 
 #header_image{position:fixed; top:2%; width:150px;}
-#header_menu{position:fixed; top:12%;}
+#header_menu{position:fixed; top:12%; }
 	#menuleft{position:fixed; }
 	#menuright{position:fixed;  right:1%;}
-#content{position:fixed; top:20%;}
+#content{position:fixed; top:20%; }
 
 <style>
 a:link    {color:#00BFFF; background-color:transparent; text-decoration:none}
@@ -20,3 +29,4 @@ a:visited {color:#00BFFF; background-color:transparent; text-decoration:none}
 a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
 a:active  {color:#ff0000; background-color:transparent; text-decoration:underline}
 </style>
+
