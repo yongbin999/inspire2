@@ -1,4 +1,19 @@
+**Project 4**
+--
+This was a good submission. It was fairly detailed and gave enough of a sense you all have an idea of how your going to implement the features you want.
+
+I noticed you have your UI as a challenge. If you really want the website to look nice, but don't want to take a huge amount of time away from implementing your features--esepcially getting the core features to work--I recommend checking out either Bootstrap or Foundation. Both are CSS frameworks that can be leveraged to build a nice looking website quickly. Just be aware of using too many divs; it might convolute the HTML a little bit.
+
+After looking at the your slides, it seems like there's still a lot that needs to be done. So because of that, I would definitely recommend checking out either of those CSS frameworks and focus on getting all the core functionality working by the time the project is due.
+
+**Trello:** The activity on here has been decent; it's nice to see you all are using it for the most part, and using it often enough.
+
+**Meeting Notes:** Your meeting notes are good for the most part. Only problem I had with them is that 4 people had the same task "added component to the dspec." While this is fine for multiple people to have, it'd be nice if it included which components were added.
+
+**Side Note:** I know I haven't mentioned anything about the logo in the past, but now that we're this far in, I definitely think you can do a better job on it. There are plenty of Photoshop tutorials on how to add some nice effects to text. Might be a good job for the person doing graphics. 
+
 **Project 3**
+---
 This was a great submission. You were very detailed in each section. I liked the extra explanation in your screen-by-screens. It seems you know what you want you do, so keep up the good work.
 
 I have noticed that Khanh, you have missed all group meetings; I recommend that you start going to them so I can better see your contributions to the group when it comes to developing the idea. So far it looks like you haven’t been apart of the development of the specifications and other documents. It is good to see you’ve contributed something to github though.
