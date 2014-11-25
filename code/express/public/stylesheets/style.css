@@ -26,8 +26,8 @@ overflow-y: auto;
 #header_menu{position:fixed; top:12%; }
 	#menuleft{position:fixed; }
 	#menuright{position:fixed;  right:1%;}
-#content{position:fixed; top:20%;  display:none;}
-
+#content{position:fixed; top:20%;  display:none; font-weight:bold;}
+#todo{color:silver;}
 
 <style>
 a:link    {color:#00BFFF; background-color:transparent; text-decoration:none}
