@@ -17,14 +17,39 @@
 	var el = content.querySelector('#headerbanner');
     	document.body.appendChild(el.cloneNode(true));
 	
-	//var el2 = content.querySelector('#menuright');
+	//var el2 = content.querySelector('#menuright'); <<<< change to #frontmenu 
   	//document.body.appendChild(el2.cloneNode(true));
   </script>
 
 
 <div id ="content" class = "contentview">
-    <h1><%= title %></h1>
-    <div><%= message %></div><br>
+    <div><%= message %></div>
+
+<div id = "todo">
+ <ul>
+<li>add front page menu bar simular to students. have main,login,signup, howitworks, aboutus<li>
+<br> open /public/index.html and add it as a div id frontmenu
+<br> import it into the front pages, by js script above <<< change to #frontmenu
+<br>
+<li> create pages howitworks and about us</li>
+<br> open /routes/homepage.js and add the route handler and the render view instructions
+<br> create /view/frontpage/xxxx.ejs and add the content for these 2 pages
+<br>
+<li> in my classes, and list of classes, pull data using a query into dynamic table</li>
+<br> add query in /lib/db/index.js
+<br> modify dynamic table to take in json in /public/javascript/table.js
+<br> modify views to add a buttom or text field to retrieve table
+<br> in /view/student/myclass.ejs and schedule.ejs
+
+<li> add new ajax fade in info boxes on hover , and other fade ins or click buttons</li>
+<br> create ajax codes in /pubic/javascript
+<br> call the codes by import link on the /views/..., and use it in the public/stylesheet....
+
+<li> lastly look into d3 ask how to import those methods into our sheet?</li>
+<br> 
+
+</ul>
+</div>
 
 	<p>Here are some links to get started </p>
 	<p><a href="../login"> Click Here </a> to login to retrieve your profile</p>
