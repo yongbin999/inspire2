@@ -18,9 +18,9 @@ var user = req.session.user;
     req.flash('auth', 'Not logged in!');
     res.redirect('../login');
   }
-	else if (user.isAdmin === true){
+	else if (user.isadminfor !== undefined){
     	res.render('schooladmin/admin', { title   : 'admin page',
-                         	users : user, 
+                         	user : user, 
 				message : 'admins route'});
 	}
 
@@ -34,7 +34,7 @@ router.post('/newgroup', function(req, res) {
 var user = req.session.user ||username;
 
         res.render('schooladmin/admin', { title   : 'not implemented yet',
-                              users : user, 
+                              user : user, 
                               message :  'error or not setup yet'});
       
 });

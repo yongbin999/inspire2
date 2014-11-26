@@ -31,7 +31,7 @@ router.get('/login', function(req, res){
   }
   else {
 	/// already logged in, so redirects them
-        if (user === undefined){ // need new method
+        if (user.isadminfor !== undefined){ // need new method
           req.flash('auth', 'admin' );
           res.redirect('/admin');
         }
@@ -57,20 +57,17 @@ router.post('/auth', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     var isadmin = req.body.isadmin;
-	var table = "students";
 
-	
     // admin login
-	if( isadmin === true){
+	if( isadmin === "true"){
 	table = "admins";
-	//m.getUser(username, admintable, function(err, data){}
+	console.log(isadmin);
+	}
+	else{
+	table = "students";	
 	}
 
-
-
-
     // Perform the user lookup.
-
     m.getUser(username,table,function (err, data) {
       if(err) {
 	console.log("error in finding user \n");

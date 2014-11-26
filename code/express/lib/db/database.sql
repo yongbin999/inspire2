@@ -16,10 +16,11 @@ create type sem as enum ('Fall', 'Spring', 'Summer');
 create type offered as enum ('Fall', 'Spring', 'Summer', 'Fall/Spring', 'Fall/Summer', 'Spring/Summer', 'Fall/Spring/Summer');
 
 create table admins (
-	adminid varchar(16),
+	id varchar(16),
 	password varchar(25),
 	firstname varchar(50),
-	lastname varchar(50)
+	lastname varchar(50),
+	isadminfor varchar(50)
 );
 
 create table students (
@@ -65,9 +66,9 @@ create table reportcards (
 	coursegrade grade
 );
 
-insert into admins values ('timrichards', 'password', 'Tim', 'Richards');
-insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen');
-insert into admins values ('admin', 'password', 'admin', 'Grupen');
+insert into admins values ('timrichards', 'password', 'Tim', 'Richards', 'UMass Amherst');
+insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen', 'UMass Amherst');
+insert into admins values ('admin', 'password', 'admin', 'admin', 'UMass Amherst');
 
 insert into students values ('test', 'password', 'test', 'test', 'Senior', 'UMass Amherst', 4.0);
 

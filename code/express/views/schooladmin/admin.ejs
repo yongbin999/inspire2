@@ -3,7 +3,8 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="import" href='/header.html'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="javascripts/content_fadein.js"></script>
   </head>
 
@@ -16,107 +17,32 @@
 	var el = content.querySelector('#headerbanner');
     	document.body.appendChild(el.cloneNode(true));
 	
-	//var el2 = content.querySelector('#menuright');
+	//var el2 = content.querySelector('#menuright'); <<<< change to #frontmenu 
   	//document.body.appendChild(el2.cloneNode(true));
   </script>
 
 
 <div id ="content" class = "contentview">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Welcome <%= user.id %> from  <%= user.isadminfor %>!  </p>
 
 	<a href="../user/online"> click to see online user list</a>
-    
-
-<div><%= message %></div><br>
-
-<p>Add new sub school group </p>
+   
+<p>Add new sub school group << not working yet </p>
 <form method="post" action="/admin/newgroup">
-      Parent group :<input type="text" name="parent group"> <br>
-	Subgroup Name: <input type="text" name="groupname"> <br>
+      	Parent group :	<input type="text" name="parentgroup"> <br>
+	Subgroup Name :	<input type="text" name="groupname"> <br>
 
       <button>Create Group</button>
     </form>
-    
-<!-- fill out later -->
-<table class="schedule" align="center">
- <tbody>
-  <thead>
-  <tr align="center">
-   <th>
-     Class Name
-   </th>
-   <th>
-     Course Number
-   </th>
-   <th>
-     Prerequisites
-   </th>
-   <th>
-     Semesters Offered
-   </th>
-   <th>
-     Students Enrolled
-   </th>
-   <th>
-     Capacity
-   </th>
-  </tr>
-  </thead>
-  <tr>
-   <th>
-     class1
-   </th>
-   <th>
-     class4
-   </th>
-   <th>
-     class1
-   </th>
-   <th>
-     class4
-   </th>
-   <th>
-     class1
-   </th>
-  </tr>
-  <tr>
-   <th>
-     class2
-   </th>
-   <th>
-     class5
-   </th>
-   <th>
-     class2
-   </th>
-   <th>
-     class5
-   </th>
-   <th>
-     class2
-   </th>
-  </tr>
-  <tr>
-   <th>
-     class3
-   </th>
-   <th>
-   </th>
-   <th>
-     class3
-   </th>
-   <th>
-   </th>
-   <th>
-     class3
-   </th>
-  </tr>
- </tbody>
-</table>
 
-<br>
-<a href="../logout"> click here to logout</a>
+<p>Add new a new course << not working yet </p>
+<form method="post" action="/admin/newcourse">
+      	New Course :	<input type="text" name="coursename"> <br>
+	Pre-req : 	<input type="text" name="pre-reqcourse"> <br>
+
+      <button>Create Group</button>
+    </form>
+
 </div>
   </body>
 </html>

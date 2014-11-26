@@ -1,3 +1,3 @@
 #! /bin/bash
 
-psql --file=database.sql
+psql --file=./lib/db/database.sql
