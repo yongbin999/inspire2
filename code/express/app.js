@@ -54,6 +54,16 @@ app.use('/', home);
 
 
 
+//start up the server by loading database in !!!//
+var sys = require('sys')
+var exec = require('child_process').exec;
+function puts(error, stdout, stderr) { sys.puts(stdout) }
+exec("ls ", puts);
+exec("bash ./lib/db/init-db.sh ", puts);
+
+
+
+
 
 ///////////////////
 // EVERYTHING BELOW HELPS WITH MISSING ROUTES
