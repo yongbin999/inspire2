@@ -73,14 +73,14 @@ function handler(request, response) {
   }
 
   //Populate the course catalog table
-  else if(path === '/populatecoursecatalog') {
-    m.populateCourseCatalog(function(err, data) {
+  else if(path === '/populatecoursesandprereqs') {
+    m.populateCoursesAndPrereqs(function(err, data) {
       if(err) {
-        console.log(err);
+        //console.log(err);
         response.write(err);
       }
       else {
-        console.log(data);
+        //console.log(data);
         response.write(data);
       }
       response.end();

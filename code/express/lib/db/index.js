@@ -5,7 +5,7 @@ var connString = 'postgres://student:student@localhost/student';
 
 
 //Populates the course catalog based on csv data
-exports.populateCourseCatalog = populateCourseCatalog;
+exports.populateCoursesAndPrereqs = populateCoursesAndPrereqs;
 
 //Returns all students in database
 exports.getAllfromTable = getAllfromTable;
@@ -25,7 +25,7 @@ exports.getPrereqs = getPrereqs;
 
 
 //Populates the course catalog based on csv data
-function populateCourseCatalog(callback) {
+function populateCoursesAndPrereqs(callback) {
   fs.readFile('./db/Courses.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
@@ -35,7 +35,11 @@ function populateCourseCatalog(callback) {
       var entries = data.split("\n");
       for(var i in entries) {
         console.log(entries[i]);
-        var values = entries.split(",");
+        var values = entries[i].split(",");
+        for(var j in values) {
+          console.log(values[j]);
+        }
+        console.log("\n\n");
       }
     }
   });
