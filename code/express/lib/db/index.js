@@ -26,21 +26,32 @@ exports.getPrereqs = getPrereqs;
 
 //Populates the course catalog based on csv data
 function populateCoursesAndPrereqs(callback) {
+  //Read in csv file...
   fs.readFile('./db/Courses.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
       response.end();
     }
     else {
-      var entries = data.split("\n");
-      for(var i in entries) {
-        console.log(entries[i]);
-        var values = entries[i].split(",");
-        for(var j in values) {
-          console.log(values[j]);
+      //If success, connect to database
+      pg.connect(connString, function(err, client, done) {
+        if(err) {
+          callback(err);
         }
-        console.log("\n\n");
-      }
+        else {
+          //If success, process csv data and post to database
+          var entries = data.split("\n");
+          for(var i in entries) {
+            console.log(entries[i]);
+            var values = entries[i].split(",");
+            for(var j in values) {
+              console.log(values[j]);
+            }
+
+            console.log("\n\n");
+          }
+        }
+      });
     }
   });
 }
@@ -87,7 +98,6 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
         + '\', \'Senior\', \'' 
         + schoolorg + '\'' +
         ', 0.0);'
-        /*client.query('insert into students values (\'samfoy\', \'password\', \'Sam\', \'Fox\', \'Senior\', \'UMass Amherst\', 4.0);' */
       , function(err, result) {
         done();
         client.end();
