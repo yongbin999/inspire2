@@ -9,10 +9,23 @@ var online = userlib.online;
 // # User Server-Side Routes
 
 var multer = require('multer');
-router.post('/upload', function (req, res) {
-  res.send('Uploaded ' + req.files.filedata.originalname + '\n');
-});
+// Use 3rd party middleware:
+router.use(multer({ dest : './public/uploads/',
+	         rename : function (fieldname, filename) {
+		   return filename.replace(/\W+/g, '-').toLowerCase() + 
+		     Date.now();
+		 }
+	       }));
 
+// This is how we do file uploads:
+router.post('/upload', function (req, res) {
+  var html = '<html>';
+  html += 'Uploaded <strong>' + req.files.file.originalname + '</strong><br><br>';
+  html += '<img src="/uploads/' + req.files.file.name + '" width="200">';
+  html += '<br><br>Size: ' + req.files.file.size + '';
+  html += '</html>';
+  res.send(html);
+});
 
 
 
