@@ -39,7 +39,7 @@ function handler(request, response) {
 
   //Query for a specific user
   else if(path === '/getuser') {
-    m.getUser('khanhnguyen', function(err, data) {
+    m.getUser('khanhnguyen', 'students', function(err, data) {
       if(err) {
         console.log('Error: ' + err);
         response.write('Error: ' + err);
@@ -56,11 +56,28 @@ function handler(request, response) {
       response.end();
     });
   }
-   else {
-    console.log('unknown filepath: ' + path + '\n');
-    response.write('unknown filepath: ' + path + '\n');
-    response.end();
-   }
+
+  //Query for prerequisites to a class
+  else if(path === '/getprereqs') {
+    m.getPrereqs(187, function(err, data) {
+      if(err) {
+        console.log(err);
+        response.write(err);
+      }
+      else {
+        console.log(data);
+      }
+      response.write(data);
+      response.end();
+    });
+  }
+
+  //Unknown filepath
+  else {
+      console.log('unknown filepath: ' + path + '\n');
+      response.write('unknown filepath: ' + path + '\n');
+      response.end();
+  }
 }
 
 //callback for testing purposes

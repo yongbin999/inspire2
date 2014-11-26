@@ -13,16 +13,19 @@ exports.addNewUser = addNewUser;
 //Returns json for student if exists, or else returns the string '[]'
 exports.getUser = getUser;
 
+//Returns prerequisites for classes specified by classid
+exports.getPrereqs = getPrereqs;
+
 
 
 
 
 //Returns all data from a table in database
 function getAllfromTable(table,callback) {
-	var querystring='';
-	if(table === undefined){
-	querystring ='select * from students;' ;
-	}
+  var querystring='';
+  if(table === undefined){
+  querystring ='select * from students;' ;
+  }
 
   pg.connect(connString, function (err, client, done) {
     if (err) {
@@ -76,20 +79,20 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
 
 //Returns json for student if exists, or else returns the string '[]'
 function getUser(id, table, callback) {
-	var querystring = '';
-	if (table === "students"){
-	querystring = 'select * from students where id=\'' + id + '\';' ;
-	}
-	else{
-	querystring = 'select * from admins where id=\'' + id + '\';' ;
-	}
+  var querystring = '';
+  if (table === "students"){
+  querystring = 'select * from students where id=\'' + id + '\';' ;
+  }
+  else{
+  querystring = 'select * from admins where id=\'' + id + '\';' ;
+  }
 
   pg.connect(connString, function (err, client, done) {
     if(err) {
       callback('Server Error: ' + err);
     }
     else {
-      	client.query(querystring, function(err, result) {
+        client.query(querystring, function(err, result) {
         done();
         client.end();
         if(err) {
@@ -102,6 +105,31 @@ function getUser(id, table, callback) {
           callback(undefined, data);
         }
       });
+    }
+  });
+}
+
+//Returns prerequisites for classes specified by classid
+function getPrereqs(classid, callback) {
+  pg.connect(connString, function(err, client, done) {
+    if(err) {
+      callback('Server Error: ' + err);
+    }
+    else {
+      client.query('select prereq from prerequisites where coursenumber=\'' + classid + '\';'
+        , function(err, result) {
+          done();
+          client.end();
+          if(err) {
+            console.log(err);
+            callback(err);
+          }
+          else {
+            //NOTE: returns '[]' if coursenumber does not exist or if no prereqs
+            var data = JSON.stringify(result.rows);
+            callback(undefined, data);
+          }
+        });
     }
   });
 }
