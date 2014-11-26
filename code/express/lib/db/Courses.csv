@@ -1,0 +1,77 @@
+Course Number,Course Name,Credits,Prerequisites,Term,Instructor
+105,Computer Literacy,3,N/A,Fall/Spring/Summer,Verts
+119,Introduction to Programming,3,N/A,Fall/Spring,Verts
+120,Introduction to Problem Solving with the Internet,3,N/A,Fall/Summer,Verts
+121,Introduction to Problem Solving with Computers,4,N/A,Spring/Summer,Anderson
+145,Representing Storing and Retrieving Information,3,N/A,Spring,Verts
+187,Programming with Data Structures,4,121,Fall/Spring/Summer,Liberatore
+197B,Advanced Assignments for CMPSCI 121,3,121,Spring,Anderson
+197C,Programming in C,1,121 187,Spring,Scarrci
+197U,A Hands on Introduction to Unix,1,N/A,Spring,DeVaughn-Brown
+197WP,Introduction to HTML/CSS,121,Spring,Scarrci
+220,Programming Methodology,4,187,Fall/Spring,Richards
+230,Computer System Principles,4,187,Fall/Spring,Richards
+240,Reasoning Under Uncertainty,4,187 MATH 132,Fall/Spring,McGregor
+250,Introduction to Computation,4,187 MATH 132,Fall/Spring,Barrington
+305,Social Issues in Computing,3,ENGLWRIT 112,Fall/Spring,Trim
+311,Introduction to Algorithms,4,250,Fall/Spring,Sitaraman
+320,Introduction to Software Engineering,4,220,Fall/Spring,Brun
+326,Web Programming,3,187,Fall/Spring,Richards
+345,Practice and Applications of Data Management,3,187,Fall,Meliou 
+348,Introduction to Knowledge Discovery,3,187 240 250,Spring,Jensen
+365,Digital Forensics,3,220 230 ,Spring,Levine
+377,Operating Systems,4,230,Fall/Spring,Ganesan
+383,Artificial Intelligence,3,220 230 240,Fall/Spring,Siegelmann
+390MB,Mobile Health Sensing and Monitoring,3,187,Fall,Ganesan
+390CG,Introduction to Computer Graphics,3,187 240,Spring,Wang
+391IB,Seminar - Inside the Box: How Computers Really Work,3,145,Fall,Weems
+391LI,Seminar - Computer Crime Law and the Technologies of Investigation and Privacy,3,145,Fall,Levine
+397G,Creative Game Design and Development,3,N/A,Spring,Smith
+397J,Introductory JavaScript Game Development,3,326,Spring,Tincknell
+403,Introduction to Robotics,3,187 230,Fall,Grupen
+445,Information Systems,3,220 230 311,Spring,Diao
+446,Search Engines,3,240 383,Spring,Allan
+453,Computer Networks,3,230 377,Fall/Spring,Venkataramani
+491IP,Seminar - Programming the iPhone and iPad,3,187 220,Fall,Weems
+491G,Computer Networking Lab,3,453,Spring,Venkataramani
+501,Formal Languate Theory,3,311,Spring,Barrington
+520,Software Engineering: Synthesis and Development,3,230 320,Spring,Bendraou
+521,Software Engineering: Analysis and Evaluation,3,230 320,Fall,Brun
+529,Software Engineering: Project Management,3,320,Fall/Spring,Brun
+575,Combinatorics and Graph Theory,3,250 311,Fall,Moll
+585,Introduction to Natural Language Processing,3,250 383,Fall,O'Connor
+589,Machine Learning,3,383,Fall/Spring,Marlin
+597CR,Crypto Engineering,3,N/A,Spring,Paar
+601,Computation Theory,3,501,Spring,Immerman
+603,Robotics,3,N/A,Spring,Grupen
+610,Compiler Techniques,3,187 250,Fall,Moss
+611,Advanced Algorithms,3,311,Fall,Sitaraman
+620,Advanced Software Engineering Synthesis and Development,3,N/A,Spring,Bendraou
+621,Advanced Software Engineering: Analysis and Evaluation,3,320 520,Fall,Brun
+630,Systems,3,230,Fall,Berger
+645,Database Design and Implementation,3,N/A,Spring,Meliou
+646,Information Retrieval,3,N/A,Fall,Allan
+650,Applied Information Theory,3,501,Fall,Learned-Miller
+653,Computer Networking,3,230 326,Fall,Kurose
+660,Advanced Information Assurance,3,460 466,Spring,Houmansadr
+670,Computer Vision,3,N/A,Fall,Maji
+677,Operating Systems,3,377,Spring,Shenoy
+683,Artificial Intelligence,3,383,Fall,Zilberstein
+688,Probabilistic Graphical Models,3,N/A,Spring,Sheldon
+689,Machine Learning,3,N/A,Fall/Spring,Maji
+690AA,Approximation Algorithms and Combinational Optimization,3,N/A,Spring,Saha
+690IV,Intelligent Visual Computing,3,N/A,Fall,Kalogerakis
+690PE,Performance Evaluation,3,N/A,Fall,Towsley
+691O,Seminar - Tools for Explanatory and Tutoring Systems,3,N/A,Fall,Woolf
+691PT,Seminar - Hot Topics in Privacy Enhancing Technologies,3,N/A,Fall,Houmansadr
+691DA,Big Data Algorithms and Applications,3,N/A,Spring,Saha
+691DD,Research Methods in Empirical Compuer Science,3,N/A,Spring,Berger
+701,Advanced Topics in Computer Science,6,N/A,Fall/Spring,Barrington
+891M,Theory of Computation,1,N/A,Spring,Immerman
+899,PhD Dissertation,9,N/A,Fall/Spring/Summer,STAFF
+H320,Honors Colloquium for CMPSCI 320,1,N/A,Fall/Spring,Brun
+H345,Honors Colloquium for CMPSCI 345,1,N/A,Fall,Meliou
+H391IB,Honors Colloquium for CMPSCI391IB,1,N/A,Fall,Weems
+H453,Honors Colloquium for CMPSCI453,1,N/A,Fall,Weems
+H589,Honors Colloquium for CMPSCI 589,N/A,Spring,Marlin
+

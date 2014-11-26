@@ -74,7 +74,17 @@ function handler(request, response) {
 
   //Populate the course catalog table
   else if(path === '/populatecoursecatalog') {
-    
+    m.populateCourseCatalog(function(err, data) {
+      if(err) {
+        console.log(err);
+        response.write(err);
+      }
+      else {
+        console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
   }
 
   //Unknown filepath

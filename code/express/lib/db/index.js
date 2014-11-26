@@ -1,7 +1,11 @@
 var pg = require('../../node_modules/pg');
+var fs = require('fs');
 
 var connString = 'postgres://student:student@localhost/student';
 
+
+//Populates the course catalog based on csv data
+exports.populateCourseCatalog = populateCourseCatalog;
 
 //Returns all students in database
 exports.getAllfromTable = getAllfromTable;
@@ -16,22 +20,25 @@ exports.getUser = getUser;
 //Returns prerequisites for classes specified by classid
 exports.getPrereqs = getPrereqs;
 
-//Populates the course catalog based on csv data
-exports.populateCourseCatalog = populateCourseCatalog;
-
 
 
 
 
 //Populates the course catalog based on csv data
-function populateCourseCatalog() {
-  fs.readFile('CS_Courses.csv', 'utf8', function(err, data) {
+function populateCourseCatalog(callback) {
+  fs.readFile('./db/Courses.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
       response.end();
     }
     else {
       var entries = data.split("\n");
+      for(var i in entries) {
+        console.log(entries[i]);
+        var values = entries.split(",");
+      }
+    }
+  });
 }
 
 //Returns all data from a table in database
