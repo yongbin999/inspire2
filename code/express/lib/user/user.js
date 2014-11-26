@@ -1,4 +1,4 @@
-// # User Library
+// # User Library for online list
 
 var online = {};
 

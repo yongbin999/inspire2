@@ -4,7 +4,7 @@ var connString = 'postgres://student:student@localhost/student';
 
 
 //Returns all students in database
-exports.getAllStudents = getAllStudents;
+exports.getAllfromTable = getAllfromTable;
 
 //Adds user to database
 //User info specified by arguments, gpa initialized to 0.0
@@ -14,15 +14,22 @@ exports.addNewUser = addNewUser;
 exports.getUser = getUser;
 
 
-//Returns all students in database
-function getAllStudents(callback) {
+
+
+
+//Returns all data from a table in database
+function getAllfromTable(table,callback) {
+	var querystring='';
+	if(table === undefined){
+	querystring ='select * from students;' ;
+	}
+
   pg.connect(connString, function (err, client, done) {
     if (err) {
       callback(err);
     }
     else {
-      client.query('select * from students;'
-          , function (err, result) {
+      client.query(querystring, function (err, result) {
         done();
         client.end();
         if (err) {
@@ -45,14 +52,14 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
       callback('Server Error: ' + err);
     }
     else {
-      client.query('insert into students values (\'' + id + '\', \''
+      client.query('insert into students values (\' ' + id + ' \', \''
         + password + '\', \''
         + fname + '\', \''
         + lname 
         + '\', \'Senior\', \'' 
         + schoolorg + '\'' +
         ', 0.0);'
-        /*client.query('insert into students values (\'samfoy\', \'password\', \'Sam\', \'Fox\', \'Senior\', \'UMass Amherst\', 4.0);'*/
+        /*client.query('insert into students values (\'samfoy\', \'password\', \'Sam\', \'Fox\', \'Senior\', \'UMass Amherst\', 4.0);' */
       , function(err, result) {
         done();
         client.end();
@@ -68,14 +75,21 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
 }
 
 //Returns json for student if exists, or else returns the string '[]'
-function getUser(id, callback) {
+function getUser(id, table, callback) {
+	var querystring = '';
+	if (table === "students"){
+	querystring = 'select * from students where id=\'' + id + '\';' ;
+	}
+	else{
+	querystring = 'select * from admins where id=\'' + id + '\';' ;
+	}
+
   pg.connect(connString, function (err, client, done) {
     if(err) {
       callback('Server Error: ' + err);
     }
     else {
-      client.query('select * from students where id=\'' + id + '\';'
-      , function(err, result) {
+      	client.query(querystring, function(err, result) {
         done();
         client.end();
         if(err) {

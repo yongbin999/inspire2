@@ -23,11 +23,6 @@ var home       = require('./routes/home');
 var app			= express();
 
 
-
-
-
-
-
 // Setup the view engine:
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

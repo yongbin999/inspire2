@@ -6,6 +6,16 @@ var m = require('../lib/db');
 
 // # User Server-Side Routes
 
+//middleware
+router.use(function (req, res, next) { 
+	console.log();
+  console.log('Time:', Date(Date.now()));
+  next();
+});
+
+
+
+
 // ## login
 // Provides a user login view.
 router.get('/login', function(req, res){
@@ -47,9 +57,12 @@ router.post('/auth', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     var isadmin = req.body.isadmin;
+	var table = "students";
 
+	
     // admin login
 	if( isadmin === true){
+	table = "admins";
 	//m.getUser(username, admintable, function(err, data){}
 	}
 
@@ -58,7 +71,7 @@ router.post('/auth', function(req, res) {
 
     // Perform the user lookup.
 
-    m.getUser(username,function (err, data) {
+    m.getUser(username,table,function (err, data) {
       if(err) {
 	console.log("error in finding user \n");
         req.flash('auth', "error in the search");
