@@ -72,6 +72,11 @@ function handler(request, response) {
     });
   }
 
+  //Populate the course catalog table
+  else if(path === '/populatecoursecatalog') {
+    
+  }
+
   //Unknown filepath
   else {
       console.log('unknown filepath: ' + path + '\n');

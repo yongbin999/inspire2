@@ -16,9 +16,23 @@ exports.getUser = getUser;
 //Returns prerequisites for classes specified by classid
 exports.getPrereqs = getPrereqs;
 
+//Populates the course catalog based on csv data
+exports.populateCourseCatalog = populateCourseCatalog;
 
 
 
+
+
+//Populates the course catalog based on csv data
+function populateCourseCatalog() {
+  fs.readFile('CS_Courses.csv', 'utf8', function(err, data) {
+    if(err) {
+      return console.log(err);
+      response.end();
+    }
+    else {
+      var entries = data.split("\n");
+}
 
 //Returns all data from a table in database
 function getAllfromTable(table,callback) {
