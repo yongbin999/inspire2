@@ -2,7 +2,8 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel='stylesheet' href='/stylesheets/menubar_style.css' />
 	<link rel="import" href='/header.html'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="javascripts/content_fadein.js"></script>
@@ -26,6 +27,23 @@
     <p>Welcome <%= user.id %> from  <%= user.isadminfor %>!  </p>
 
 	<a href="../user/online"> click to see online user list</a>
+
+<form method="post" 
+	action="/upload"
+	enctype="multipart/form-data">
+
+    <p>
+      <label>File to Upload</label>
+      <input id="file" type="file" name="file">
+      <label>Press to...</label>
+      <input id="submit" type="submit" name="submit" value="Upload!">
+    </p>
+    
+  </form>
+
+
+
+
    
 <p>Add new sub school group << not working yet </p>
 <form method="post" action="/admin/newgroup">

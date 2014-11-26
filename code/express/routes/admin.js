@@ -8,6 +8,15 @@ var online = userlib.online;
 
 // # User Server-Side Routes
 
+var multer = require('multer');
+router.post('/upload', function (req, res) {
+  res.send('Uploaded ' + req.files.filedata.originalname + '\n');
+});
+
+
+
+
+
 // ## main
 // The main user view.
 router.get('/', function(req, res) {
