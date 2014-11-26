@@ -85,8 +85,14 @@ router.post('/auth', function(req, res) {
         // Store the user in our in memory database.
 	var userinfo = JSON.parse(data);
 	console.log("parsed id: " + userinfo[0].id);
+
+	if(userinfo[0].password !== password){
+	req.flash('auth', "Password incorrect! Please try again");
+	}
+	else{
 	req.session.user = userinfo[0]; // get the first one from thearray
         userlib.addonline(userinfo[0].id);
+	}
 	}
 
         // Redirect to main.
