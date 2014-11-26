@@ -2,8 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 var userlib = require('../lib/user');
+var m = require('../lib/db');
+
 
 // # User Server-Side Routes
+
+
 
 router.get('/testing', function(req, res) {
 	var user = req.session.user;
@@ -66,6 +70,9 @@ router.get('/geneds', function(req, res) {
 	}
 });
 
+
+
+
 // routes for list of courses
 router.get('/courses', function(req, res) {
 	var user = req.session.user;
@@ -74,9 +81,11 @@ router.get('/courses', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
+	
+
     	res.render('student/courselist', { title   : 'New page to be made',
                          	users : user, 
-				message : 'none yet'});
+				message : message});
 	}
 });
 
