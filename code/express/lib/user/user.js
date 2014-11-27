@@ -1,6 +1,6 @@
 // # User Library for online list
 
-var online = {};
+var online = [];
 
 exports.addonline = function(username) {
   var len = online.length;

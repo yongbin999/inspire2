@@ -81,6 +81,9 @@ function getAllfromTable(table,callback) {
   if(table === undefined){
   querystring ='select * from students;' ;
   }
+  if(table === "admins"){
+  querystring ='select * from admins;' ;
+  }
 
   pg.connect(connString, function (err, client, done) {
     if (err) {

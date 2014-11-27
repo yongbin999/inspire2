@@ -28,16 +28,20 @@ var link = document.querySelector('link[rel="import"]');
     <p>admins list </p>
     <ul>
       <% var a = 0 %>
-      <% for(var id in adminlist) { %>
+      <% for(var list in adminlist) { %>
         <% for(var userid in onlinelist) { %>
-              <% if (adminlist[id].id === onlinelist[userid]){ %>
+              <% if (adminlist[list].id === onlinelist[userid]){ %>
                 <li><%= users[userid] + "[online] <<<"%></li>
                      <% a++ %>
               <% } %>
-              <% if (adminlist[id].id !== onlinelist[userid]){ %>
-              <li><%= adminlist[id].id + " [offline]"%></li>
+              <% if (adminlist[list].id !== onlinelist[userid]){ %>
+              <li><%= adminlist[list].id + " [offline]"%></li>
               <% } %>
         <% } %>
+
+		<%if (onlinelist.length === 0){ %>
+		<li><%= adminlist[list].id + " [offline]"%></li>
+		<% } %>
        <% } %>
 
 

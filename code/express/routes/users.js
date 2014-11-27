@@ -114,23 +114,24 @@ router.get('/online', function(req, res) {
 	}
 	else{requser= user.id;}
 
-	m.getAllfromTable("students",function (err, data) {
+	m.getAllfromTable("admins",function (err, data) {
       	if(err) {
 		console.log("error in finding user \n");
       	}
       	else{
-		console.log("user data : " + data);
-          	adminlist = data;
+			//console.log("user data : " + data);
+          	adminlist = JSON.parse(data);
 			userlib.onlinelist(function(onlines) {
 			    	if (onlines){
 			          onlinelist = onlines;
-			
+						//console.log("user data : " + onlines);
 			          res.render('student/online', { 
 						title : 'Users Online',
 						adminlist: adminlist,
 						onlinelist : onlinelist,
 						requser : requser });
 	        		}
+	        		
   			});
 		}
 	});
