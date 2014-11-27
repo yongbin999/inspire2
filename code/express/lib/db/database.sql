@@ -4,6 +4,8 @@ drop table if exists admins;
 drop table if exists prerequisites;
 drop table if exists offeredcourses;
 drop table if exists reportcards;
+drop table if exists major_tracks;
+
 
 drop type if exists level; 
 drop type if exists grade;
@@ -32,6 +34,15 @@ create table students (
 	schoolorg varchar(100),
 	gpa decimal,
 	primary key (id)
+);
+
+
+
+create table major_track (
+	track_shortname varchar(50),
+	track_description varchar(50),
+	coursenumber varchar(50),
+	primary key (coursenumber)
 );
 
 create table coursecatalog (

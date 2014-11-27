@@ -82,6 +82,12 @@ function getAllfromTable(table,callback) {
   if(table === undefined){
   querystring ='select * from coursecatalog;' ;
   }
+  else if(table === 'students'){
+  querystring ='select * from students;' ;
+  }
+  else if(table === 'admins'){
+  querystring ='select * from admins;' ;
+  }
 
   pg.connect(connString, function (err, client, done) {
     if (err) {
@@ -103,6 +109,9 @@ function getAllfromTable(table,callback) {
     }
   });
 }
+
+
+
 
 //Adds user to database
 //User info specified by arguments, gpa initialized to 0.0
@@ -132,6 +141,9 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
     }
   });
 }
+
+
+
 
 //Returns json for student if exists, or else returns the string '[]'
 function getUser(id, table, callback) {
@@ -164,6 +176,9 @@ function getUser(id, table, callback) {
     }
   });
 }
+
+
+
 
 //Adds new course to coursecatalog
 function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callback) {
@@ -207,6 +222,8 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
   });
 }
 
+
+
 //Returns course specified by courseid
 function getCourse(courseid, callback) {
   pg.connect(connString, function(err, client, done) {
@@ -231,6 +248,9 @@ function getCourse(courseid, callback) {
   });
 }
 
+
+
+
 //Sets prereqid as a prerequisite for the course specified by courseid
 function addNewPrereq(courseid, prereqid, callback) {
   pg.connect(connString, function(err, client, done) {
@@ -252,6 +272,9 @@ function addNewPrereq(courseid, prereqid, callback) {
     }
   });
 }
+
+
+
 
 //Returns prerequisites for classes specified by classid
 function getPrereqs(classid, callback) {
