@@ -68,6 +68,7 @@ function populateCoursesAndPrereqs(callback) {
             var term = values[4];
             var instructor = values[5];
  
+            //TODO: Finish this function
           }
         }
       });
@@ -79,10 +80,7 @@ function populateCoursesAndPrereqs(callback) {
 function getAllfromTable(table,callback) {
   var querystring='';
   if(table === undefined){
-  querystring ='select * from students;' ;
-  }
-  if(table === "admins"){
-  querystring ='select * from admins;' ;
+  querystring ='select * from coursecatalog;' ;
   }
 
   pg.connect(connString, function (err, client, done) {
@@ -97,6 +95,7 @@ function getAllfromTable(table,callback) {
           callback(err);
         }
         else {
+          console.log(data);
           var data = JSON.stringify(result.rows);
           callback(undefined, data);
         }
@@ -137,7 +136,7 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
 //Returns json for student if exists, or else returns the string '[]'
 function getUser(id, table, callback) {
   var querystring = '';
-  if (table === "students"){
+  if (table === 'students'){
   querystring = 'select * from students where id=\'' + id + '\';' ;
   }
   else{

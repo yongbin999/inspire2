@@ -24,6 +24,19 @@ function handler(request, response) {
     });
   }
 
+  else if(path === '/getallfromtable') {
+    m.getAllfromTable('coursecatalog', function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+        console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
   //Add a new user
   else if(path === '/signup/newuser') {
     m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', function(err, data) {
@@ -88,13 +101,13 @@ function handler(request, response) {
   }
 
   else if(path === '/getcourse') {
-    m.getCourse(999, function(err, data) {
+    m.getCourse(998, function(err, data) {
       if(err) {
-        //console.log(err);
+        console.log(err);
         response.write(err);
       }
       else {
-        //console.log(data);
+        console.log(data);
         response.write(data);
       }
       response.end();
@@ -116,7 +129,7 @@ function handler(request, response) {
   }
 
   else if(path === '/addnewcourse') {
-    m.addNewCourse(999, 'Introduction to the Universe', '5'
+    m.addNewCourse(998, 'Introduction to the Universe', '5'
       , 'Fall', 'Poopman', ["187", "105"], function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
