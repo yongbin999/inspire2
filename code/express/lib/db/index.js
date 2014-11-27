@@ -17,6 +17,15 @@ exports.addNewUser = addNewUser;
 //Returns json for student if exists, or else returns the string '[]'
 exports.getUser = getUser;
 
+//Adds new course to coursecatalog
+exports.addNewCourse = addNewCourse;
+
+//Returns course specified by courseid
+exports.getCourse = getCourse;
+
+//Sets prereqid as a prerequisite for the course specified by courseid
+exports.addNewPrereq = addNewPrereq;
+
 //Returns prerequisites for classes specified by classid
 exports.getPrereqs = getPrereqs;
 
@@ -33,13 +42,13 @@ function populateCoursesAndPrereqs(callback) {
       response.end();
     }
     else {
-      //If success, connect to database
+      //If success, connect to database...
       pg.connect(connString, function(err, client, done) {
         if(err) {
           callback(err);
         }
         else {
-          //If success, process csv data and post to database
+          //If success, process csv data and post to database...
           var entries = data.split("\n");
           for(var i in entries) {
             console.log(entries[i]);
@@ -47,8 +56,18 @@ function populateCoursesAndPrereqs(callback) {
             for(var j in values) {
               console.log(values[j]);
             }
-
             console.log("\n\n");
+
+            var coursenumber = values[0];
+            var name = values[1];
+            var credits = values[2];
+            var prereqs = '';
+            if(values[3] !== 'N/A') {
+              prereqs = values[3];
+            }
+            var term = values[4];
+            var instructor = values[5];
+ 
           }
         }
       });
@@ -140,6 +159,94 @@ function getUser(id, table, callback) {
           callback(undefined, data);
         }
       });
+    }
+  });
+}
+
+//Adds new course to coursecatalog
+function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callback) {
+  pg.connect(connString, function(err, client, done) {
+    if(err) {
+      callback(err);
+    }
+    else {
+
+      //Perform checks
+      /*if(!(term === 'Fall' || term === 'Spring' || term === 'Summer' || term === 'Fall/Spring' || term === 'Fall/Summer' 
+        || term === 'Spring/Summer'|| term === 'Fall/Spring/Summer')) {
+        callback("Invalid string for term\nValid term strings: Fall, Spring, Summer, Fall/Spring, Fall/Spring, Fall/summer, "
+        + "Spring/Summer, Fall/Spring/Summer", undefined);
+      }
+      else*/ if(isNaN(credits) || isNaN(parseInt(credits))) {
+        callback("Non-number entered for credits", undefined);
+      }
+
+
+      //Add New Course information
+      else {
+        var querystring = 'insert into coursecatalog values (\' ' 
+          + coursenum + '\', \''
+          + name + '\', \''
+          + credits + '\', \''
+          + term + '\', \''
+          + instructor + '\');';
+        client.query(querystring, function(err, result) {
+          done();
+          client.end();
+          if(err) {
+            callback(err);
+          }
+          else {
+            callback(undefined, 'Success!\n');
+          }
+        });
+      }
+    }
+  });
+}
+
+//Returns course specified by courseid
+function getCourse(courseid, callback) {
+  pg.connect(connString, function(err, client, done) {
+    if(err) {
+      callback(err);
+    }
+    else {
+      client.query('select * from coursecatalog where coursenumber =\'' + courseid + '\';'
+        , function(err, result) {
+          done();
+          client.end();
+          if(err) {
+            console.log(err);
+          }
+          else {
+            //NOTE: returns '[]' if coursenumber does not exist
+            var data = JSON.stringify(result.rows);
+            callback(undefined, data);
+          }
+        });
+    }
+  });
+}
+
+//Sets prereqid as a prerequisite for the course specified by courseid
+function addNewPrereq(courseid, prereqid, callback) {
+  pg.connect(connString, function(err, client, done) {
+    if(err) {
+      callback(err);
+    }
+    else {
+      client.query(''
+        , function(err, result) {
+          done();
+          client.end();
+          if(err) {
+            callback(err);
+          }
+          else {
+            callback(undefined, 'Success!\n');
+          }
+        });
     }
   });
 }

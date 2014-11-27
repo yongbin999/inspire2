@@ -87,6 +87,49 @@ function handler(request, response) {
     });
   }
 
+  else if(path === '/getcourse') {
+    m.getCourse(999, function(err, data) {
+      if(err) {
+        //console.log(err);
+        response.write(err);
+      }
+      else {
+        //console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
+  else if(path === '/addnewprereq') {
+    m.addNewPrereq(187, function(err, data) {
+      if(err) {
+        console.log(err);
+        response.write(err);
+      }
+      else {
+        console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
+  else if(path === '/addnewcourse') {
+    m.addNewCourse(999, 'Introduction to the Universe', '5'
+      , 'Fall', 'Poopman', ["187", "105"], function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+        response.write('ERROR: ' + err);
+      }
+      else {
+        console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
   //Unknown filepath
   else {
       console.log('unknown filepath: ' + path + '\n');

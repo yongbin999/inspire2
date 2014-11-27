@@ -1,4 +1,3 @@
-Course Number,Course Name,Credits,Prerequisites,Term,Instructor
 105,Computer Literacy,3,N/A,Fall/Spring/Summer,Verts
 119,Introduction to Programming,3,N/A,Fall/Spring,Verts
 120,Introduction to Problem Solving with the Internet,3,N/A,Fall/Summer,Verts
@@ -73,5 +72,5 @@ H320,Honors Colloquium for CMPSCI 320,1,N/A,Fall/Spring,Brun
 H345,Honors Colloquium for CMPSCI 345,1,N/A,Fall,Meliou
 H391IB,Honors Colloquium for CMPSCI391IB,1,N/A,Fall,Weems
 H453,Honors Colloquium for CMPSCI453,1,N/A,Fall,Weems
-H589,Honors Colloquium for CMPSCI 589,N/A,Spring,Marlin
+H589,Honors Colloquium for CMPSCI 589,1,N/A,Spring,Marlin
 
