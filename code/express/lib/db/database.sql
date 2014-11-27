@@ -69,7 +69,7 @@ create table reportcards (
 
 insert into admins values ('timrichards', 'password', 'Tim', 'Richards', 'UMass Amherst');
 insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen', 'UMass Amherst');
-insert into admins values ('admin', 'password', 'admin', 'admin', 'UMass Amherst');
+insert into admins values ('admin', 'admin', 'admin', 'admin', 'UMass Amherst');
 
 insert into students values ('test', 'password', 'test', 'test', 'Senior', 'UMass Amherst', 4.0);
 insert into students values ('samfox', 'password', 'Sam', 'Fox', 'Senior', 'UMass Amherst', 4.0);

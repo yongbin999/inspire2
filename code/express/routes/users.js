@@ -85,7 +85,7 @@ router.get('/courses', function(req, res) {
 
     	res.render('student/courselist', { title   : 'New page to be made',
                          	users : user, 
-				message : message});
+				message : "hi"});
 	}
 });
 
@@ -114,11 +114,13 @@ router.get('/online', function(req, res) {
 	}
 	else{requser= user.id;}
 
-
-  	userlib.adminlist(function(data) {
-    		if (data){
+	m.getAllfromTable("students",function (err, data) {
+      	if(err) {
+		console.log("error in finding user \n");
+      	}
+      	else{
+		console.log("user data : " + data);
           	adminlist = data;
-
 			userlib.onlinelist(function(onlines) {
 			    	if (onlines){
 			          onlinelist = onlines;
