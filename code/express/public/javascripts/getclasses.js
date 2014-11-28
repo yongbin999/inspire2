@@ -1,18 +1,10 @@
-function displayTable(classid) {
- m.getPrereqs("187", function(err, data) {
-	if(err) {
-	        console.log('ERROR: ' + err);
-      	}
-      	else if (data === '[]'){
-        	message+="no prereq \n";
-	}
-	else{
-        	// Store the user in our in memory database.
-		listclasses = JSON.parse(data);
 
+
+function list(listclasses) {
 
 			col = listclasses[0].length;
 			row = listclasses.length;
+
 		
 			console.log(col);
 			console.log(row);
@@ -51,6 +43,3 @@ function displayTable(classid) {
 		  }
 		  document.write('</table>');
 }
-
-
-	}

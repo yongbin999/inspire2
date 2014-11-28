@@ -11,6 +11,12 @@
 	<script src="../javascripts/displaytable.js"></script>
   <script src="../javascripts/getclasses.js"></script>
 
+    <script>
+    function table(x,y){
+      $('#testing').append(displayTimes(x,y));
+    }
+    </script>
+
   </head>
 
   <body>
@@ -33,94 +39,28 @@
 
 	<div id="testing" class= "schedule" align ="center">
 	<br>
+
+
+  <form action="">
+  <input id=x type="text"  placeholder="x" name="x" value = 5>
+  <input id=y type="text"  placeholder="y" name="y" value = 5>
+  <button id="foo" onclick=table(4,6)> display pre-req</button>
+   </form>
+ </div>
     <script>
     function table(x,y){
-      document.appendChild(displayTimes(x,y));
+      $('#testing').append(displayTimes(x,y));
     }
     </script>
 
-  <form target="_self">
-  <input type="text"  placeholder="x" name="x" value = 5>
-  <input type="text"  placeholder="y" name="y" value = 5>
-  <button id="foo" onclick=table(5,4)> display pre-req</button>
-   </form>
- </div>
+    
+<script>
+var obj = <%=listclasses%>;
 
+list(obj);
 
+</script>
 
-  <script> displayTable(CS187)</script>
-
-
-<!-- get individual users data to display later -->
-<table id="testing" class="schedule" align="center">
- <tbody>
-  <tr align="center">
-   <th>
-     Monday
-   </th>
-   <th>
-     Tuesday
-   </th>
-   <th>
-     Wednesday
-   </th>
-   <th>
-     Thursday
-   </th>
-   <th>
-     Friday
-   </th>
-  </tr>
-  <tr>
-   <th>
-     class1
-   </th>
-   <th>
-     class4
-   </th>
-   <th>
-     class1
-   </th>
-   <th>
-     class4
-   </th>
-   <th>
-     class1
-   </th>
-  </tr>
-  <tr>
-   <th>
-     class2
-   </th>
-   <th>
-     class5
-   </th>
-   <th>
-     class2
-   </th>
-   <th>
-     class5
-   </th>
-   <th>
-     class2
-  </tr>
-  <tr>
-   <th>
-     class3
-   </th>
-   <th>
-   </th>
-   <th>
-     class3
-   </th>
-   <th>
-   </th>
-   <th>
-     class3
-   </th>
-  </tr>
- </tbody>
-</table>
 
 
 </div>

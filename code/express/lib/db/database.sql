@@ -55,8 +55,8 @@ create table coursecatalog (
 );
 
 create table prerequisites (
-	coursenumber int,
-	prereq int
+	coursenumber varchar(6),
+	prereq varchar(6)
 );
 
 /*Probably will not need this...*/

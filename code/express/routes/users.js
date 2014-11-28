@@ -73,20 +73,31 @@ router.get('/geneds', function(req, res) {
 
 
 
+
 // routes for list of courses
 router.get('/courses', function(req, res) {
 	var user = req.session.user;
-  	if (user === undefined) {
-    	req.flash('auth', 'Not logged in!');
-    	res.redirect('/login');
-	}
-	else{
-	
+	var message = "";
+	var listclasses;
+	m.getCourse("CS187", function(err, data) {
+		if(err) {
+		        console.log('ERROR: ' + err);
+	    	}
+	    	else if (data === '[]'){
+	        	message+="no prereq \n";
+	        	console.log("blank");
+		}
+		else{
+	        // Store the user in our in memory database.
+			 listclasses = JSON.parse(data);
+		message+= "hi";
+		}
+		console.log(listclasses);
 
-    	res.render('student/courselist', { title   : 'New page to be made',
-                         	users : user, 
-				message : "hi"});
-	}
+		res.render('student/courselist', { title   : 'data',
+                         	listclasses : listclasses, 
+							message : "hi"});
+	});
 });
 
 // routes for changing settings.

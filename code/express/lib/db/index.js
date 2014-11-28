@@ -226,13 +226,20 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
 
 //Returns course specified by courseid
 function getCourse(courseid, callback) {
-  pg.connect(connString, function(err, client, done) {
+  var querystring ='';
+  if (courseid ==="all"){
+    querystring = 'select * from coursecatalog ;';
+  }
+  else{
+    querystring = 'select * from coursecatalog where coursenumber =\'' + courseid + '\';';
+  }
+
+    pg.connect(connString, function(err, client, done) {
     if(err) {
       callback(err);
     }
     else {
-      client.query('select * from coursecatalog where coursenumber =\'' + courseid + '\';'
-        , function(err, result) {
+      client.query(querystring, function(err, result) {
           done();
           client.end();
           if(err) {
@@ -283,7 +290,7 @@ function getPrereqs(classid, callback) {
       callback('Server Error: ' + err);
     }
     else {
-      client.query('select prereq from prerequisites where coursenumber=\'' + classid + '\';'
+      client.query('select prereq from prerequisites where coursenumber =\'' + classid + '\';'
         , function(err, result) {
           done();
           client.end();
@@ -294,6 +301,7 @@ function getPrereqs(classid, callback) {
           else {
             //NOTE: returns '[]' if coursenumber does not exist or if no prereqs
             var data = JSON.stringify(result.rows);
+            //console.log(data);
             callback(undefined, data);
           }
         });
