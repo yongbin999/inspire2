@@ -9,14 +9,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="../javascripts/content_fadein.js"></script>
 	<script src="../javascripts/displaytable.js"></script>
-
-<script>
-$(document).ready(function(){
-$("button").click(function(){
-  $("#testing").fadeIn();
-});
-});
-</script>
+  <script src="../javascripts/getclasses.js"></script>
 
   </head>
 
@@ -39,11 +32,23 @@ $("button").click(function(){
 
 
 	<div id="testing" class= "schedule" align ="center">
+	<br>
+    <script>
+    function table(x,y){
+      document.appendChild(displayTimes(x,y));
+    }
+    </script>
 
-	<br><button onclick='displayTimes(5,4);'> display pre-req 
-  </button>
-	<script >displayTable(CS187)</script>
-</div>
+  <form target="_self">
+  <input type="text"  placeholder="x" name="x" value = 5>
+  <input type="text"  placeholder="y" name="y" value = 5>
+  <button id="foo" onclick=table(5,4)> display pre-req</button>
+   </form>
+ </div>
+
+
+
+  <script> displayTable(CS187)</script>
 
 
 <!-- get individual users data to display later -->
