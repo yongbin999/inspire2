@@ -10,6 +10,14 @@
 	<script src="../javascripts/content_fadein.js"></script>
 	<script src="../javascripts/displaytable.js"></script>
 
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+  $("#testing").fadeIn();
+});
+});
+</script>
+
   </head>
 
   <body>
@@ -31,12 +39,11 @@
 
 
 	<div id="testing" class= "schedule" align ="center">
-	<script >displayTimes(2,5)</script>
 
-	<br><button>display pre-req</button>
-	<script >displayTable(187)</script>
-	</div>
-
+	<br><button onclick='displayTimes(5,4);'> display pre-req 
+  </button>
+	<script >displayTable(CS187)</script>
+</div>
 
 
 <!-- get individual users data to display later -->
