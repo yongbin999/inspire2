@@ -5,40 +5,61 @@
     <link type="text/css" rel="stylesheet" href="../stylesheets/d3/style.css"/>
     <script type="text/javascript" src="../javascripts/d3/d3.js"></script>
     <script type="text/javascript" src="../javascripts/d3/d3.layout.js"></script>
-    <style type="text/css">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='/stylesheets/menubar_style.css' />
+	<link rel="import" href='/header.html'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../javascripts/content_fadein.js"></script>
 
+    <style type="text/css">
 
 .node circle {
   cursor: pointer;
   fill: #fff;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 5px;
 }
 
 .node text {
-  font-size: 11px;
+  color: red;
+  font-size: 15px;
 }
 
 path.link {
   fill: none;
   stroke: #ccc;
-  stroke-width: 1.5px;
+  stroke-width: 10px;
 }
-
     </style>
   </head>
+
+
+
+
   <body>
+<div id="header"></div>
+  <script>
+var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('#headerbanner');
+    document.body.appendChild(el.cloneNode(true));
+	
+	var el2 = content.querySelector('#student_menu');
+  	document.body.appendChild(el2.cloneNode(true));
+  </script>
+
+<div id ="content" class = "contentview">
     <div id="body">
-      <div id="footer">
-        d3.layout.tree
-        <div class="hint">click or option-click to expand or collapse</div>
-      </div>
-    </div>
+
+
+
+
     <script type="text/javascript">
 
-var m = [20, 120, 20, 120],
-    w = 1280 - m[1] - m[3],
-    h = 800 - m[0] - m[2],
+var m = [-20, 0, 50, 50],
+    w = 800 - m[1] - m[3],
+    h = 350 - m[0] - m[2],
     i = 0,
     root;
 
@@ -53,6 +74,7 @@ var vis = d3.select("#body").append("svg:svg")
     .attr("height", h + m[0] + m[2])
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
 
 d3.json("../uploads/flare.json", function(json) {
   root = json;
@@ -70,8 +92,6 @@ d3.json("../uploads/flare.json", function(json) {
   root.children.forEach(toggleAll);
   toggle(root.children[1]);
   toggle(root.children[1].children[2]);
-  toggle(root.children[9]);
-  toggle(root.children[9].children[0]);
 
   update(root);
 });
@@ -83,7 +103,7 @@ function update(source) {
   var nodes = tree.nodes(root).reverse();
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
+  nodes.forEach(function(d) { d.y = d.depth * 100; });
 
   // Update the nodes…
   var node = vis.selectAll("g.node")
@@ -178,5 +198,9 @@ function toggle(d) {
 }
 
     </script>
+</div>
+</div>
+
+
   </body>
 </html>
