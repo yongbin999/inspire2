@@ -42,9 +42,9 @@
 
 
   <form action="">
-  <input id=x type="text"  placeholder="x" name="x" value = 5>
-  <input id=y type="text"  placeholder="y" name="y" value = 5>
-  <button id="foo" onclick=table(4,6)> display pre-req</button>
+  <input id="x" type="text"  placeholder="x" name="x" value = "5">
+  <input id="y" type="text"  placeholder="y" name="y" value = "5">
+  <button id="foo" onclick=table($('x'),$('y'))> display pre-req</button>
    </form>
  </div>
     <script>

@@ -42,6 +42,23 @@ router.get('/newpage', function(req, res) {
 });
 
 
+router.get('/major_track', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('student/major_track', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
+
+
+
+
+
 //routes for getting their stored list of classes planning to take / took
 router.get('/class', function(req, res) {
 	var user = req.session.user;
