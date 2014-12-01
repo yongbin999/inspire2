@@ -148,3 +148,356 @@
         }]
     }]
 }
+
+starting point
+{
+    "name": "XXXXX",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220"
+                },{
+                "name": "230"
+                },{
+                "name": "240"
+                },{
+                "name": "250"
+            }]
+        }]
+    }]
+}
+
+{
+    "name": "GenCmpsci",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children":[{
+                    "name":"383"
+                    }]
+                },{
+                "name": "230"
+                "children": [{
+                    "name":"377"
+                    }]
+                },{
+                "name": "240"
+                },{
+                "name": "250"
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+
+{
+    "name": "Software Engineering",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320",
+                    "children": [{
+                        "name":"520"
+                        },{
+                        "name":"521"
+                        }]
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name": "311"
+                    }]
+            }]
+        }]
+    }]
+}
+
+{
+    "name": "Artificial Intellegence",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    },{
+                    "name": "383"
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Search & Data Mining",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    },{
+                    "name": "585"
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240",
+                "children": [{
+                    "name": "446"
+                    }]
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311",
+                    "children": [{
+                        "name": "445"
+                        }]
+                    },{
+                    "name":"348"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Robotics",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "473"
+                },{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    },{
+                    "name": "403"
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240",
+                "children": [{
+                    "name": "370"
+                    }]
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Theory of Computation",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311",
+                    "children": [{
+                        "name":"501"
+                        }]
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Computer Architecture",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    },{
+                    "name": "391IB",
+                    "children": [{
+                        "name": "535",
+                        "children": [{
+                            "name": "635"
+                            }]
+                        }]
+                    }]
+                },{
+                "name": "230"
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Security & Privacy",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320 or 326"
+                    }]
+                },{
+                "name": "230",
+                "children": [{
+                    "name": "377",
+                    "children": [{
+                        "name": "460"
+                        }]
+                    }]
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Networking",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320 or 326"
+                    }]
+                },{
+                "name": "230",
+                "children": [{
+                    "name": "377"
+                    },{
+                    "name": "453",
+                    "children": [{
+                        "name": "491G"
+                        }]
+                    }]
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Software Systems",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320"
+                    }]
+                },{
+                "name": "230",
+                "children": [{
+                    "name": "377"
+                    }]
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311",
+                    "children": [{
+                        "name": "445"
+                        }]
+                    }]
+            }]
+        }]
+    }]
+}
+{
+    "name": "Programming Languages and Compilers",
+    "children": [{
+        "name": "121",
+        "children": [{
+            "name": "187",
+            "children": [{
+                "name": "220",
+                "children": [{
+                    "name": "320 or 326"
+                    },{
+                    "name": "530"
+                    }]
+                },{
+                "name": "230",
+                "children": [{
+                    "name": "377",
+                    "children": [{
+                        "name": "410"
+                        }]
+                    }]
+                },{
+                "name": "240"
+                },{
+                "name": "250",
+                "children": [{
+                    "name":"311"
+                    }]
+            }]
+        }]
+    }]
+}
