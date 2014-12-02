@@ -72,7 +72,7 @@ function handler(request, response) {
 
   //Query for prerequisites to a class
   else if(path === '/getprereqs') {
-    m.getPrereqs(187, function(err, data) {
+    m.getPrereqs('CS187', function(err, data) {
       if(err) {
         console.log(err);
         response.write(err);
@@ -101,7 +101,7 @@ function handler(request, response) {
   }
 
   else if(path === '/getcourse') {
-    m.getCourse(998, function(err, data) {
+    m.getCourse('CS998', function(err, data) {
       if(err) {
         console.log(err);
         response.write(err);
@@ -115,7 +115,7 @@ function handler(request, response) {
   }
 
   else if(path === '/addnewprereq') {
-    m.addNewPrereq(187, function(err, data) {
+    m.addNewPrereq('CS187', 'CS232', function(err, data) {
       if(err) {
         console.log(err);
         response.write(err);
@@ -129,8 +129,8 @@ function handler(request, response) {
   }
 
   else if(path === '/addnewcourse') {
-    m.addNewCourse(998, 'Introduction to the Universe', '5'
-      , 'Fall', 'Poopman', ["187", "105"], function(err, data) {
+    m.addNewCourse('CS998', 'Introduction to the Universe', '5'
+      , 'Fall', 'Poopman', ["CS187", "CS105"], function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
         response.write('ERROR: ' + err);
