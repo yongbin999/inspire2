@@ -21,8 +21,9 @@
 }
 
 .node text {
-  color: red;
-  font-size: 15px;
+  fill: #98FB98;
+	stroke: #0000FF;
+  font-size: 20px;
 }
 
 path.link {
@@ -50,16 +51,18 @@ var link = document.querySelector('link[rel="import"]');
   </script>
 
 <div id ="content" class = "contentview">
+<h3>Welcome to the CS graduation requirement page!</h3>
+Please select a track in the drop down menu and view the require courses
+
+
+
     <div id="body">
-
-
-
 
     <script type="text/javascript">
 
-var m = [-20, 0, 50, 50],
+var m = [0, 0, 50, 100],
     w = 800 - m[1] - m[3],
-    h = 350 - m[0] - m[2],
+    h = 450 - m[0] - m[2],
     i = 0,
     root;
 
@@ -103,7 +106,7 @@ function update(source) {
   var nodes = tree.nodes(root).reverse();
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 100; });
+  nodes.forEach(function(d) { d.y = d.depth * 150; }); // << change spacing
 
   // Update the nodes…
   var node = vis.selectAll("g.node")

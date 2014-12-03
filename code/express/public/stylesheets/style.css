@@ -10,13 +10,13 @@ overflow-y: auto;
 	  text-align:left;
 	  position: fixed;
 	top:20%;	
-	height:55%;
+	height:75%;
 	overflow-y: auto;	
-	  left: 10%;
-	  right: 10%;
+	  left: 7%;
+	  right: 7%;
 	  transform: translate(00%, 00%);
 	  background-color:#881c1c;
-	  padding:5%;
+	  padding:0 3% 0;
 	border-radius: 15px;
 	display:none;       << fadein
 	font-weight:bold;
