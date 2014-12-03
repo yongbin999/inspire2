@@ -149,28 +149,8 @@
     }]
 }
 
-starting point
 {
-    "name": "XXXXX",
-    "children": [{
-        "name": "121",
-        "children": [{
-            "name": "187",
-            "children": [{
-                "name": "220"
-                },{
-                "name": "230"
-                },{
-                "name": "240"
-                },{
-                "name": "250"
-            }]
-        }]
-    }]
-}
-
-{
-    "name": "GenCmpsci",
+    "name": "General Compsci",
     "children": [{
         "name": "121",
         "children": [{
@@ -192,6 +172,19 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
+                },{
+                "name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"	
+                	},{
+                	"name": ">400"
+                	},{
+                	"name": ">400"
+                	},{
+                	"name": ">400"
+                	}]
             }]
         }]
     }]
@@ -222,7 +215,42 @@ starting point
                 "children": [{
                     "name": "311"
                     }]
-            }]
+            	},{
+                "name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"	
+                	}]
+            	},{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"325"
+            		},{
+            		"name":"365"
+            		},{
+            		"name":"377"
+            		},{
+            		"name":"410"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"453"
+            		},{
+            		"name":"460"
+            		},{
+            		"name":"501"
+            		},{
+            		"name":"513"
+            		},{
+            		"name":"529"
+            		},{
+            		"name":"575"
+            		},{
+            		"name":"496"
+            		}]
+            	}]
+
         }]
     }]
 }
@@ -249,6 +277,31 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
+            	},{
+                "name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                	},{
+                	"name": ">300"	
+                },{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"370"
+            		},{
+            		"name":"403"
+            		},{
+            		"name":"446"
+            		},{
+            		"name":"503"
+            		},{
+            		"name":"585"
+            		},{
+            		"name":"589"
+            		},{
+            		"name":"683"
+            		}]
             }]
         }]
     }]
@@ -283,6 +336,13 @@ starting point
                     },{
                     "name":"348"
                     }]
+                },{
+                "name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                }]
             }]
         }]
     }]
@@ -314,7 +374,31 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                	}]
+            	},{
+            	"name": "select 1",
+            	"children": [{
+            		"name":"383"
+            		},{
+            		"name":"474"
+            		},{
+            		"name":"496"
+            		},{
+            		"name":"590GM"
+            		},{
+            		"name":"603"
+            		},{
+            		"name":"617"
+            		},{
+            		"name":"690IV"
+            		}]
+            	}]
         }]
     }]
 }
@@ -341,7 +425,40 @@ starting point
                         "name":"501"
                         }]
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                	}]
+            	},{
+            	"name": "select 1",
+            	"children": [{
+            		"name":"377"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"453"
+            		},{
+            		"name":"535"
+            		}]
+            	},{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"513"
+            		},{
+            		"name":"575"
+            		},{
+            		"name":"601"
+            		},{
+            		"name":"611"
+            		},{
+            		"name":"496"
+            		},{
+            		"name":"Math 411"
+            		}]
+            	}]
         }]
     }]
 }
@@ -373,7 +490,45 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                	}]
+            	},{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"377"
+            		},{
+            		"name":"410"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"453"
+            		},{
+            		"name":"501"
+            		},{
+            		"name":"520"
+            		},{
+            		"name":"530"
+            		},{
+            		"name":"610"
+            		},{
+            		"name":"653"
+            		},{
+            		"name":"677"
+            		},{
+            		"name":"496"
+            		},{
+            		"name":"ECE 353"
+            		},{
+            		"name":"ECE 354"
+            		},{
+            		"name":"ECE 558"
+            		}]
+            	}]
         }]
     }]
 }
@@ -403,7 +558,36 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                }]
+            },{
+            	"name": "select 1",
+            	"children": [{
+            		"name":"348"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"453"
+            		}]
+            	},{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"365"
+            		},{
+            		"name":"391LI"
+            		},{
+            		"name":"466"
+            		},{
+            		"name":"660"
+            		},{
+            		"name":"ECE 597AB"
+            		}]
+            	}]
         }]
     }]
 }
@@ -435,7 +619,27 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
-            }]
+           		},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                }]
+            },{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"320"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"460"
+            		},{
+            		"name":"466"
+            		},{
+            		"name":"653"
+            		}]
+            	}]
         }]
     }]
 }
@@ -465,7 +669,29 @@ starting point
                         "name": "445"
                         }]
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                }]
+            },{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"325"
+            		},{
+            		"name":"453"
+            		},{
+            		"name":"460"
+            		},{
+            		"name":"466"
+            		},{
+            		"name":"535"
+            		},{
+            		"name":"677"
+            		}]
+            	}]
         }]
     }]
 }
@@ -497,7 +723,25 @@ starting point
                 "children": [{
                     "name":"311"
                     }]
-            }]
+            	},{
+            	"name": "electives",
+                "children": [{
+                	"name": ">300"
+                	},{
+                	"name": ">300"
+                }]
+            },{
+            	"name": "select 2",
+            	"children": [{
+            		"name":"320"
+            		},{
+            		"name":"445"
+            		},{
+            		"name":"535"
+            		},{
+            		"name":"496"
+            		}]
+            	}]
         }]
     }]
 }
