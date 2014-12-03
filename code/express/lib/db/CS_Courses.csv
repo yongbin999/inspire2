@@ -1,54 +1,69 @@
-Course Number,Course Name,Prerequisites,Term,Instructor
-105,Computer Literacy,N/A,Spring,Verts
-119,Introduction to Programming,N/A,Spring,Verts
-121,Introduction to Problem Solving with Computers,N/A,Spring,Anderson
-145,Representing Storing and Retrieving Information,N/A,Spring,Verts
-187,Programming with Data Structures,121,Spring,Liberatore
-187,Programming with Data Structures,121,Spring,Ridgway
-197B,Advanced Assignments for CMPSCI 121,121,Spring,Anderson
-197C,Programming in C,121 187,Spring,Scarrci
-197U,A Hands on Introduction to Unix,N/A,Spring,DeVaughn-Brown
-197WP,Introduction to HTML/CSS,121,Spring,Scarrci
-220,Programming Methodology,187,Spring,Richards
-230,Computer System Principles,187,Spring,Richards
-230,Computer System Principles,187,Spring,Moss
-240,Reasoning Under Uncertainty,187 MATH 132,Spring,McGregor
-250,Introduction to Computation,187  MATH 132,Spring,Barrington
-305,Social Issues in Computing,ENGLWRIT 112,Spring,Trim
-311,Introduction to Algorithms,250,Spring,Sitaraman
-320,Introduction to Software Engineering,220,Spring,Brun
-320,Introduction to Software Engineering,220,Spring,Anderson
-326,Web Programming,187,Spring,Richards
-348,Introduction to Knowledge Discovery,187 240 250,Spring,Jensen
-365,Digital Forensics,220 230 ,Spring,Levine
-377,Operating Systems,230,Spring,Ganesan
-383,Artificial intelligence,220 (230) 240,Spring,Siegelmann
-390CG,Introduction to Computer Graphics,187 190DM (240),Spring,Wang
-397G,Creative Game Design and Development,N/A,Spring,STAFF
-397J,Introductory JavaScript Game Development,326,Spring,Tincknell
-445,Information Systems,220 (230) 311,Spring,Diao
-446,Search Engines,240 (383),Spring,Allan
-453,Computer Networks,230 (377),Spring,STAFF
-491G,Computer Networking Lab,453,Spring,Venkataramani
-501,Formal Languate Theory,311,Spring,Barrington
-520,Software Engineering Synthesis and Development,230,Spring,Bendraou
-529,Software Engineering Project Management,320,Spring,Brun
-529,Software Engineering Project Management,320,Spring,Anderson
-589,Machine Learning,383,Spring,Marlin
-597CR,Crypto Engineering,N/A,Spring,Paar
-601,Computation Theory,501,Spring,Immerman
-603,Robotics,N/A,Spring,Grupen
-620,Advanced Software Engineering Synthesis and Development,N/A,Spring,Bendraou
-645,Database Design and Implementation,N/A,Spring,Meliou
-660,Advanced Information Assurance,460 (466),Spring,Houmansadr
-677,Operating Systems,N/A,Spring,Shenoy
-688,Probabilistic Graphical Models,N/A,Spring,Sheldon
-689,Machine Learning,N/A,Spring,Maji
-690AA,Approximation Algorithms and Combinational Optimization,N/A,Spring,Saha
-691DA,Big Data Algorithms and Applications,N/A,Spring,Saha
-691DD,Research Methods in Empirical Compuer Science,N/A,Spring,Berger
-701,Advanced Topics in Computer Science,N/A,Spring,STAFF
-891M,Theory of Computation,N/A,Spring,Immerman
-899,PhD Dissertation,N/A,Spring,STAFF
-H320,Honors Colloquium for CMPSCI 320,N/A,Spring,Brun
-H589,Honors Colloquium for CMPSCI 589,N/A,Spring,Marlin
+Course Number,Course Name,Prerequisites,Term,Instructor,
+CS187,Programming with Data Structures,CS121,Spring,Liberatore,
+CS187,Programming with Data Structures,CS121,Spring,Ridgway,
+CS197B,Advanced Assignments for CMPSCI 121,CS121,Spring,Anderson,
+CS197WP,Introduction to HTML/CSS,CS121,Spring,Scarrci,
+CS220,Programming Methodology,CS187,Spring,Richards,
+CS230,Computer System Principles,CS187,Spring,Richards,
+CS230,Computer System Principles,CS187,Spring,Moss,
+CS326,Web Programming,CS187,Spring,Richards,
+CS320,Introduction to Software Engineering,CS220,Spring,Brun,
+CS320,Introduction to Software Engineering,CS220,Spring,Anderson,
+CS377,Operating Systems,CS230,Spring,Ganesan,
+CS520,Software Engineering Synthesis and Development,CS230,Spring,Bendraou,
+CS311,Introduction to Algorithms,CS250,Spring,Sitaraman,
+CS501,Formal Languate Theory,CS311,Spring,Barrington,
+CS529,Software Engineering Project Management,CS320,Spring,Brun,
+CS529,Software Engineering Project Management,CS320,Spring,Anderson,
+CS397J,Introductory JavaScript Game Development,CS326,Spring,Tincknell,
+CS589,Machine Learning,CS383,Spring,Marlin,
+CS491G,Computer Networking Lab,CS453,Spring,Venkataramani,
+CS601,Computation Theory,CS501,Spring,Immerman,
+CS197C,Programming in C,CS121,Spring,Scarrci,
+CS197C,Programming in C,CS187,Spring,Scarrci,
+CS250,Introduction to Computation,CS187,Spring,Barrington,
+CS250,Introduction to Computation,MATH132,Spring,Barrington,
+CS390CG,Introduction to Computer Graphics,CS187,Spring,Wang,
+CS390CG,Introduction to Computer Graphics,CS240,Spring,Wang,
+CS390CG,Introduction to Computer Graphics,CS190DM,Spring,Wang,
+CS348,Introduction to Knowledge Discovery,CS187,Spring,Jensen,
+CS348,Introduction to Knowledge Discovery,CS250,Spring,Jensen,
+CS348,Introduction to Knowledge Discovery,CS240,Spring,Jensen,
+CS240,Reasoning Under Uncertainty,CS187,Spring,McGregor,
+CS240,Reasoning Under Uncertainty,MATH132,Spring,McGregor,
+CS383,Artificial intelligence,CS220,Spring,Siegelmann,
+CS383,Artificial intelligence,CS240,Spring,Siegelmann,
+CS383,Artificial intelligence,CS230,Spring,Siegelmann,
+CS445,Information Systems,CS220,Spring,Diao,
+CS445,Information Systems,CS311,Spring,Diao,
+CS445,Information Systems,CS230,Spring,Diao,
+CS365,Digital Forensics,CS220,Spring,Levine,
+CS365,Digital Forensics,CS230,Spring,Levine,
+CS453,Computer Networks,CS230,Spring,STAFF,
+CS453,Computer Networks,CS377,Spring,STAFF,
+CS446,Search Engines,CS240,Spring,Allan,
+CS446,Search Engines,CS383,Spring,Allan,
+CS660,Advanced Information Assurance,CS460,Spring,Houmansadr,
+CS660,Advanced Information Assurance,CS466,Spring,Houmansadr,
+CS305,Social Issues in Computing,ENGL112,Spring,Trim,
+CS105,Computer Literacy,NA,Spring,Verts,
+CS119,Introduction to Programming,NA,Spring,Verts,
+CS121,Introduction to Problem Solving with Computers,NA,Spring,Anderson,
+CS145,Representing Storing and Retrieving Information,NA,Spring,Verts,
+CS197U,A Hands on Introduction to Unix,NA,Spring,DeVaughn-Brown,
+CS397G,Creative Game Design and Development,NA,Spring,STAFF,
+CS597CR,Crypto Engineering,NA,Spring,Paar,
+CS603,Robotics,NA,Spring,Grupen,
+CS620,Advanced Software Engineering Synthesis and Development,NA,Spring,Bendraou,
+CS645,Database Design and Implementation,NA,Spring,Meliou,
+CS677,Operating Systems,NA,Spring,Shenoy,
+CS688,Probabilistic Graphical Models,NA,Spring,Sheldon,
+CS689,Machine Learning,NA,Spring,Maji,
+CS690AA,Approximation Algorithms and Combinational Optimization,NA,Spring,Saha,
+CS691DA,Big Data Algorithms and Applications,NA,Spring,Saha,
+CS691DD,Research Methods in Empirical Compuer Science,NA,Spring,Berger,
+CS701,Advanced Topics in Computer Science,NA,Spring,STAFF,
+CS891M,Theory of Computation,NA,Spring,Immerman,
+CS899,PhD Dissertation,NA,Spring,STAFF,
+CSH320,Honors Colloquium for CMPSCI 320,NA,Spring,Brun,
+CSH589,Honors Colloquium for CMPSCI 589,NA,Spring,Marlin,
