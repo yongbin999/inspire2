@@ -21,9 +21,15 @@
 }
 
 .node text {
-  fill: #98FB98;
-	stroke: #0000FF;
-  font-size: 15px;
+  fill: #FFD700;
+  stroke: #0000FF;
+  stroke-width: 1px;
+  font-size: 20px;
+}
+
+// how to use jquery to add a underline?
+.node text.attr text-anchor:end{
+font-size: 50px;
 }
 
 path.link {
@@ -55,7 +61,8 @@ var link = document.querySelector('link[rel="import"]');
 	<h3>Welcome to the CS graduation requirement page!</h3>
 	Please select a track in the drop down menu
 	<br>
-	<select>
+
+	<select id ="choice">
 	  <option value="volvo">Volvo</option>
 	  <option value="saab">Saab</option>
 	  <option value="mercedes">Mercedes</option>
@@ -63,6 +70,7 @@ var link = document.querySelector('link[rel="import"]');
 	</select>
 </div>
 
+need jQuery to update the choice
 
 
     <div id="body">
