@@ -21,6 +21,7 @@
 }
 
 .node text {
+  cursor: pointer;
   fill: #FFD700;
   stroke: #0000FF;
   stroke-width: 1px;
@@ -28,9 +29,10 @@
 }
 
 // how to use jquery to add a underline?
-.node text.attr text-anchor:end{
-font-size: 50px;
+.node text.attr("text-anchor",end){
+	text-decoration:underline);
 }
+
 
 path.link {
   fill: none;
@@ -57,7 +59,7 @@ var link = document.querySelector('link[rel="import"]');
   </script>
 
 <div id ="content" class = "contentview">
-	<div id="hintm" >
+	<div id="hintm">
 	<h3>Welcome to the CS graduation requirement page!</h3>
 	Please select a track in the drop down menu
 	<br>
@@ -68,16 +70,16 @@ var link = document.querySelector('link[rel="import"]');
 	  <option value="mercedes">Mercedes</option>
 	  <option value="audi">Audi</option>
 	</select>
-</div>
 
-need jQuery to update the choice
+	need jQuery to update the choice
+	</div>
 
 
     <div id="body">
 
     <script type="text/javascript">
 
-var m = [-20, 0, 50, 100],
+var m = [0, 0, 50, 100],
     w = 800 - m[1] - m[3],
     h = 350 - m[0] - m[2],
     i = 0,
@@ -96,7 +98,7 @@ var vis = d3.select("#body").append("svg:svg")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
 
-d3.json("../uploads/flare.json", function(json) {
+d3.json("../uploads/ai.json", function(json) {
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
@@ -109,9 +111,9 @@ d3.json("../uploads/flare.json", function(json) {
   }
 
   // Initialize the display to show a few nodes.
-  root.children.forEach(toggleAll);
-  toggle(root.children[1]);
-  toggle(root.children[1].children[2]);
+  //root.children.forEach(toggleAll);
+  //toggle(root.children[1]);
+  //toggle(root.children[1].children[2]);
 
   update(root);
 });
@@ -129,15 +131,20 @@ function update(source) {
   var node = vis.selectAll("g.node")
       .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
+
+
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node.enter().append("svg:g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
       .on("click", function(d) { toggle(d); update(d); });
 
+
+
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
       .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
 
   nodeEnter.append("svg:text")
       .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
@@ -145,6 +152,10 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
+
+
+
+
 
   // Transition nodes to their new position.
   var nodeUpdate = node.transition()
@@ -200,22 +211,22 @@ function update(source) {
       .remove();
 
   // Stash the old positions for transition.
-  nodes.forEach(function(d) {
-    d.x0 = d.x;
-    d.y0 = d.y;
-  });
-}
-
-// Toggle children.
-function toggle(d) {
-  if (d.children) {
-    d._children = d.children;
-    d.children = null;
-  } else {
-    d.children = d._children;
-    d._children = null;
-  }
-}
+	  nodes.forEach(function(d) {
+	    d.x0 = d.x;
+	    d.y0 = d.y;
+	  });
+	}
+	
+	// Toggle children.
+	function toggle(d) {
+	  if (d.children) {
+	    d._children = d.children;
+	    d.children = null;
+	  } else {
+	    d.children = d._children;
+	    d._children = null;
+	  }
+	}
 
     </script>
 </div>
