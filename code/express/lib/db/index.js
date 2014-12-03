@@ -79,7 +79,7 @@ function populateCoursesAndPrereqs(callback) {
 //Returns all data from a table in database
 function getAllfromTable(table,callback) {
   var querystring='';
-  if(table === undefined){
+  if(table === undefined || table === 'coursecatalog'){
   querystring ='select * from coursecatalog;' ;
   }
   else if(table === 'students'){
@@ -201,7 +201,7 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
 
       //Add New Course information
       else {
-        var querystring = 'insert into coursecatalog values (\' ' 
+        var querystring = 'insert into coursecatalog values (\'' 
           + coursenum + '\', \''
           + name + '\', \''
           + credits + '\', \''
@@ -265,6 +265,8 @@ function addNewPrereq(courseid, prereqid, callback) {
       callback(err);
     }
     else {
+      //TODO: create querystring
+
       client.query(''
         , function(err, result) {
           done();

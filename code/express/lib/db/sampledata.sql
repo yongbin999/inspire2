@@ -24,5 +24,5 @@ insert into offeredcourses values (2014, 'Fall', CS119, CS120, CS91, 'Verts');
 insert into offeredcourses values (2014, 'Fall', CS121, CS165, CS165, 'Anderson, Moll');
 insert into offeredcourses values (2014, 'Fall', CS187, CS60, CS57, 'Barrington');*/
 
-insert into reportcards values ('samfox', CS187, /*'samfox', CS187,*/ 'F');
-insert into reportcards values ('samfox', CS121, /*'samfox', CS121,*/ 'F');
+insert into reportcards values ('samfox', 'CS187', /*'samfox', CS187,*/ 'F');
+insert into reportcards values ('samfox', 'CS121', /*'samfox', CS121,*/ 'F');
