@@ -23,7 +23,7 @@
 .node text {
   fill: #98FB98;
 	stroke: #0000FF;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 path.link {
@@ -51,8 +51,17 @@ var link = document.querySelector('link[rel="import"]');
   </script>
 
 <div id ="content" class = "contentview">
-<h3>Welcome to the CS graduation requirement page!</h3>
-Please select a track in the drop down menu and view the require courses
+	<div id="hintm" >
+	<h3>Welcome to the CS graduation requirement page!</h3>
+	Please select a track in the drop down menu
+	<br>
+	<select>
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="mercedes">Mercedes</option>
+	  <option value="audi">Audi</option>
+	</select>
+</div>
 
 
 
@@ -60,9 +69,9 @@ Please select a track in the drop down menu and view the require courses
 
     <script type="text/javascript">
 
-var m = [0, 0, 50, 100],
+var m = [-20, 0, 50, 100],
     w = 800 - m[1] - m[3],
-    h = 450 - m[0] - m[2],
+    h = 350 - m[0] - m[2],
     i = 0,
     root;
 
