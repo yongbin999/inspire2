@@ -51,23 +51,12 @@ function populateCoursesAndPrereqs(callback) {
           //If success, process csv data and post to database...
           var entries = data.split("\n");
           for(var i in entries) {
-            console.log(entries[i]);
+            //console.log(entries[i]);
             var values = entries[i].split(",");
             /*for(var j in values) {
-              console.log("THE VALUE: " + values[j]);
+              console.log("Value " + j + ": " + values[j]);
             }
             console.log("\n\n");*/
-            addNewCourse(values[0], values[1], values[2], values[4], values[5], values[3], 
-              function(err, data) {
-                if(err) {
-                  console.log(err);
-                }
-                else {
-                  console.log(values[0] + " added to database\n");
-                }
-              });
-
-
 
             var coursenumber = values[0];
             var name = values[1];
@@ -76,9 +65,21 @@ function populateCoursesAndPrereqs(callback) {
             if(values[3] !== 'N/A') {
               prereqs = values[3];
             }
+            else {
+
+            }
             var term = values[4];
             var instructor = values[5];
  
+            addNewCourse(coursenumber, name, credits, term, instructor, prereqs, 
+              function(err, data) {
+                if(err) {
+                  console.log(err);
+                }
+                else {
+                  console.log(values[0] + " added to database\n");
+                }
+              });
             
           }
         }
