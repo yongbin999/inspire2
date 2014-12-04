@@ -53,10 +53,21 @@ function populateCoursesAndPrereqs(callback) {
           for(var i in entries) {
             console.log(entries[i]);
             var values = entries[i].split(",");
-            for(var j in values) {
-              console.log(values[j]);
+            /*for(var j in values) {
+              console.log("THE VALUE: " + values[j]);
             }
-            console.log("\n\n");
+            console.log("\n\n");*/
+            addNewCourse(values[0], values[1], values[2], values[4], values[5], values[3], 
+              function(err, data) {
+                if(err) {
+                  console.log(err);
+                }
+                else {
+                  console.log(values[0] + " added to database\n");
+                }
+              });
+
+
 
             var coursenumber = values[0];
             var name = values[1];
@@ -68,7 +79,7 @@ function populateCoursesAndPrereqs(callback) {
             var term = values[4];
             var instructor = values[5];
  
-            //TODO: Finish this function
+            
           }
         }
       });
