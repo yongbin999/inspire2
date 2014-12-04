@@ -46,7 +46,7 @@ create table major_track (
 );
 
 create table coursecatalog (
-	coursenumber varchar(6),
+	coursenumber varchar(8),
 	coursename varchar(50),
 	credits int,
 	semestersoffered offered,

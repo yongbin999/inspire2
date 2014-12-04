@@ -69,7 +69,7 @@ function populateCoursesAndPrereqs(callback) {
 
             }
             var term = values[4];
-            var instructor = values[5];
+            var instructor = values[5];//.substring(0, values[5].length-2);
  
             addNewCourse(coursenumber, name, credits, term, instructor, prereqs, 
               function(err, data) {
@@ -77,7 +77,7 @@ function populateCoursesAndPrereqs(callback) {
                   console.log(err);
                 }
                 else {
-                  console.log(values[0] + " added to database\n");
+                  console.log("New entry added to database\n");
                 }
               });
             
@@ -193,6 +193,7 @@ function getUser(id, table, callback) {
 
 
 //Adds new course to coursecatalog
+//NOTE: if multiple prereqs, list them in one string separated by a space
 function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callback) {
   pg.connect(connString, function(err, client, done) {
     if(err) {
@@ -220,18 +221,33 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
           + term + '\', \''
           + instructor + '\');';
         client.query(querystring, function(err, result) {
-          done();
-          client.end();
+          //done();
+          //client.end();
           if(err) {
             callback(err);
           }
           else {
             callback(undefined, 'Success!\n');
+
+            //Add prereq information
+            if(prereqs != 'N/A' && prereqs != undefined) {
+              var pre = prereqs.split(" ");
+              for(var k in pre) {
+                addNewPrereq(coursenum, pre[k]
+                  , function(err, data) {
+                      if(err) {
+                        console.log(err);
+                      }
+                      else {
+                        console.log('Prerequsite ' + pre[k] + ' registered');
+                      }
+                });
+              }
+            } 
           }
+          done();
+          client.end();
         });
-
-        //TODO: For each prereq given, use addPrereq to add it
-
       }
     }
   });

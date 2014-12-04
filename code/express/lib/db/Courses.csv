@@ -7,7 +7,7 @@ CS187,Programming with Data Structures,4,121,Fall/Spring/Summer,Liberatore
 CS197B,Advanced Assignments for CMPSCI 121,3,121,Spring,Anderson
 CS197C,Programming in C,1,121 187,Spring,Scarrci
 CS197U,A Hands on Introduction to Unix,1,N/A,Spring,DeVaughn-Brown
-CS197WP,Introduction to HTML/CSS,121,Spring,Scarrci
+CS197WP,Introduction to HTML/CSS,3,121,Spring,Scarrci
 CS220,Programming Methodology,4,187,Fall/Spring,Richards
 CS230,Computer System Principles,4,187,Fall/Spring,Richards
 CS240,Reasoning Under Uncertainty,4,187 MATH 132,Fall/Spring,McGregor
@@ -16,9 +16,9 @@ CS305,Social Issues in Computing,3,ENGLWRIT 112,Fall/Spring,Trim
 CS311,Introduction to Algorithms,4,250,Fall/Spring,Sitaraman
 CS320,Introduction to Software Engineering,4,220,Fall/Spring,Brun
 CS326,Web Programming,3,187,Fall/Spring,Richards
-CS345,Practice and Applications of Data Management,3,187,Fall,Meliou 
+CS345,Practice and Applications of Data Management,3,187,Fall,Meliou
 CS348,Introduction to Knowledge Discovery,3,187 240 250,Spring,Jensen
-CS365,Digital Forensics,3,220 230 ,Spring,Levine
+CS365,Digital Forensics,3,220 230,Spring,Levine
 CS377,Operating Systems,4,230,Fall/Spring,Ganesan
 CS383,Artificial Intelligence,3,220 230 240,Fall/Spring,Siegelmann
 CS390MB,Mobile Health Sensing and Monitoring,3,187,Fall,Ganesan

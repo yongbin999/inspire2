@@ -130,7 +130,7 @@ function handler(request, response) {
 
   else if(path === '/addnewcourse') {
     m.addNewCourse('CS998', 'Introduction to the Universe', '5'
-      , 'Fall', 'Poopman', ["CS187", "CS105"], function(err, data) {
+      , 'Fall', 'Poopman', "CS187 CS105", function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
         response.write('ERROR: ' + err);
