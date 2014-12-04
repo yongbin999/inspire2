@@ -31,8 +31,6 @@ exports.getPrereqs = getPrereqs;
 
 
 
-
-
 //Populates the course catalog based on csv data
 function populateCoursesAndPrereqs(callback) {
   //Read in csv file...
@@ -43,13 +41,21 @@ function populateCoursesAndPrereqs(callback) {
     }
     else {
       //If success, connect to database...
-      pg.connect(connString, function(err, client, done) {
-        if(err) {
-          callback(err);
-        }
-        else {
           //If success, process csv data and post to database...
           var entries = data.split("\n");
+
+
+          /*addNewCourse("sdkj", "sdfgdsgdf", "3", "Fall", "poop", "", 
+              function(err, data) {
+                if(err) {
+                  console.log("COURSE ADD ERROR: " + err);
+                }
+                else {
+                  console.log("New entry added to database\n");
+                }
+              });*/
+
+
           for(var i in entries) {
             //console.log(entries[i]);
             var values = entries[i].split(",");
@@ -61,29 +67,20 @@ function populateCoursesAndPrereqs(callback) {
             var coursenumber = values[0];
             var name = values[1];
             var credits = values[2];
-            var prereqs = '';
-            if(values[3] !== 'N/A') {
-              prereqs = values[3];
-            }
-            else {
-
-            }
+            var prereqs = values[3];
             var term = values[4];
             var instructor = values[5];//.substring(0, values[5].length-2);
  
             addNewCourse(coursenumber, name, credits, term, instructor, prereqs, 
               function(err, data) {
                 if(err) {
-                  console.log(err);
+                  console.log("COURSE ADD ERROR: " + err);
                 }
                 else {
                   console.log("New entry added to database\n");
                 }
-              });
-            
+              });      
           }
-        }
-      });
     }
   });
 }
@@ -200,7 +197,8 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
       callback(err);
     }
     else {
-
+      //done();
+      //client.end();
       //Perform checks
       /*if(!(term === 'Fall' || term === 'Spring' || term === 'Summer' || term === 'Fall/Spring' || term === 'Fall/Summer' 
         || term === 'Spring/Summer'|| term === 'Fall/Spring/Summer')) {
@@ -221,32 +219,14 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
           + term + '\', \''
           + instructor + '\');';
         client.query(querystring, function(err, result) {
-          //done();
-          //client.end();
+          done();
+          client.end();
           if(err) {
             callback(err);
           }
           else {
             callback(undefined, 'Success!\n');
-
-            //Add prereq information
-            if(prereqs != 'N/A' && prereqs != undefined) {
-              var pre = prereqs.split(" ");
-              for(var k in pre) {
-                addNewPrereq(coursenum, pre[k]
-                  , function(err, data) {
-                      if(err) {
-                        console.log(err);
-                      }
-                      else {
-                        console.log('Prerequsite ' + pre[k] + ' registered');
-                      }
-                });
-              }
-            } 
-          }
-          done();
-          client.end();
+          } 
         });
       }
     }
