@@ -229,6 +229,9 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
             callback(undefined, 'Success!\n');
           }
         });
+
+        //TODO: For each prereq given, use addPrereq to add it
+
       }
     }
   });
