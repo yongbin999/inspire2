@@ -266,8 +266,9 @@ function addNewPrereq(courseid, prereqid, callback) {
     }
     else {
       //TODO: create querystring
+      var querystring = 'insert into prerequisites values (\'' + courseid + '\', \'' + prereqid + '\');';
 
-      client.query(''
+      client.query(querystring
         , function(err, result) {
           done();
           client.end();
