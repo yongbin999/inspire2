@@ -9,10 +9,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="../javascripts/content_fadein.js"></script>
 	<script src="../javascripts/displaytable.js"></script>
-  <script src="../javascripts/getclasses.js"></script>
-  <style type="text/css">
+  	<script src="../javascripts/getclasses.js"></script>
+
+<style type="text/css">
 TABLE.CSVTable {
-  font: 1.4em Verdana,Arial,Geneva,Helvetica,sans-serif;
+  font: 1.2em Verdana,Arial,Geneva,Helvetica,sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
@@ -23,15 +24,15 @@ TABLE.CSVTable THEAD TR {
 }
 TABLE.CSVTable TH {
   font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
-  font-size: 1.9em;
+  font-size: 1.5em;
 }
 
 /* Table Cells */
 TABLE.CSVTable TD, TABLE.CSVTable TH {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #FFFFFF;
-  border-top: 1px solid transparent;
+  border-bottom: 1px solid silver;
+  border-top: 1px solid silver;
 }
 /* Default background color for rows */
 TABLE.CSVTable TR {
@@ -48,7 +49,7 @@ TABLE.CSVTable TR:hover {
 
 /* Source code */
 .source {
-  background-color: #333333 ; border: 1px solid #999999
+  background-color: #333333 ; border: 1px solid silver
 }
   </style>
 
@@ -70,30 +71,7 @@ TABLE.CSVTable TR:hover {
 
 
 <div id = "content" class = "contentview">
-
-
-	<div id="testing" class= "schedule" align ="center">
-	<br>
-
-  <input id="x" type="text"  placeholder="x" name="x" value = "5">
-  <input id="y" type="text"  placeholder="y" name="y" value = "5">
-  <button id="foo")> display pre-req</button>
-
- </div>
-    <script>
-     console.log($("x"));
-
-    $("#foo").click(function(){
-displayTimes(4,5);
-    });
-
-    </script>
-
-    <%=listclasses%>
-<script>
-list([11,2,36]);
-list($("listclasses"));
-</script>
+<h1>List of Existign CS Courses</h1>
 
 <script type="text/javascript">
 (function($){
@@ -195,10 +173,10 @@ list($("listclasses"));
 })(jQuery);
 
 $(function() {
-    $.get('../uploads/CS_Courses.csv', function(data) {
+    $.get('../uploads/studentsample/CS_Courses.csv', function(data) {
       $('#CSVSource').html('<pre>' + data + '</pre>');
     });
-    $('#CSVTable').CSVToTable('../uploads/CS_Courses.csv', { startLine: 0 });
+    $('#CSVTable').CSVToTable('../uploads/studentsample/CS_Courses.csv', { startLine: 0 });
   });
 
 </script>
