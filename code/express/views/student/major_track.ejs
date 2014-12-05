@@ -87,8 +87,31 @@ var link = document.querySelector('link[rel="import"]');
     <script type="text/javascript">
 
 //jquery??
-$("#choice").change(function(){
-d3.json("../uploads/softeng.json", function(json) {
+var line;
+$("select").change(function(){
+  if($("select").val() === "softeng")
+    line = "../uploads/softeng.json";
+  else if($("select").val() === "ai")
+    line = "../uploads/ai.json";
+  else if($("select").val() === "robotics")
+    line = "../uploads/robotics.json";
+  else if($("select").val() === "comparch")
+    line = "../uploads/comparch.json";
+  else if($("select").val() === "network")
+    line = "../uploads/network.json";
+  else if($("select").val() === "softsys")
+    line = "../uploads/softsys.json";
+  else if($("select").val() === "comp")
+    line = "../uploads/compiler.json";
+  else if($("select").val() === "throfcomp")
+    line = "../uploads/computation.json";
+  else if($("select").val() === "sec")
+    line = "../uploads/security.json";
+  else if($("select").val() === "data")
+    line = "../uploads/search.json";
+  else
+    line = "../uploads/gencs.json";
+d3.json(line, function(json) {
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
@@ -122,24 +145,24 @@ var vis = d3.select("#body").append("svg:svg")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
 
-d3.json("../uploads/ai.json", function(json) {
-  root = json;
-  root.x0 = h / 2;
-  root.y0 = 0;
+// d3.json("../uploads/ai.json", function(json) {
+//   root = json;
+//   root.x0 = h / 2;
+//   root.y0 = 0;
 
-  function toggleAll(d) {
-    if (d.children) {
-      d.children.forEach(toggleAll);
-      toggle(d);
-    }
-  }
-  // Initialize the display to show a few nodes.
-  //root.children.forEach(toggleAll);
-  //toggle(root.children[1]);
-  //toggle(root.children[1].children[2]);
+//   function toggleAll(d) {
+//     if (d.children) {
+//       d.children.forEach(toggleAll);
+//       toggle(d);
+//     }
+//   }
+//   // Initialize the display to show a few nodes.
+//   //root.children.forEach(toggleAll);
+//   //toggle(root.children[1]);
+//   //toggle(root.children[1].children[2]);
 
-  update(root);
-});
+//   update(root);
+// });
 
 function update(source) {
   var duration = d3.event && d3.event.altKey ? 5000 : 500;
