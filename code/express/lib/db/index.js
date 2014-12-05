@@ -61,6 +61,19 @@ function enroll(studentid, courseid, term, instructor, callback) {
   }); 
 }
 
+//Populate the students based on csv data
+function populateStudents(callback) {
+  //Read in csv file...
+  fs.readFile('./db/StudentTracks.csv', 'utf8', function(err, data) {
+    if(err) {
+      return console.log(err);
+    }
+    else {
+      //If success, process the csv data and post to database...
+      
+    }
+  });
+}
 
 //Populates the course catalog based on csv data
 function populateCoursesAndPrereqs(callback) {
@@ -71,21 +84,9 @@ function populateCoursesAndPrereqs(callback) {
       response.end();
     }
     else {
-      //If success, connect to database...
           //If success, process csv data and post to database...
           var entries = data.split("\n");
           var counter = entries.length;
-
-          /*addNewCourse("sdkj", "sdfgdsgdf", "3", "Fall", "poop", "", 
-              function(err, data) {
-                if(err) {
-                  console.log("COURSE ADD ERROR: " + err);
-                }
-                else {
-                  console.log("New entry added to database\n");
-                }
-              });*/
-
 
           for(var i in entries) {
             counter--; 
