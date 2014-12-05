@@ -2,13 +2,12 @@ drop table if exists students cascade;
 drop table if exists coursecatalog cascade;
 drop table if exists prerequisites;
 drop table if exists admins;
-drop table if exists reportcards;
 drop table if exists studentschedule;
 /*drop table if exists major_tracks;*/
 
 
 drop type if exists level; 
-drop type if exists grade;
+drop type if exists grade cascade;
 drop type if exists sem;
 drop type if exists offered cascade;
 drop type if exists track;
@@ -67,20 +66,3 @@ create table studentschedule (
 	instructor varchar(50)
 );
 
-/*create table offeredcourses (
-	year int,
-	semester sem,
-	coursenumber int,
-	foreign key (coursenumber) references coursecatalog,
-	capacity int,
-	enrolled int,
-	instructor varchar(50)
-);*/
-
-create table reportcards (
-	id varchar(25),
-	coursenumber int,
-	/*foreign key (id) references students,
-	foreign key (coursenumber) references coursecatalog,*/
-	coursegrade grade
-);

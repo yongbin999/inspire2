@@ -7,6 +7,9 @@ var connString = 'postgres://student:student@localhost/student';
 //Enrolls a student in a course for a given term
 exports.enroll = enroll;
 
+//Populate the students based on csv data
+exports.populateStudents = populateStudents;
+
 //Populates the course catalog based on csv data
 exports.populateCoursesAndPrereqs = populateCoursesAndPrereqs;
 
@@ -64,13 +67,48 @@ function enroll(studentid, courseid, term, instructor, callback) {
 //Populate the students based on csv data
 function populateStudents(callback) {
   //Read in csv file...
-  fs.readFile('./db/StudentTracks.csv', 'utf8', function(err, data) {
+  fs.readFile('./db/studentTracks.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
     }
     else {
       //If success, process the csv data and post to database...
-      
+          var entries = data.split("\n");
+          var counter = entries.length;
+
+          for(var i in entries) {
+            counter--; 
+            console.log("COUNTER: " + counter + "\n");
+            var values = entries[i].split(",");
+
+            var studentid = values[0];
+            console.log('ID: ' + studentid + '\n');
+            var password = values[1];
+            console.log('PASSWORD: ' + password + '\n');
+            var fname = values[2];
+            console.log('FNAME: ' + fname + '\n');
+            var lname = values[3];
+            console.log('LNAME: ' + lname + '\n');
+            var year = values[4];
+            console.log('YEAR: ' + year + '\n');
+            var school = values[5];
+            console.log('SCHOOL: ' + school + '\n');
+            var gpa = values[6];
+            console.log('GPA: ' + gpa + '\n');
+            var track = values[7];
+            console.log('TRACK: ' + track + '\n\n\n\n');
+ 
+            addNewUser(studentid, password, fname, lname, year, school, gpa, track, 
+              function(err, data) {
+                if(err) {
+                  console.log("STUDENT ADD ERROR: " + err);
+                }
+                else {
+                  console.log("New student from csv added");
+                }
+              }, counter);
+        
+          }
     }
   });
 }
@@ -153,7 +191,7 @@ function getAllfromTable(table,callback) {
 
 //Adds user to database
 //User info specified by arguments, gpa initialized to 0.0
-function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
+function addNewUser(id, password, fname, lname, year, schoolorg, gpa, track, callback, counter) {
   pg.connect(connString, function (err, client, done) {
     if(err) {
       callback('Server Error: ' + err);
@@ -163,16 +201,22 @@ function addNewUser(id, password, fname, lname, admin, schoolorg, callback) {
         + password + '\', \''
         + fname + '\', \''
         + lname 
-        + '\', \'Senior\', \'' 
-        + schoolorg + '\'' +
-        ', 0.0);'
+        + '\', \''
+        + year + '\', \''
+        + schoolorg + '\', '
+        + gpa + ', \'' + track + '\');'
       , function(err, result) {
         done();
-        client.end();
         if(err) {
           callback(err);
         }
         else {
+          if(counter <= 0) {
+              setTimeout(function(){ 
+              client.end();
+              console.log("Load students from csv completed!!\n");
+              }, 2000);
+          }
           callback(undefined, 'Success!\n');
         }
       });
@@ -226,36 +270,28 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
       callback(err);
     }
     else {
-      if(isNaN(credits) || isNaN(parseInt(credits))) {
-        callback("Non-number entered for credits", undefined);
-      }
-
       //Add New Course information
-      else {
         var querystring = 'insert into coursecatalog values (\'' 
           + coursenum + '\', \''
           + name + '\', \''
           + credits + '\', \''
           + term + '\', \''
           + instructor + '\');';
-        //console.log(querystring + "\n");
         client.query(querystring, function(err, result) {
           done();
-          //client.end();
           if(err) {
             callback(err);
           }
           else {
             if(counter <= 0) {
-		setTimeout(function(){ 
-			client.end();
-              		console.log("Load courses from csv completed!!\n");
-			}, 2000);
+		          setTimeout(function(){ 
+              client.end();
+              console.log("Load courses from csv completed!!\n");
+              }, 2000);
             }
             callback(undefined, 'Success!\n');
           } 
         });
-      }
     }
   });
 }

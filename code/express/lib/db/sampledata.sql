@@ -16,6 +16,3 @@ insert into coursecatalog values ('CS187', 'Programming with Data Structures', 4
 
 insert into prerequisites values ('CS187', 'CS105');
 insert into prerequisites values ('CS187', 'CS119');
-
-insert into reportcards values ('samfox', 'CS187', 'F');
-insert into reportcards values ('samfox', 'CS121', 'F');
