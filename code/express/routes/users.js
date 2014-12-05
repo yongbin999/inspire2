@@ -81,7 +81,7 @@ router.get('/geneds', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/newpage', { title   : 'New page to be made',
+    	res.render('student/geneds', { title   : 'New page to be made',
                          	users : user, 
 				message : 'none yet'});
 	}
@@ -125,7 +125,7 @@ router.get('/settings', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/newpage', { title   : 'New page to be made',
+    	res.render('student/settings', { title   : 'New page to be made',
                          	users : user, 
 				message : 'none yet'});
 	}
