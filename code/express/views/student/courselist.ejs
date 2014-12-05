@@ -74,7 +74,8 @@ TABLE.CSVTable TR:hover {
 <h1>List of Existign CS Courses</h1>
 
 <script type="text/javascript">
-var temp = new Array();
+var newLine = new Array();
+var className = new Array();
 (function($){
 
   /**
@@ -150,8 +151,15 @@ var temp = new Array();
               tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
               $.each(items, function(itemCount, item) {
                 if(itemCount===0){
-                  temp[lineOn] = item;
+                  className[lineOn] = item;
+                  newLine[lineOn] = item;
                 }
+                else if(itemCount === 1)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                else if(itemCount === 3)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                else if(itemCount===4)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
                 tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
               tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
@@ -186,7 +194,8 @@ $(function() {
   });
 
 function fxn(btn){
-  document.getElementById("temp").innerHTML = temp[btn.id];
+  alert("You are now enrolled in"+className[btn.id]);
+  document.getElementById("temp").innerHTML = '<%= username %>,'+newLine[btn.id];
 }
 
 </script>

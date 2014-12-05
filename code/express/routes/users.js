@@ -36,7 +36,8 @@ router.get('/newpage', function(req, res) {
 	}
 	else{
     	res.render('student/newpage', { title   : 'New page to be made',
-                         	users : user, 
+                         	users : user,
+                         	username : user.id, 
 				message : 'none yet'});
 	}
 });
@@ -50,7 +51,8 @@ router.get('/major_track', function(req, res) {
 	}
 	else{
     	res.render('student/major_track', { title   : 'Major Concentration',
-                         	users : user, 
+                         	users : user,
+                         	username : user.id, 
 				message : 'none yet'});
 	}
 });
@@ -69,6 +71,7 @@ router.get('/class', function(req, res) {
 	else{
     	res.render('student/myclasses', { title   : 'Classes',
                          	users : user, 
+                         	username : user.id,
 				message : 'none yet'});
 	}
 });
@@ -97,6 +100,7 @@ router.get('/geneds', function(req, res) {
 	else{
     	res.render('student/geneds', { title   : 'General Education Requirements',
                          	users : user, 
+                         	username : user.id,
 				message : 'none yet'});
 	}
 });
@@ -116,6 +120,7 @@ if (user === undefined) {
 	else{
 		res.render('student/courselist', { title   : 'data',
                          				users : user, 
+                         				username : user.id,
 							message : "hi"});
 	}
 });
