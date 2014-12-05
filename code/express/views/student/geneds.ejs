@@ -160,7 +160,7 @@ var instructor = new Array();
                   instructor[lineOn] = item;
                 tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
-              tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
+              tableHTML += '<td><form method="post" action="/user/geneds/enroll"><button value="'+className[lineOn]+'" name="enroll" id="'+lineOn+'" ">Enroll</button></form></td></tr>';
               lineOn = lineOn + 1;
             }
           }
@@ -193,7 +193,7 @@ $(function() {
 
 function fxn(btn){
   alert("You are now enrolled in"+className[btn.id]);
-  enroll(user,)
+  //m.enroll(user,className[btn.id],term[btn.id],instructor[btn.id],function(err,data));
 }
 
 </script>
