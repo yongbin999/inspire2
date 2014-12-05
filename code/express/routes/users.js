@@ -117,19 +117,6 @@ router.get('/courses', function(req, res) {
 	});
 });
 
-// routes for changing settings.
-router.get('/settings', function(req, res) {
-	var user = req.session.user;
-  	if (user === undefined) {
-    	req.flash('auth', 'Not logged in!');
-    	res.redirect('/login');
-	}
-	else{
-    	res.render('student/settings', { title   : 'New page to be made',
-                         	users : user, 
-				message : 'none yet'});
-	}
-});
 
 //online calls the admin list 
 router.get('/online', function(req, res) {

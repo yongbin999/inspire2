@@ -47,48 +47,6 @@ path.link {
 
   <body>
 
-<div id="menuleft">
-<ul id="tabs">
-<li>
-<a href = "main">
-Home
-<a href = "major_track">
-Track
-</a>
-</li>
-<li>
-<a href = "class">
-My Classes
-</a>
-</li>
-<li>
-<a href = "geneds">
-GenEd Requirements
-</a>
-</li>
-<li>
-<a href = "courses">
-List of courses
-</a>
-</li>
-</ul>
-</div>
-<div id="menuright">
-<ul id="tabs">
-<li>
-<a href = "settings">
-Settings
-</a>
-</li>
-<li>
-<a href = "../logout">
-Logout
-</a>
-</li>
-</ul>
-</div>
-</div> 
-
 <div id="header"></div>
   <script>
 var link = document.querySelector('link[rel="import"]');
@@ -100,11 +58,13 @@ var link = document.querySelector('link[rel="import"]');
 	var el2 = content.querySelector('#student_menu');
   	document.body.appendChild(el2.cloneNode(true));
   </script>
+  
 
 <div id ="content" class = "contentview">
-	<div id="hintm">
+	<div id="hintm" max-width: 100px;>
 	<h3>Welcome to the CS graduation requirement page!</h3>
-	Please select a track in the drop down menu
+	Hi <%= users.id %>
+	<br>Please select a track in the drop down menu
 	<br>
 
 	<select id ="choice">
@@ -112,15 +72,15 @@ var link = document.querySelector('link[rel="import"]');
 	  <option value="softeng">Software Engineering</option>
 	  <option value="robotics">Robotics</option>
 	  <option value="ai">AI</option>
-    <option value="comparch">Computer Architecture</option>
-    <option value="network">Networking</option>
-    <option value="softsys">Software Systems</option>
-    <option value="comp">Compilers</option>
-    <option value="throfcomp">Theory of Computation</option>
-    <option value="sec">Security</option>
-    <option value="data">Data Mining</option>
+	    <option value="comparch">Computer Architecture</option>
+	    <option value="network">Networking</option>
+	    <option value="softsys">Software Systems</option>
+	    <option value="comp">Compilers</option>
+	    <option value="throfcomp">Theory of Computation</option>
+	    <option value="sec">Security</option>
+    	<option value="data">Data Mining</option>
 	</select>
-  need to load correct value for person on load
+  //need to load correct value for person on load
 	</div>
 
 

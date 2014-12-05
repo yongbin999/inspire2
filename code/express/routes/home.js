@@ -104,6 +104,20 @@ router.post('/auth', function(req, res) {
   }
 });
 
+// routes for changing settings.
+router.get('/settings', function(req, res) {
+	var user = req.session.user;
+  	if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
+    	res.render('frontpage/settings', { title   : 'New page to be made',
+                         	users : user, 
+				message : 'none yet'});
+	}
+});
+
 
 // ## logout
 // Deletes user info & session - then redirects to login.
