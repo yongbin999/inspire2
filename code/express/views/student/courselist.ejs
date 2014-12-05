@@ -40,25 +40,25 @@
 	<div id="testing" class= "schedule" align ="center">
 	<br>
 
-
-  <form action="">
   <input id="x" type="text"  placeholder="x" name="x" value = "5">
   <input id="y" type="text"  placeholder="y" name="y" value = "5">
-  <button id="foo" onclick=table($('x'),$('y'))> display pre-req</button>
-   </form>
+  <button id="foo")> display pre-req</button>
+
  </div>
     <script>
-    function table(x,y){
-      $('#testing').append(displayTimes(x,y));
-    }
+    displayTimes(4,5);
+    console.log($("x"));
+
+    $("#foo").click(function(){
+      displayTimes($("x"),$("y"));
+    });
+
     </script>
 
-    
+    <%=listclasses%>
 <script>
-var obj = <%=listclasses%>;
-
-list(obj);
-
+list([11,2,36]);
+list($("listclasses"));
 </script>
 
 
