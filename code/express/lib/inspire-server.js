@@ -24,6 +24,19 @@ function handler(request, response) {
     });
   }
 
+  else if(path === '/enroll') {
+    m.enroll("samfox", "MATH 100", "S15", "Richards", function(err, data) {
+      if(err) {
+        console.log('ERROR: ' + err);
+      }
+      else {
+        console.log(data);
+        response.write(data);
+      }
+      response.end();
+    });
+  }
+
   else if(path === '/getallfromtable') {
     m.getAllfromTable('coursecatalog', function(err, data) {
       if(err) {
