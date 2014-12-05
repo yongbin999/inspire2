@@ -9,4 +9,4 @@ echo Finished loading sample data
 echo
 
 echo Server up and running!
-echo Open a browser at localhost:3000
+echo Open Chrome to localhost:3000
