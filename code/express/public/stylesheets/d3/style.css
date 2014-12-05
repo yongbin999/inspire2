@@ -4,8 +4,8 @@
   top: 0;
 }
 
-#body{position: relative;top:-50px; z-index:-1;}
-#hintm{position: relative;}
+#body{position: relative;top:-50px; z-index:-1; float: left;}
+#hintm{position: relative; float: left;}
 
 
 rect {

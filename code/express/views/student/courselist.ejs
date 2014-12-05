@@ -5,11 +5,53 @@
     <title><%= title %></title>
 	<link rel='stylesheet' href='/stylesheets/style.css' />
     	<link rel='stylesheet' href='/stylesheets/menubar_style.css' />
-	<link rel="import" href='/header.html'/>
+	<link rel="import" href='../header.html'/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="../javascripts/content_fadein.js"></script>
 	<script src="../javascripts/displaytable.js"></script>
-  <script src="../javascripts/getclasses.js"></script>
+  	<script src="../javascripts/getclasses.js"></script>
+
+<style type="text/css">
+TABLE.CSVTable {
+  font: 1.2em Verdana,Arial,Geneva,Helvetica,sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Header */
+TABLE.CSVTable THEAD TR {
+  background: #333333;
+}
+TABLE.CSVTable TH {
+  font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+  font-size: 1.5em;
+}
+
+/* Table Cells */
+TABLE.CSVTable TD, TABLE.CSVTable TH {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid silver;
+  border-top: 1px solid silver;
+}
+/* Default background color for rows */
+TABLE.CSVTable TR {
+  background: #FF6666;
+}
+/* Background color for odd rows */
+TABLE.CSVTable TR.odd {
+  background: #CC3333 ;
+}
+/* Hover color for all rows */
+TABLE.CSVTable TR:hover {
+  background: #333333 ;
+}
+
+/* Source code */
+.source {
+  background-color: #333333 ; border: 1px solid silver
+}
+  </style>
 
   </head>
 
@@ -26,34 +68,145 @@
   	document.body.appendChild(el2.cloneNode(true));
   </script>
 
-
-
 <div id = "content" class = "contentview">
 
+<p id="temp">test</p>
+<h1>List of Existign CS Courses</h1>
 
-	<div id="testing" class= "schedule" align ="center">
-	<br>
+<script type="text/javascript">
+var newLine = new Array();
+var className = new Array();
+(function($){
 
-  <input id="x" type="text"  placeholder="x" name="x" value = "5">
-  <input id="y" type="text"  placeholder="y" name="y" value = "5">
-  <button id="foo")> display pre-req</button>
+  /**
+  *
+  * CSV Parser credit goes to Brian Huisman, from his blog entry entitled "CSV String to Array in JavaScript":
+  * http://www.greywyvern.com/?post=258
+  *
+  */
+  String.prototype.splitCSV = function(sep) {
+    for (var thisCSV = this.split(sep = sep || ","), x = thisCSV.length - 1, tl; x >= 0; x--) {
+      if (thisCSV[x].replace(/"\s+$/, '"').charAt(thisCSV[x].length - 1) == '"') {
+        if ((tl = thisCSV[x].replace(/^\s+"/, '"')).length > 1 && tl.charAt(0) == '"') {
+          thisCSV[x] = thisCSV[x].replace(/^\s*"|"\s*$/g, '').replace(/""/g, '"');
+        } else if (x) {
+          thisCSV.splice(x - 1, 2, [thisCSV[x - 1], thisCSV[x]].join(sep));
+        } else thisCSV = thisCSV.shift().split(sep).concat(thisCSV);
+      } else thisCSV[x].replace(/""/g, '"');
+    } return thisCSV;
+  };
 
- </div>
-    <script>
-    displayTimes(4,5);
-    console.log($("x"));
-
-    $("#foo").click(function(){
-      displayTimes($("x"),$("y"));
+  $.fn.CSVToTable = function(csvFile, options) {
+    var defaults = {
+      tableClass: "CSVTable",
+      theadClass: "",
+      thClass: "",
+      tbodyClass: "",
+      trClass: "",
+      tdClass: "",
+      loadingImage: "",
+      loadingText: "Loading CSV data...",
+      separator: ",",
+      startLine: 0
+    };  
+    var options = $.extend(defaults, options);
+    return this.each(function() {
+      var obj = $(this);
+      var error = '';
+      (options.loadingImage) ? loading = '<div style="text-align: center"><img alt="' + options.loadingText + '" src="' + options.loadingImage + '" /><br>' + options.loadingText + '</div>' : loading = options.loadingText;
+      obj.html(loading);
+      $.get(csvFile, function(data) {
+        var tableHTML = '<table class="' + options.tableClass + '">';
+        var lines = data.replace('\r','').split('\n');
+        var printedLines = 0;
+        var headerCount = 0;
+        var headers = new Array();
+        var lineOn=0;
+        $.each(lines, function(lineCount, line) {
+          if ((lineCount == 0) && (typeof(options.headers) != 'undefined')) {
+            headers = options.headers;
+            headerCount = headers.length;
+            tableHTML += '<thead class="' + options.theadClass + '"><tr class="' + options.trClass + '">';
+            $.each(headers, function(headerCount, header) {
+              tableHTML += '<th class="' + options.thClass + '">' + header + '</th>';
+            });
+            tableHTML += '</tr></thead><tbody class="' + options.tbodyClass + '">';
+          }
+          if ((lineCount == options.startLine) && (typeof(options.headers) == 'undefined')) {
+            headers = line.splitCSV(options.separator);
+            headerCount = headers.length;
+            tableHTML += '<thead class="' + options.theadClass + '"><tr class="' + options.trClass + '">';
+            $.each(headers, function(headerCount, header) {
+              tableHTML += '<th class="' + options.thClass + '">' + header + '</th>';
+            });
+            tableHTML += '<th>Enroll</th></tr></thead><tbody class="' + options.tbodyClass + '">';
+          } else if (lineCount >= options.startLine) {
+            var items = line.splitCSV(options.separator);
+            if (items.length > 1) {
+              printedLines++;
+              if (items.length != headerCount) {
+                error += 'error on line ' + lineCount + ': Item count (' + items.length + ') does not match header count (' + headerCount + ') \n';
+              }
+              (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
+              tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
+              $.each(items, function(itemCount, item) {
+                if(itemCount===0){
+                  className[lineOn] = item;
+                  newLine[lineOn] = item;
+                }
+                else if(itemCount === 1)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                else if(itemCount === 3)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                else if(itemCount===4)
+                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
+              });
+              tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
+              lineOn = lineOn + 1;
+            }
+          }
+        });
+        tableHTML += '</tbody></table>';
+        if (error) {
+          obj.html(error);
+        } else {
+          obj.fadeOut(500, function() {
+            obj.html(tableHTML)
+          }).fadeIn(function() {
+            // trigger loadComplete
+            setTimeout(function() {
+              obj.trigger("loadComplete");  
+            },0);
+          });
+        }
+      });
     });
+  };
 
-    </script>
+})(jQuery);
 
-    <%=listclasses%>
-<script>
-list([11,2,36]);
-list($("listclasses"));
+$(function() {
+    $.get('../uploads/studentsample/CS_Courses.csv', function(data) {
+      $('#CSVSource').html('<pre>' + data + '</pre>');
+    });
+    $('#CSVTable').CSVToTable('../uploads/studentsample/CS_Courses.csv', { startLine: 0 });
+  });
+
+function fxn(btn){
+  alert("You are now enrolled in"+className[btn.id]);
+  document.getElementById("temp").innerHTML = '<%= username %>,'+newLine[btn.id];
+}
+
 </script>
+
+<!-- <div id="CSVSource" class="source">
+</div> -->
+<br>
+<div id="CSVTable">
+
+</div>
+
 
 
 

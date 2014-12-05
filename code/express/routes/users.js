@@ -36,7 +36,8 @@ router.get('/newpage', function(req, res) {
 	}
 	else{
     	res.render('student/newpage', { title   : 'New page to be made',
-                         	users : user, 
+                         	users : user,
+                         	username : user.id, 
 				message : 'none yet'});
 	}
 });
@@ -49,8 +50,9 @@ router.get('/major_track', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/major_track', { title   : 'New page to be made',
-                         	users : user, 
+    	res.render('student/major_track', { title   : 'Major Concentration',
+                         	users : user,
+                         	username : user.id, 
 				message : 'none yet'});
 	}
 });
@@ -67,10 +69,25 @@ router.get('/class', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/myclasses', { title   : 'New page to be made',
+    	res.render('student/myclasses', { title   : 'Classes',
                          	users : user, 
+                         	username : user.id,
 				message : 'none yet'});
 	}
+});
+
+// routes for changing settings.
+router.get('/settings', function(req, res) {
+ var user = req.session.user;
+ if (user === undefined) {
+ req.flash('auth', 'Not logged in!');
+ res.redirect('/login');
+ }
+ else{
+ res.render('student/settings', { title : 'Settings',
+ users : user,
+ message : 'none yet'});
+ }
 });
 
 // routes for getting generd list
@@ -81,8 +98,9 @@ router.get('/geneds', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/geneds', { title   : 'New page to be made',
+    	res.render('student/geneds', { title   : 'General Education Requirements',
                          	users : user, 
+                         	username : user.id,
 				message : 'none yet'});
 	}
 });
@@ -95,26 +113,16 @@ router.get('/geneds', function(req, res) {
 router.get('/courses', function(req, res) {
 	var user = req.session.user;
 	var message = "";
-	var listclasses;
-	m.getCourse("CS187", function(err, data) {
-		if(err) {
-		        console.log('ERROR: ' + err);
-	    	}
-	    	else if (data === '[]'){
-	        	message+="no prereq \n";
-	        	console.log("blank");
-		}
-		else{
-	        // Store the user in our in memory database.
-			 listclasses = JSON.parse(data);
-		message+= "hi";
-		}
-		console.log(listclasses);
-
+if (user === undefined) {
+    	req.flash('auth', 'Not logged in!');
+    	res.redirect('/login');
+	}
+	else{
 		res.render('student/courselist', { title   : 'data',
-                         	listclasses : listclasses, 
+                         				users : user, 
+                         				username : user.id,
 							message : "hi"});
-	});
+	}
 });
 
 

@@ -60,9 +60,8 @@ var exec = require('child_process').exec;
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 //exec("ls ", puts);
 
+exec("bash ./lib/db/init-db.sh", puts);
 exec("node init.js", puts);
-exec("bash ./lib/db/init-db.sh ", puts);
-
 
 
 ///////////////////

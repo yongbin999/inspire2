@@ -73,7 +73,7 @@ function populateCoursesAndPrereqs(callback) {
                   console.log("COURSE ADD ERROR: " + err);
                 }
                 else {
-                  console.log("New entry added to database\n");
+                  console.log("New course from csv added");
                 }
               }, counter); 
         
@@ -215,11 +215,10 @@ function addNewCourse(coursenum, name, credits, term, instructor, prereqs, callb
           }
           else {
             if(counter <= 0) {
-              client.end();
-		setTimeout(function(){ alert("Hello"); }, 2000);
-              //TODO: ADD A WAIT FUNCTION SO IT WAITS FOR 2 SECONDS
-
-              console.log("IT ENDED!!!!!\n\n");
+		setTimeout(function(){ 
+			client.end();
+              		console.log("Load courses from csv completed!!\n");
+			}, 2000);
             }
             callback(undefined, 'Success!\n');
           } 
