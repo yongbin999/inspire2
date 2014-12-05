@@ -69,10 +69,7 @@ var link = document.querySelector('link[rel="import"]');
 
 
 <div id = "content" class = "contentview">
-<p><h1>General Education Requirements</h1>
-<h3>
-<br>   
-<br>
+<h1>General Education Requirements</h1>
 
 <script type="text/javascript">
 (function($){
@@ -174,10 +171,10 @@ var link = document.querySelector('link[rel="import"]');
 })(jQuery);
 
 $(function() {
-    $.get('../uploads/genEds.csv', function(data) {
+    $.get('../uploads/studentsample/genEds.csv', function(data) {
       $('#CSVSource').html('<pre>' + data + '</pre>');
     });
-    $('#CSVTable').CSVToTable('../uploads/genEds.csv', { startLine: 0 });
+    $('#CSVTable').CSVToTable('../uploads/studentsample/genEds.csv', { startLine: 0 });
   });
 
 </script>

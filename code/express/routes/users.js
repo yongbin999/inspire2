@@ -115,7 +115,7 @@ if (user === undefined) {
 	}
 	else{
 		res.render('student/courselist', { title   : 'data',
-                         	listclasses : listclasses, 
+                         				users : user, 
 							message : "hi"});
 	}
 });
