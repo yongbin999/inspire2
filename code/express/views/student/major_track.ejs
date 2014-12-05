@@ -5,26 +5,27 @@
     <link type="text/css" rel="stylesheet" href="../stylesheets/d3/style.css"/>
     <script type="text/javascript" src="../javascripts/d3/d3.js"></script>
     <script type="text/javascript" src="../javascripts/d3/d3.layout.js"></script>
-	<link rel='stylesheet' href='/stylesheets/style.css' />
-    	<link rel='stylesheet' href='/stylesheets/menubar_style.css' />
-	<link rel="import" href='../header.html'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="../javascripts/content_fadein.js"></script>
-
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/dropdown.css'/>
+    <link rel='stylesheet' href='/stylesheets/menubar_style.css' />
+    <link rel="import" href='../header.html'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../javascripts/content_fadein.js"></script>
     <style type="text/css">
 
 .node circle {
   cursor: pointer;
   fill: #fff;
-  stroke: steelblue;
-  stroke-width: 5px;
+  stroke: royalblue;
+  stroke-width: 1.6px;
 }
 
 .node text {
   cursor: pointer;
-  stroke: #000080;
-  stroke-width: 2px;
-  font-size: 20px;
+  stroke: lightgreen;
+  stroke-width: 1px;
+  font-size: 12px;
+  font-family: "ubuntu";
 }
 
 // how to use jquery to add a underline?
@@ -36,7 +37,7 @@
 path.link {
   fill: none;
   stroke: #ccc;
-  stroke-width: 10px;
+  stroke-width: 5px;
 }
     </style>
   </head>
@@ -67,23 +68,30 @@ var link = document.querySelector('link[rel="import"]');
 	<br>
 
 	<select id ="choice">
-	  <option value="gencs">General CS</option>
-	  <option value="softeng">Software Engineering</option>
-	  <option value="robotics">Robotics</option>
-	  <option value="ai">AI</option>
-	    <option value="comparch">Computer Architecture</option>
-	    <option value="network">Networking</option>
-	    <option value="softsys">Software Systems</option>
-	    <option value="comp">Compilers</option>
-	    <option value="throfcomp">Theory of Computation</option>
-	    <option value="sec">Security</option>
-    	<option value="data">Data Mining</option>
-	</select>
-  	<br>//need to load correct value for person on load
-	</div>
+	 <option value="gencs">General CS</option>
+	 <option value="softeng">Software Engineering</option>
+	 <option value="robotics">Robotics</option>
+	 <option value="ai">AI</option>
+	 <option value="comparch">Computer Architecture</option>
+	 <option value="network">Networking</option>
+	 <option value="softsys">Software Systems</option>
+	 <option value="comp">Compilers</option>
+	 <option value="throfcomp">Theory of Computation</option>
+	 <option value="sec">Security</option>
+    	 <option value="data">Data Mining</option>
+       </select>
+       <br>//need to load correct value for person on load
+</div>
 
+<ul class="navigation">
+  <a class="main" href="#url">Navigation</a>
+	<li class="n2"><a value="gencs" href="#">General CS</a></li>
+	<li class="n3"><a href="#">item #3</a></li>
+	<li class="n4"><a href="#">item #4</a></li>
+	<li class="n5"><a href="#">item #5</a></li>
+</ul>
 
-    <div id="body">
+<div id="body">
 
     <script type="text/javascript">
 //select views
@@ -125,15 +133,18 @@ d3.json(line, function(json) {
       toggle(d);
     }
   }
+  root.children.forEach(toggleAll);
+        toggle(root.children[0]);
+        toggle(root.children[0].children[0]);
   update(root);
 });
 });
 
 
 // declear variables
-var m = [0, 0, 50, 200],
+var m = [0, 0, 10, 100],
     w = 1000 - m[1] - m[3],
-    h = 350 - m[0] - m[2],
+    h = 410 - m[0] - m[2],
     i = 0,
     root;
 
@@ -203,13 +214,12 @@ function update(source) {
 
 
   nodeEnter.append("svg:text")
-      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+      .attr("x", function(d) { return d.children ? 0 : 10; })
+      .attr("y", function(d) { return d.children ? -15 : 0; })
       .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+      .attr("text-anchor", function(d) { return d.children ? "middle" : "start"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
-
-
 
 
 
@@ -220,10 +230,13 @@ function update(source) {
 
   nodeUpdate.select("circle")
       .attr("r", 4.5)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+      .style("fill", function(d) { return d._children ? "yellow" : "#fff"; });
 
   nodeUpdate.select("text")
-      .style("fill-opacity", 1);
+      .attr("x", function(d) { return d.children ? 0 : 10; })
+      .attr("y", function(d) { return d.children ? -15 : 0; })
+      .style("fill-opacity", 1)
+      .attr("text-anchor", function(d) { return d.children ? "middle" : "start"; });
 
   // Transition exiting nodes to the parent's new position.
   var nodeExit = node.exit().transition()
