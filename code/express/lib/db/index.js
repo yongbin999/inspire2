@@ -34,7 +34,7 @@ exports.getPrereqs = getPrereqs;
 //Populates the course catalog based on csv data
 function populateCoursesAndPrereqs(callback) {
   //Read in csv file...
-  fs.readFile('./lib/db/Courses.csv', 'utf8', function(err, data) {
+  fs.readFile('./db/Courses.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
       response.end();
