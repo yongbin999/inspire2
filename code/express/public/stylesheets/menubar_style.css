@@ -1,8 +1,8 @@
 
-#header_image{position:fixed; top:2%; width:150px;}
+#header_image{position:fixed; top:2%; width:175px;}
 #header_quote{position:fixed; top:2%; width:100%; text-align:center;}
-.header_menu{position:fixed; top:12%; }
-	.menuright{position:fixed; top:12%; right:10px;}
+.header_menu{position:fixed; top:10%; }
+	.menuright{position:fixed; top:10%; right:10px;}
 
 //later in their settings load their own styles.
 //defaults styles will be in teh style.css
