@@ -80,16 +80,17 @@ var link = document.querySelector('link[rel="import"]');
 	    <option value="sec">Security</option>
     	<option value="data">Data Mining</option>
 	</select>
-  //need to load correct value for person on load
+  	<br>//need to load correct value for person on load
 	</div>
 
 
     <div id="body">
 
     <script type="text/javascript">
+//select views
+var line = "../uploads/gencs.json";
+  //need to load correct value for person on load
 
-//jquery??
-var line;
 $("select").change(function(){
   if($("select").val() === "softeng")
     line = "../uploads/softeng.json";
@@ -113,6 +114,7 @@ $("select").change(function(){
     line = "../uploads/search.json";
   else
     line = "../uploads/gencs.json";
+
 d3.json(line, function(json) {
   root = json;
   root.x0 = h / 2;
@@ -128,8 +130,10 @@ d3.json(line, function(json) {
 });
 });
 
-var m = [0, 0, 50, 100],
-    w = 800 - m[1] - m[3],
+
+// declear variables
+var m = [0, 0, 50, 200],
+    w = 1000 - m[1] - m[3],
     h = 350 - m[0] - m[2],
     i = 0,
     root;
@@ -147,24 +151,22 @@ var vis = d3.select("#body").append("svg:svg")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
 
-// d3.json("../uploads/ai.json", function(json) {
-//   root = json;
-//   root.x0 = h / 2;
-//   root.y0 = 0;
 
-//   function toggleAll(d) {
-//     if (d.children) {
-//       d.children.forEach(toggleAll);
-//       toggle(d);
-//     }
-//   }
-//   // Initialize the display to show a few nodes.
-//   //root.children.forEach(toggleAll);
-//   //toggle(root.children[1]);
-//   //toggle(root.children[1].children[2]);
+//initialize tree
+d3.json(line, function(json) {
+  root = json;
+  root.x0 = h / 2;
+  root.y0 = 0;
 
-//   update(root);
-// });
+  function toggleAll(d) {
+    if (d.children) {
+      d.children.forEach(toggleAll);
+      toggle(d);
+    }
+  }
+  update(root);
+});
+
 
 function update(source) {
   var duration = d3.event && d3.event.altKey ? 5000 : 500;
