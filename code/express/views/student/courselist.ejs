@@ -153,14 +153,11 @@ var instructor = new Array();//sid cid term instructor
               $.each(items, function(itemCount, item) {
                 if(itemCount===0){
                   className[lineOn] = item;
-                  newLine[lineOn] = item;
                 }
-                else if(itemCount === 1)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
                 else if(itemCount === 3)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                  term[lineOn] = item;
                 else if(itemCount===4)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                  instructor[lineOn] = item;
                 tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
               tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
