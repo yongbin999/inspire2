@@ -1,24 +1,24 @@
-Requirement, CourseNumber,CourseName,CourseDesignation,Term,Instructor
-BasicMath,MATH100,BasicMathSkillsforModernWorld,R1,S15,Beaulieu
-BasicMath,MATH102,AnalyticGeometryandTrigonometry,R1,S15,Norkin
-BasicMath,MATH104,AlgebraAnalyticGeometryandTrigonometry,R1,S15,Benincasa
-AnalyticalReasoning,MATH127,CalculusfortheLifeandSocialSciencesI,R2,S15,Calden
-AnalyticalReasoning,MATH128,CalculusfortheLifeandSocialSciencesII,R2,S15,Cook
-AnalyticalReasoning,ANTHRO281,ResearchMethodsinAnthropology,R2,S15,King
-AnalyticalReasoning,CMPSCI105,ComputerLiteracy,R2,S15,Verts
-AnalyticalReasoning,LINGUIST201,IntroductiontoLingusiticTheory,R2,S15,Harris
-BiologicalandPhysicalWorld,BIOLOGY105,BiologyofSocialIssues,BS,S15,Irschick
-BiologicalandPhysicalWorld,FOOD-SCI150,TheScienceofFood,BS,S15,Levin
-BiologicalandPhysicalWorld,KIN100,IntroductiontoKinesiology,BS,S15,Kamen
-BiologicalandPhysicalWorld,ASTRON100,ExploringtheUniverse,PS,S15,Wilson
-BiologicalandPhysicalWorld,CHEM111,GenChem-Sci,PS,S15,Holden
-SocialWorld,AFROAM151,LiteratureandCulture,AL,S15,Zelaya
-SocialWorld,CLASSICS224,GreekMythology,AL,S15,Philippides
-SocialWorld,CLASSICS202,TheAgeofAugustus,AT,S15,Breed
-SocialWorld,JAPANESE235,PerformingArtsofJapan,AT,S15,Baird
-SocialWorld,ANTHRO150,AncientCivilizations,HS,S15,Agostini
-SocialandCulturalDiversity,ECON105,IntroductiontoPoliticalEconomy,U,S15,Crowell
-SocialandCulturalDiversity,EDUC115,EmbracingDiversity,U,S15,Barnes
-SocialandCulturalDiversity,LEGAL250,IntroductiontoLegalStudies,U,S15,Collins
-SocialandCulturalDiversity,ENGLISH307,ModernismandItsOthers,G,S15,Fernando
-SocialandCulturalDiversity,GEOGRAPH102,TheHumanLandscape,G,S15,Applegate
+Requirement,Course Number,Course Name,Course Designation,Term,Instructor
+Basic Math,MATH 100,Basic Math Skills for Modern World,R1,S15,Beaulieu
+Basic Math,MATH 102,Analytic Geometry and Trigonometry,R1,S15,Norkin
+Basic Math,MATH 104,Algebra Analytic Geometry and Trigonometry,R1,S15,Benincasa
+Analytical Reasoning,MATH 127,Calculus for the Life and Social Sciences I,R2,S15,Calden
+Analytical Reasoning,MATH 128,Calculus for the Life and Social Sciences II,R2,S15,Cook
+Analytical Reasoning,ANTHRO 281,Research Methods in Anthropology,R2,S15,King
+Analytical Reasoning,CMPSCI 105,Computer Literacy,R2,S15,Verts
+Analytical Reasoning,LINGUIST 201,Introduction to Lingusitic Theory,R2,S15,Harris
+Biological and Physical World,BIOLOGY 105,Biology of Social Issues,BS,S15,Irschick
+Biological and Physical World,FOODSCI 150,The Science of Food,BS,S15,Levin
+Biological and Physical World,KIN 100,Introduction to Kinesiology,BS,S15,Kamen
+Biological and Physical World,ASTRON 100,Exploring the Universe,PS,S15,Wilson
+Biological and Physical World,CHEM 111,Gen ChemSci,PS,S15,Holden
+Social World,AFROAM 151,Literature and Culture,AL,S15,Zelaya
+Social World,CLASSICS 224,Greek Mythology,AL,S15,Philippides
+Social World,CLASSICS 202,The Age of Augustus,AT,S15,Breed
+Social World,JAPANESE 235,Performing Arts of Japan,AT,S15,Baird
+Social World,ANTHRO 150,Ancient Civilizations,HS,S15,Agostini
+Social and Cultural Diversity,ECON 105,Introduction to Political Economy,U,S15,Crowell
+Social and Cultural Diversity,EDUC 115,Embracing Diversity,U,S15,Barnes
+Social and Cultural Diversity,LEGAL 250,Introduction to Legal Studies,U,S15,Collins
+Social and Cultural Diversity,ENGLISH 307,Modernism and Its Others,G,S15,Fernando
+Social and Cultural Diversity,GEOGRAPH 102,The Human Landscape,G,S15,Applegate
