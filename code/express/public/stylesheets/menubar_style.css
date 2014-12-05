@@ -3,7 +3,8 @@
 #header_quote{position:fixed; top:2%; width:100%; text-align:center;}
 .header_menu{position:fixed; top:12%; }
 	.studentmenu{position:fixed; }
-	.menuright{position:fixed;  right:1%;}
+	#menuright{position:absolute; top:10px; right:10px;}
+	#menuleft{position:absolute; top:10px;left:10px;}
 
 //later in their settings load their own styles.
 //defaults styles will be in teh style.css
