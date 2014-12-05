@@ -49,7 +49,7 @@ router.get('/major_track', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/major_track', { title   : 'New page to be made',
+    	res.render('student/major_track', { title   : 'Major Concentration',
                          	users : user, 
 				message : 'none yet'});
 	}
@@ -67,7 +67,7 @@ router.get('/class', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/myclasses', { title   : 'New page to be made',
+    	res.render('student/myclasses', { title   : 'Classes',
                          	users : user, 
 				message : 'none yet'});
 	}
@@ -81,7 +81,7 @@ router.get('/settings', function(req, res) {
  res.redirect('/login');
  }
  else{
- res.render('student/settings', { title : 'New page to be made',
+ res.render('student/settings', { title : 'Settings',
  users : user,
  message : 'none yet'});
  }
@@ -95,7 +95,7 @@ router.get('/geneds', function(req, res) {
     	res.redirect('/login');
 	}
 	else{
-    	res.render('student/geneds', { title   : 'New page to be made',
+    	res.render('student/geneds', { title   : 'General Education Requirements',
                          	users : user, 
 				message : 'none yet'});
 	}
