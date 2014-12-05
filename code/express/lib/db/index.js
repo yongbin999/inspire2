@@ -4,6 +4,9 @@ var fs = require('fs');
 var connString = 'postgres://student:student@localhost/student';
 
 
+//Enrolls a student in a course for a given term
+exports.enroll = enroll;
+
 //Populates the course catalog based on csv data
 exports.populateCoursesAndPrereqs = populateCoursesAndPrereqs;
 
@@ -31,10 +34,38 @@ exports.getPrereqs = getPrereqs;
 
 
 
+
+//Enrolls a student in a course for a given term
+function enroll(studentid, courseid, term, instructor, callback) {
+  pg.connect(connString, function (err, client, done) {
+    if(err) {
+      callback('Server Error: ' + err);
+    }
+    else {
+      client.query('insert into studentschedule values (\''
+        + studentid + '\', \''
+        + courseid + '\', \''
+        + term + '\', \''
+        + instructor + '\');'
+      , function(err, result) {
+        done();
+        client.end();
+        if(err) {
+          callback(err);
+        }
+        else {
+          callback(undefined, 'Success!\n');
+        }
+      });
+    }
+  }); 
+}
+
+
 //Populates the course catalog based on csv data
 function populateCoursesAndPrereqs(callback) {
   //Read in csv file...
-  fs.readFile('./db/Courses.csv', 'utf8', function(err, data) {
+  fs.readFile('./lib/db/Courses.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
       response.end();

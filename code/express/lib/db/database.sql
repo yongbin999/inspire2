@@ -1,10 +1,10 @@
-drop table if exists students cascade;
+drop table if exists students; /*cascade;*/
 drop table if exists coursecatalog cascade;
 drop table if exists admins;
 drop table if exists prerequisites;
-drop table if exists offeredcourses;
+/*drop table if exists offeredcourses;*/
 drop table if exists reportcards;
-drop table if exists major_tracks;
+/*drop table if exists major_tracks;*/
 
 
 drop type if exists level; 
@@ -16,14 +16,7 @@ create type level as enum ('Freshman', 'Sophomore', 'Junior', 'Senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
 create type sem as enum ('Fall', 'Spring', 'Summer');
 create type offered as enum ('Fall', 'Spring', 'Summer', 'Fall/Spring', 'Fall/Summer', 'Spring/Summer', 'Fall/Spring/Summer');
-
-create table admins (
-	id varchar(16),
-	password varchar(25),
-	firstname varchar(50),
-	lastname varchar(50),
-	isadminfor varchar(50)
-);
+/*create type track as enum ('Software Engineering', 'General ');*/
 
 create table students (
 	id varchar(25),
@@ -33,17 +26,16 @@ create table students (
 	year level,
 	schoolorg varchar(100),
 	gpa decimal,
+	/*trackid track,*/
 	primary key (id)
 );
 
-
-
-create table major_track (
+/*create table major_track (
 	track_shortname varchar(50),
 	track_description varchar(50),
 	coursenumber varchar(50),
 	primary key (coursenumber)
-);
+);*/
 
 create table coursecatalog (
 	coursenumber varchar(8),
@@ -59,7 +51,13 @@ create table prerequisites (
 	prereq varchar(6)
 );
 
-/*Probably will not need this...*/
+create table studentschedule (
+	studentid varchar(25),
+	coursenumber varchar(25),
+	term varchar(20),
+	instructor varchar(50)
+);
+
 /*create table offeredcourses (
 	year int,
 	semester sem,
