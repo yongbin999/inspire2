@@ -56,13 +56,13 @@ Logout
   
 <div id="header"></div>
   <script>
-var link = document.querySelector('link[rel="import"]');
+var link = document.querySelector('link[rel="import"]').import;
     var content = link.import;
     // Grab DOM from warning.html's document.
-    var el = content.querySelector('#headerbanner');
+    var el = content.querySelector('#headerbanner').import;
     document.body.appendChild(el.cloneNode(true));
 	
-	var el2 = content.querySelector('#student_menu');
+	var el2 = content.querySelector('#student_menu').import;
   	document.body.appendChild(el2.cloneNode(true));
   </script>
 
