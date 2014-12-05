@@ -52,7 +52,7 @@ function handler(request, response) {
 
   //Add a new user
   else if(path === '/signup/newuser') {
-    m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', function(err, data) {
+    m.addNewUser('person', 'password', 'bob', 'smith', false, 'UMass Amherst', "Software Engineering", function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
       }
