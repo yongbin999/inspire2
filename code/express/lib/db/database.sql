@@ -1,22 +1,22 @@
-drop table if exists students; /*cascade;*/
+drop table if exists students cascade;
 drop table if exists coursecatalog cascade;
-drop table if exists admins;
 drop table if exists prerequisites;
-/*drop table if exists offeredcourses;*/
-drop table if exists reportcards;
+drop table if exists admins;
+drop table if exists studentschedule;
 /*drop table if exists major_tracks;*/
 
 
 drop type if exists level; 
-drop type if exists grade;
+drop type if exists grade cascade;
 drop type if exists sem;
 drop type if exists offered cascade;
+drop type if exists track;
 
 create type level as enum ('Freshman', 'Sophomore', 'Junior', 'Senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
 create type sem as enum ('Fall', 'Spring', 'Summer');
 create type offered as enum ('Fall', 'Spring', 'Summer', 'Fall/Spring', 'Fall/Summer', 'Spring/Summer', 'Fall/Spring/Summer');
-/*create type track as enum ('Software Engineering', 'General ');*/
+create type track as enum ('General Computer Science', 'Software Engineering', 'Security & Privacy', 'Robotics, Vision, and Graphics', 'Artificial Intelligence', 'Computer Architecture', 'Networking', 'Software Systems', 'Programming Languages & Compilers', 'Theory of Computation', 'Search & Data Mining');
 
 create table students (
 	id varchar(25),
@@ -26,8 +26,16 @@ create table students (
 	year level,
 	schoolorg varchar(100),
 	gpa decimal,
-	/*trackid track,*/
+	trackid track,
 	primary key (id)
+);
+
+create table admins (
+	id varchar(16),
+	password varchar(25),
+	firstname varchar(50),
+	lastname varchar(50),
+	isadminfor varchar(50)
 );
 
 /*create table major_track (
@@ -58,20 +66,3 @@ create table studentschedule (
 	instructor varchar(50)
 );
 
-/*create table offeredcourses (
-	year int,
-	semester sem,
-	coursenumber int,
-	foreign key (coursenumber) references coursecatalog,
-	capacity int,
-	enrolled int,
-	instructor varchar(50)
-);*/
-
-create table reportcards (
-	id varchar(25),
-	coursenumber int,
-	/*foreign key (id) references students,
-	foreign key (coursenumber) references coursecatalog,*/
-	coursegrade grade
-);
