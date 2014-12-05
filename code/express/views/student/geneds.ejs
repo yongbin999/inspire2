@@ -70,8 +70,10 @@ var link = document.querySelector('link[rel="import"]');
 
 <div id = "content" class = "contentview">
 <h1>General Education Requirements</h1>
+<p id="temp">test</p>
 
 <script type="text/javascript">
+var temp = new Array();
 (function($){
 
   /**
@@ -117,6 +119,7 @@ var link = document.querySelector('link[rel="import"]');
         var printedLines = 0;
         var headerCount = 0;
         var headers = new Array();
+        var lineOn=0;
         $.each(lines, function(lineCount, line) {
           if ((lineCount == 0) && (typeof(options.headers) != 'undefined')) {
             headers = options.headers;
@@ -134,7 +137,7 @@ var link = document.querySelector('link[rel="import"]');
             $.each(headers, function(headerCount, header) {
               tableHTML += '<th class="' + options.thClass + '">' + header + '</th>';
             });
-            tableHTML += '</tr></thead><tbody class="' + options.tbodyClass + '">';
+            tableHTML += '<th>Enroll</th></tr></thead><tbody class="' + options.tbodyClass + '">';
           } else if (lineCount >= options.startLine) {
             var items = line.splitCSV(options.separator);
             if (items.length > 1) {
@@ -145,9 +148,13 @@ var link = document.querySelector('link[rel="import"]');
               (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
               tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
               $.each(items, function(itemCount, item) {
+                if(itemCount===1){
+                  temp[lineOn] = item;
+                }
                 tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
-              tableHTML += '</tr>';
+              tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
+              lineOn = lineOn + 1;
             }
           }
         });
@@ -176,6 +183,10 @@ $(function() {
     });
     $('#CSVTable').CSVToTable('../uploads/studentsample/genEds.csv', { startLine: 0 });
   });
+
+function fxn(btn){
+  document.getElementById("temp").innerHTML = temp[btn.id];
+}
 
 </script>
 

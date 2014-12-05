@@ -69,16 +69,11 @@ TABLE.CSVTable TR:hover {
   </script>
 
 <div id = "content" class = "contentview">
-<<<<<<< HEAD
 
-<input type='text' id='userInput' value='Enter Text Here' />
-<p id="fuckthis">test</p>
-=======
+<p id="temp">test</p>
 <h1>List of Existign CS Courses</h1>
->>>>>>> 761ef72577f4432a019b1c5d087f11b5a89233c6
 
 <script type="text/javascript">
-var temp2 = "butt";
 var temp = new Array();
 (function($){
 
@@ -120,7 +115,7 @@ var temp = new Array();
       (options.loadingImage) ? loading = '<div style="text-align: center"><img alt="' + options.loadingText + '" src="' + options.loadingImage + '" /><br>' + options.loadingText + '</div>' : loading = options.loadingText;
       obj.html(loading);
       $.get(csvFile, function(data) {
-        var tableHTML = '<table class="' + options.tableClass + '" onclick="handleClick(event)">';
+        var tableHTML = '<table class="' + options.tableClass + '">';
         var lines = data.replace('\r','').split('\n');
         var printedLines = 0;
         var headerCount = 0;
@@ -191,7 +186,7 @@ $(function() {
   });
 
 function fxn(btn){
-  document.getElementById("fuckthis").innerHTML = temp[btn.id];
+  document.getElementById("temp").innerHTML = temp[btn.id];
 }
 
 </script>
