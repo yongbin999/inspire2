@@ -173,7 +173,7 @@ var user = req.session.user ||username;
 });
 
 // video tutorial
-router.get('/tutorial', function(req, res) {
+router.get('/info', function(req, res) {
       	    res.render('frontpage/info', { title   : 'How inSpire Works',
                                message : 'Welcome to inSpire'
                                });
