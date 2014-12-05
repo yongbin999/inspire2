@@ -73,8 +73,10 @@ var link = document.querySelector('link[rel="import"]');
 <p id="temp">test</p>
 
 <script type="text/javascript">
-var newLine = new Array();
+var user = '<%= username %>,';
 var className = new Array();
+var term = new Array();
+var instructor = new Array();
 (function($){
 
   /**
@@ -151,14 +153,11 @@ var className = new Array();
               $.each(items, function(itemCount, item) {
                 if(itemCount===1){
                   className[lineOn] = item;
-                  newLine[lineOn] = item;
                 }
-                else if(itemCount === 2)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
                 else if(itemCount === 4)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                  term[lineOn] = item;
                 else if(itemCount===5)
-                  newLine[lineOn] = newLine[lineOn] + ',' + item;
+                  instructor[lineOn] = item;
                 tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
               tableHTML += '<td><input type="button" value="Enroll" id="'+lineOn+'" onclick="fxn(this)"/></td></tr>';
@@ -194,7 +193,7 @@ $(function() {
 
 function fxn(btn){
   alert("You are now enrolled in"+className[btn.id]);
-  document.getElementById("temp").innerHTML = '<%= username %>,'+newLine[btn.id];
+  enroll(user,)
 }
 
 </script>
