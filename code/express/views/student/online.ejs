@@ -10,48 +10,6 @@
   </head>
 
   <body>
-
-<div id="menuleft">
-<ul id="tabs">
-<li>
-<a href = "main">
-Home
-<a href = "major_track">
-Track
-</a>
-</li>
-<li>
-<a href = "class">
-My Classes
-</a>
-</li>
-<li>
-<a href = "geneds">
-GenEd Requirements
-</a>
-</li>
-<li>
-<a href = "courses">
-List of courses
-</a>
-</li>
-</ul>
-</div>
-<div id="menuright">
-<ul id="tabs">
-<li>
-<a href = "settings">
-Settings
-</a>
-</li>
-<li>
-<a href = "../logout">
-Logout
-</a>
-</li>
-</ul>
-</div>
-</div> 
   
 <div id="header"></div>
   <script>
@@ -71,7 +29,14 @@ var link = document.querySelector('link[rel="import"]');
     <p>admins list </p>
     <ul>
       <% var a = 0 %>
-      <% for(var list in adminlist) { %>
+	<%if (onlinelist.length === 0){ %>
+		<% for(var list in adminlist) { %>
+		<li><%= adminlist[list].id + " [offline]"%></li>
+		<% } %>
+	<% } %>
+	
+	<%if (onlinelist.length !== 0){ %>
+      	<% for(var list in adminlist) { %>
         <% for(var userid in onlinelist) { %>
               <% if (adminlist[list].id === onlinelist[userid]){ %>
                 <li><%= users[userid] + "[online] <<<"%></li>
@@ -81,12 +46,8 @@ var link = document.querySelector('link[rel="import"]');
               <li><%= adminlist[list].id + " [offline]"%></li>
               <% } %>
         <% } %>
-
-		<%if (onlinelist.length === 0){ %>
-		<li><%= adminlist[list].id + " [offline]"%></li>
-		<% } %>
-       <% } %>
-
+       	<% } %>
+	<% } %>
 
    <% if (a ===0){ %>
     <br>no admins currently online

@@ -57,6 +57,7 @@ router.post('/auth', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     var isadmin = req.body.isadmin;
+    //console.log(username);
 
     // admin login
 	if( isadmin === "true"){
@@ -149,17 +150,23 @@ router.get('/signup', function(req, res) {
 // signup new user
 router.post('/signup/newuser', function(req, res) {
   
+	var admintype = req.body.admintype;
+
     var username = req.body.username;
     var password = req.body.password;
     var fname = req.body.fname;
     var lname = req.body.lname;
-    var admintype = req.body.admintype;
-    var schoolorg = req.body.schoolorg;
+    var year = req.body.year;
+	var schoolorg = req.body.schoolorg;
+	var gpa = req.body.gpa;
+	var track = req.body.track;
+var schoolorg = req.body.schoolorg;
+
 
 var user = req.session.user ||username;
 
 
-    m.addNewUser(username, password, fname, lname, false, schoolorg, function(err, data) {
+    m.addNewUser(username,password,fname,lname,year,schoolorg,gpa,track, function(err, data) {
       if(err) {
         console.log('ERROR: ' + err);
       }
