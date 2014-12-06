@@ -63,8 +63,11 @@ var link = document.querySelector('link[rel="import"]');
 <div id ="content" class = "contentview">
 	<div id="hintm">
 	<h3>Welcome to the CS graduation requirement page!</h3>
-	Hi <%= users.id %> in <%= users.track %>
-	<br>Please select a track in the drop down menu
+	Hi <%= users.id %> in <%= users.trackid %>
+
+	<br>We have display your track coursed based on your major.
+	<br>
+	<br>You may use the dropdown menu below to see other options
 	<br>
 
 	<select id ="choice">
@@ -80,7 +83,7 @@ var link = document.querySelector('link[rel="import"]');
 	 <option value="sec">Security</option>
     	 <option value="data">Data Mining</option>
        </select>
-       <br>//need to load correct value for person on load
+       <br>
 </div>
 
 <!--<ul class="navigation">
@@ -104,7 +107,7 @@ $("select").change(function(){
   else if($("select").val() === "ai")
     line = "../uploads/ai.json";
   else if($("select").val() === "robotics")
-    line = "..i/uploads/robotics.json";
+    line = "../uploads/robotics.json";
   else if($("select").val() === "comparch")
     line = "../uploads/comparch.json";
   else if($("select").val() === "network")
