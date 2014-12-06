@@ -49,7 +49,7 @@ path.link {
 
 <div id="header"></div>
   <script>
-var link = document.querySelector('link[rel="import"]');
+	var link = document.querySelector('link[rel="import"]');
     var content = link.import;
     // Grab DOM from warning.html's document.
     var el = content.querySelector('#headerbanner');
@@ -63,9 +63,9 @@ var link = document.querySelector('link[rel="import"]');
 <div id ="content" class = "contentview">
 	<div id="hintm">
 	<h3>Welcome to the CS graduation requirement page!</h3>
-	Hi <%= users.id %> in <%= users.trackid %>
+	Hi <%= users.id %> from <%= users.schoolorg %> in <%= users.trackid %> track!
 
-	<br>We have display your track coursed based on your major.
+	<br>We will in the future display based on your major.
 	<br>
 	<br>You may use the dropdown menu below to see other options
 	<br>
@@ -86,6 +86,9 @@ var link = document.querySelector('link[rel="import"]');
        <br>
 </div>
 
+
+<div id="body">
+
 <!--<ul class="navigation">
 //  <a class="main" href="#url">Navigation</a>
 //	<li class="n2"><a value="gencs" href="#">General CS</a></li>
@@ -93,8 +96,6 @@ var link = document.querySelector('link[rel="import"]');
 //	<li class="n4"><a href="#">item #4</a></li>
 //	<li class="n5"><a href="#">item #5</a></li>
 //</ul> -->
-
-<div id="body">
 
     <script type="text/javascript">
 //select views
