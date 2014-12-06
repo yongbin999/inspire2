@@ -1,23 +1,24 @@
-Basic Math,MATH100,Basic Math Skills for Modern World,R1,S15,Beaulieu
-Basic Math,MATH102,Analytic Geometry and Trigonometry,R1,S15,Norkin
-Basic Math,MATH104,Algebra Analytic Geometry and Trigonometry,R1,S15,Benincasa
-Analytical Reasoning,MATH127,Calculus for the Life and Social Sciences I,R2,S15,Calden
-Analytical Reasoning,MATH128,Calculus for the Life and Social Sciences II,R2,S15,Cook
-Analytical Reasoning,ANTHRO281,Research Methods in Anthropology,R2,S15,King
-Analytical Reasoning,CMPSCI105,Computer Literacy,R2,S15,Verts
-Analytical Reasoning,LINGUIST201,Introduction to Lingusitic Theory,R2,S15,Harris
-Biological and Physical World,BIOLOGY105,Biology of Social Issues,BS,S15,Irschick
-Biological and Physical World,FOODSCI150,The Science of Food,BS,S15,Levin
-Biological and Physical World,KIN100,Introduction to Kinesiology,BS,S15,Kamen
-Biological and Physical World,ASTRON100,Exploring the Universe,PS,S15,Wilson
-Biological and Physical World,CHEM111,Gen ChemSci,PS,S15,Holden
-Social World,AFROAM151,Literature and Culture,AL,S15,Zelaya
-Social World,CLASSICS224,Greek Mythology,AL,S15,Philippides
-Social World,CLASSICS202,The Age of Augustus,AT,S15,Breed
-Social World,JAPANESE235,Performing Arts of Japan,AT,S15,Baird
-Social World,ANTHRO150,Ancient Civilizations,HS,S15,Agostini
-Social and Cultural Diversity,ECON105,Introduction to Political Economy,U,S15,Crowell
-Social and Cultural Diversity,EDUC115,Embracing Diversity,U,S15,Barnes
-Social and Cultural Diversity,LEGAL250,Introduction to Legal Studies,U,S15,Collins
-Social and Cultural Diversity,ENGLISH307,Modernism and Its Others,G,S15,Fernando
-Social and Cultural Diversity,GEOGRAPH102,The Human Landscape,G,S15,Applegate
+Course Number,Course Name,Credits,Requirement Filled,Term,Instructor
+MATH100,Basic Math Skills for Modern World,4,R1,Spring,Beaulieu
+MATH102,Analytic Geometry and Trigonometry,4,R1,Spring,Norkin
+MATH104,Algebra Analytic Geometry and Trigonometry,4,R1,Spring,Benincasa
+MATH127,Calculus for the Life and Social Sciences I,4,R2,Spring,Calden
+MATH128,Calculus for the Life and Social Sciences II,4,R2,Spring,Cook
+ANTHRO281,Research Methods in Anthropology,4,R2,Spring,King
+CMPSCI105,Computer Literacy,4,R2,Spring,Verts
+LINGUIST201,Introduction to Lingusitic Theory,4,R2,Spring,Harris
+BIOLOGY105,Biology of Social Issues,4,BS,Spring,Irschick
+FOODSCI150,The Science of Food,4,BS,Spring,Levin
+KIN100,Introduction to Kinesiology,4,BS,Spring,Kamen
+ASTRON100,Exploring the Universe,4,PS,Spring,Wilson
+CHEM111,Gen ChemSci,4,PS,Spring,Holden
+AFROAM151,Literature and Culture,4,AL,Spring,Zelaya
+CLASSICS224,Greek Mythology,4,AL,Spring,Philippides
+CLASSICS202,The Age of Augustus,4,AT,Spring,Breed
+JAPANESE235,Performing Arts of Japan,4,AT,Spring,Baird
+ANTHRO150,Ancient Civilizations,4,HS,Spring,Agostini
+ECON105,Introduction to Political Economy,4,U,Spring,Crowell
+EDUC115,Embracing Diversity,4,U,Spring,Barnes
+LEGAL250,Introduction to Legal Studies,4,U,Spring,Collins
+ENGLISH307,Modernism and Its Others,4,G,Spring,Fernando
+GEOGRAPH102,The Human Landscape,4,G,Spring,Applegate
