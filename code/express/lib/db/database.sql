@@ -46,7 +46,7 @@ create table admins (
 );*/
 
 create table coursecatalog (
-	coursenumber varchar(8),
+	coursenumber varchar(20),
 	coursename varchar(100),
 	credits int,
 	semestersoffered offered,
