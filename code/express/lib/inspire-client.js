@@ -2,7 +2,7 @@ var url = require('url');
 var http = require('http');
 
 // The url to connect to:
-var urlStr = process.argv[2] || 'http://localhost:4000/populatestudents';
+var urlStr = process.argv[2] || 'http://localhost:4000/enroll';
 
 var u = url.parse(urlStr);
 

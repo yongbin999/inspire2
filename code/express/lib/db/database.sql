@@ -27,7 +27,7 @@ create table students (
 	year level,
 	schoolorg varchar(100),
 	gpa decimal,
-	trackid track,
+	trackid varchar(50),
 	primary key (id)
 );
 

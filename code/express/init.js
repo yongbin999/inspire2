@@ -10,3 +10,12 @@ m.populateCoursesAndPrereqs(function(err, data) {
 		console.log("Database successfully initialized");
 	}
 });
+
+m.populateStudents(function(err, data) {
+	if(err) {
+		console.log("ERROR Users not initialized: " + err);
+	}
+	else {
+		console.log("Users successfully initialized");
+	}
+}); 

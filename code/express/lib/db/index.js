@@ -67,7 +67,7 @@ function enroll(studentid, courseid, term, instructor, callback) {
 //Populate the students based on csv data
 function populateStudents(callback) {
   //Read in csv file...
-  fs.readFile('./db/studentTracks.csv', 'utf8', function(err, data) {
+  fs.readFile('./lib/db/studentTracks.csv', 'utf8', function(err, data) {
     if(err) {
       return console.log(err);
     }
