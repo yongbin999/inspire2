@@ -14,7 +14,10 @@ create type level as enum ('Freshman', 'Sophomore', 'Junior', 'Senior');
 create type grade as enum ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F');
 create type sem as enum ('Fall', 'Spring', 'Summer');
 create type offered as enum ('Fall', 'Spring', 'Summer', 'Fall/Spring', 'Fall/Summer', 'Spring/Summer', 'Fall/Spring/Summer');
-create type track as enum ('General Computer Science', 'Software Engineering', 'Security & Privacy', 'Robotics, Vision, and Graphics', 'Artificial Intelligence', 'Computer Architecture', 'Networking', 'Software Systems', 'Programming Languages & Compiler', 'Theory of Computation', 'Search & Data Mining');
+create type track as enum ('General Computer Science', 'Software Engineering', 'Security & Privacy', 
+						'Robotics, Vision, and Graphics', 'Artificial Intelligence', 'Computer Architecture', 
+						'Networking', 'Software Systems', 'Programming Languages & Compiler', 
+						'Theory of Computation', 'Search & Data Mining');
 
 create table students (
 	id varchar(25),

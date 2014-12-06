@@ -192,12 +192,17 @@ function getAllfromTable(table,callback) {
 //Adds user to database
 //User info specified by arguments, gpa initialized to 0.0
 function addNewUser(id, password, fname, lname, year, schoolorg, gpa, track, callback, counter) {
+
+	if(counter === undefined) {
+	counter = 0;
+	}
   pg.connect(connString, function (err, client, done) {
     if(err) {
       callback('Server Error: ' + err);
     }
     else {
-      client.query('insert into students values (\' ' + id + ' \', \''
+      client.query('insert into students values (\'' 
+        + id + '\', \''
         + password + '\', \''
         + fname + '\', \''
         + lname 
