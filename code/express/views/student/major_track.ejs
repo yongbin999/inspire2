@@ -90,7 +90,54 @@ path.link {
 
     <script type="text/javascript">
 //select views
-var line = "../uploads/gencs.json";
+var temp = '<%= users.trackid %>';
+var line;
+console.log(temp);
+if(temp == 'Security &amp; Privacy'){
+  $("select").val("sec");
+  line = "../uploads/security.json";
+}
+else if(temp == 'Software Engineering'){
+  $("select").val("softeng");
+  line = "../uploads/softeng.json";
+}
+else if(temp == 'Artificial Intelligence'){
+  $("select").val("ai");
+  line = "../uploads/ai.json";
+}
+else if(temp == 'General Computer Science'){
+  $("select").val("gencs");
+  line = "../uploads/gencs.json";
+}
+else if(temp == 'Robotics, Vision, and Graphics'){
+  $("select").val("robotics");
+  line = "../uploads/robotics.json";
+}
+else if(temp == 'Computer Architecture'){
+  $("select").val("comparch");
+  line = "../uploads/comparch.json";
+}
+else if(temp == 'Networking'){
+  $("select").val("network");
+  line = "../uploads/network.json";
+}
+else if(temp == 'Software Systems'){
+  $("select").val("softsys");
+  line = "../uploads/softsys.json";
+}
+else if(temp == 'Programming Languages &amp; Compilers'){
+  $("select").val("comp");
+  line = "../uploads/compiler.json";
+}
+else if(temp == 'Theory of Computation'){
+  $("select").val("throfcomp");
+  line = "../uploads/computation.json";
+}
+else{
+  $("select").val("data");
+  line = "../uploads/search.json";
+}
+
   //need to load correct value for person on load
 
 $("select").change(function(){

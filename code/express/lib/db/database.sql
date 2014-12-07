@@ -27,7 +27,7 @@ create table students (
 	year level,
 	schoolorg varchar(100),
 	gpa decimal,
-	trackid track,
+	trackid varchar(50),
 	primary key (id)
 );
 
@@ -40,7 +40,7 @@ create table admins (
 );
 
 create table coursecatalog (
-	coursenumber varchar(8),
+	coursenumber varchar(20),
 	coursename varchar(100),
 	credits int,
 	semestersoffered offered,

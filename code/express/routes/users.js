@@ -190,6 +190,7 @@ router.post('/geneds/enroll', function(req, res) {
     var coursedata;
     var term;
     var instructor;
+    console.log(classname);
 
 var user = req.session.user ||username;
 	m.getCourse(classname,function(err,data){
@@ -198,22 +199,20 @@ var user = req.session.user ||username;
 		else{
 			coursedata = JSON.parse(data);
 			console.log(coursedata);
-			//term = coursedata[0].
+			term = coursedata[0].term;
 			instructor = coursedata[0].instructor;
+			 m.enroll(user, classname, term,instructor, function(err) {
+      			if(err) {
+        			console.log('ERROR: ' + err);
+     			}
+      			else {
+					console.log("enrolled\n");
+        			res.redirect('/user/geneds');
+      			}
+
+   			});
 		}
-	});
-
-    m.enroll(user, classname, term,instructor, function(err, data) {
-      if(err) {
-        console.log('ERROR: ' + err);
-      }
-      else {
-		console.log("enrolled\n");
-        res.redirect('/user/geneds');
-      }
-
-    }); 
-  
+	}); 
 });
 
 router.post('/courses/enroll', function(req, res) {
@@ -229,29 +228,22 @@ var user = req.session.user ||username;
 		if(err)
 			console.log("course not found\n");
 		else{
-			//console.log(data);
 			coursedata = JSON.parse(data);
 			console.log(coursedata);
-			//term = coursedata[0].
-
+			term = coursedata[0].term;
 			instructor = coursedata[0].instructor;
-			console.log(instructor);
+			 m.enroll(user, classname, term,instructor, function(err) {
+      			if(err) {
+        			console.log('ERROR: ' + err);
+     			}
+      			else {
+					console.log("enrolled\n");
+        			res.redirect('/user/courses');
+      			}
+
+   			});
 		}
-	});
-	
-
-    m.enroll(user, classname, term,instructor, function(err, data) {
-      if(err) {
-        console.log('ERROR: ' + err);
-      }
-      else {
-		console.log("enrolled\n");
-        res.redirect('/user/courses');
-        alert("test");
-      }
-
-    }); 
-  
+	}); 
 });
 
 module.exports = router;
