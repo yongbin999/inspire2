@@ -6,7 +6,6 @@
     <script type="text/javascript" src="../javascripts/d3/d3.js"></script>
     <script type="text/javascript" src="../javascripts/d3/d3.layout.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!--<link rel='stylesheet' href='/stylesheets/dropdown.css'/>-->
     <link rel='stylesheet' href='/stylesheets/menubar_style.css' />
     <link rel="import" href='../header.html'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -88,14 +87,6 @@ path.link {
 
 
 <div id="body">
-
-<!--<ul class="navigation">
-//  <a class="main" href="#url">Navigation</a>
-//	<li class="n2"><a value="gencs" href="#">General CS</a></li>
-//	<li class="n3"><a href="#">item #3</a></li>
-//	<li class="n4"><a href="#">item #4</a></li>
-//	<li class="n5"><a href="#">item #5</a></li>
-//</ul> -->
 
     <script type="text/javascript">
 //select views
@@ -219,7 +210,7 @@ function update(source) {
       .attr("x", function(d) { return d.children ? 0 : 10; })
       .attr("y", function(d) { return d.children ? -15 : 0; })
       .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children ? "middle" : "start"; })
+      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
 
@@ -238,7 +229,7 @@ function update(source) {
       .attr("x", function(d) { return d.children ? 0 : 10; })
       .attr("y", function(d) { return d.children ? -15 : 0; })
       .style("fill-opacity", 1)
-      .attr("text-anchor", function(d) { return d.children ? "middle" : "start"; });
+      .attr("text-anchor", function(d) { return d.children ? "end" : "start"; });
 
   // Transition exiting nodes to the parent's new position.
   var nodeExit = node.exit().transition()
