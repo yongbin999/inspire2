@@ -150,7 +150,7 @@ var instructor = new Array();
               (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
               tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
               $.each(items, function(itemCount, item) {
-                if(itemCount===1){
+                if(itemCount===0){
                   className[lineOn] = item;
                 }
                 else if(itemCount === 4)

@@ -190,10 +190,10 @@ router.post('/geneds/enroll', function(req, res) {
     var coursedata;
     var term;
     var instructor;
-    console.log(classname)
+    console.log(classname);
 
 var user = req.session.user ||username;
-	m.getCourse("MATH104",function(err,data){
+	m.getCourse(classname,function(err,data){
 		if(err)
 			console.log("course not found\n");
 		else{
@@ -201,7 +201,7 @@ var user = req.session.user ||username;
 			console.log(coursedata);
 			term = coursedata[0].term;
 			instructor = coursedata[0].instructor;
-			 m.enroll(user, classname, term,instructor, function(err, data) {
+			 m.enroll(user, classname, term,instructor, function(err) {
       			if(err) {
         			console.log('ERROR: ' + err);
      			}
@@ -221,6 +221,7 @@ router.post('/courses/enroll', function(req, res) {
     var coursedata;
     var term;
     var instructor;
+    console.log(classname);
 
 var user = req.session.user ||username;
 	m.getCourse(classname,function(err,data){
@@ -231,7 +232,7 @@ var user = req.session.user ||username;
 			console.log(coursedata);
 			term = coursedata[0].term;
 			instructor = coursedata[0].instructor;
-			 m.enroll(user, classname, term,instructor, function(err, data) {
+			 m.enroll(user, classname, term,instructor, function(err) {
       			if(err) {
         			console.log('ERROR: ' + err);
      			}
