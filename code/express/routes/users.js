@@ -230,14 +230,19 @@ var user = req.session.user ||username;
 		else{
 			coursedata = JSON.parse(data);
 			console.log(coursedata);
-			term = coursedata[0].term;
-			instructor = coursedata[0].instructor;
-			 m.enroll(user, classname, term,instructor, function(err) {
+			term = coursedata[0].credits;
+			instructor = "test";
+			console.log(user.id);
+			console.log(classname);
+			console.log(term);
+			console.log(instructor);
+			
+			 m.enroll(user.id, classname, term,instructor, function(err) {
       			if(err) {
         			console.log('ERROR: ' + err);
      			}
       			else {
-					console.log("enrolled\n");
+					console.log("enrolled");
         			res.redirect('/user/courses');
       			}
 
