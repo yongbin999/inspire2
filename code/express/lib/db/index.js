@@ -52,13 +52,12 @@ function enroll(studentid, courseid, term, instructor, callback) {
         + instructor + '\');'
       , function(err, result) {
         done();
-		client.end();
-        
+        client.end();
         if(err) {
           callback(err);
         }
         else {
-          callback(undefined, 'Success!\n');
+          callback(undefined, result);
         }
       });
     }

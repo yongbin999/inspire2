@@ -31,6 +31,8 @@ var link = document.querySelector('link[rel="import"]');
 <h1>My Class Schedule Plan</h1>
 
 <script type="text/javascript">
+var username = '<%= users.id %>';
+var addme = false;
 (function($){
 
   /**
@@ -102,11 +104,20 @@ var link = document.querySelector('link[rel="import"]');
                 error += 'error on line ' + lineCount + ': Item count (' + items.length + ') does not match header count (' + headerCount + ') \n';
               }
               (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
-              tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
+              
               $.each(items, function(itemCount, item) {
-                tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
+                if(itemCount === 0){
+                  addme = false;
+                  if(username === item){
+                    tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
+                    addme = true;
+                  }
+                }
+                if (addme === true)
+                  tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
-              tableHTML += '</tr>';
+              if(addme === true)
+                tableHTML += '</tr>';
             }
           }
         });
