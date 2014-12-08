@@ -2,6 +2,7 @@ insert into admins values ('timrichards', 'password', 'Tim', 'Richards', 'UMass 
 insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen', 'UMass Amherst');
 insert into admins values ('admin', 'admin', 'admin', 'admin', 'UMass Amherst');
 
+insert into students values ('test', 'password', 'test', 'testt', 'Senior', 'UMass Amherst', 4.0, 'General Computer Science');
 insert into students values ('samfox', 'password', 'Sam', 'Fox', 'Senior', 'UMass Amherst', 4.0, 'General Computer Science');
 insert into students values ('yongliang', 'password', 'Yong', 'Liang', 'Junior','UMass Amherst', 4.0, 'Artificial Intellignce');
 insert into students values ('alexrevello', 'password', 'Alex', 'Revello', 'Sophomore', 'UMass Amherst', 4.0, 'Security & Privacy');
