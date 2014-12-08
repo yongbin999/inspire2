@@ -218,7 +218,7 @@ function addNewUser(id, password, fname, lname, year, schoolorg, gpa, track, cal
         else {
           if(counter <= 0) {
               setTimeout(function(){ 
-              client.end();
+              //client.end();
               console.log("Load students from csv completed!!\n");
               }, 2000);
           }

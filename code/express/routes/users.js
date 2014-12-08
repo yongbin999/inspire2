@@ -199,8 +199,8 @@ var user = req.session.user ||username;
 		else{
 			coursedata = JSON.parse(data);
 			console.log(coursedata);
-			term = coursedata[0].term;
-			instructor = coursedata[0].instructor;
+			term = coursedata[0].credits;
+			instructor = "test";
 			 m.enroll(user, classname, term,instructor, function(err) {
       			if(err) {
         			console.log('ERROR: ' + err);
