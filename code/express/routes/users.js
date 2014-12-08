@@ -239,7 +239,8 @@ var user = req.session.user ||username;
 			
 			 m.enroll(user.id, classname, term,instructor, function(err) {
       			if(err) {
-        			console.log('ERROR: ' + err);
+        			//console.log('ERROR: ' + err);
+				res.redirect('/user/courses');
      			}
       			else {
 					console.log("enrolled");
