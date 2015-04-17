@@ -61,8 +61,8 @@ function puts(error, stdout, stderr) { sys.puts(stdout) }
 //exec("ls ", puts);
 
 exec("bash ./lib/db/init-db.sh", puts);
-exec("node init.js", puts);
-
+exec("echo running part 2 student enrollments, finish in 10 secs", puts);
+exec("bash ./lib/db/init-db-enrollment.sh", puts);
 
 ///////////////////
 // EVERYTHING BELOW HELPS WITH MISSING ROUTES

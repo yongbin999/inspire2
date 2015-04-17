@@ -1,4 +1,4 @@
-var m = require('./lib/db');
+var m = require('./')
 
 console.log("Loading courses from .csv");
 

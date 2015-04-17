@@ -1,0 +1,6 @@
+{
+  "name": "team inspire",
+  "description": "app",
+  "repository": "https://git.heroku.com/lit-shelf-9134.git",
+  "keywords": ["node", "express", "static"]
+}
