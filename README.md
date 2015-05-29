@@ -1,5 +1,8 @@
 team-inspire
 ============
+http://team-inspire.herokuapp.com/
+
+
 
 #Project Overview
 Our main product is a class timeline application, where student can select and display the classes they would need to complete their degree. The idea is that this will ease the process of degree planning and course enrollment, so that there is no difficulty determining what classes to take and when. Students can have a better outlook when deciding on a major of what the course path will look like. Our focus will be to achieve seamless, undaunting usability so that students have no problem being informed of their degree paths. We will focus on the Umass computer science major to begin with, and branch out to other majors or other schools as time and resources permit us to. We also hope to provide functionality for administrators and counselors, and integration with third-party services. 
