@@ -1,4 +1,4 @@
-var pg = require('../../node_modules/pg');
+var pg = require('pg');
 var fs = require('fs');
 
 var connString = 'postgres://student:student@localhost/student';

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var multer = require('multer');
 var userlib = require('../lib/user');
 
 // A logged in "database":
@@ -8,7 +8,7 @@ var online = userlib.online;
 
 // # User Server-Side Routes
 
-var multer = require('multer');
+
 // Use 3rd party middleware:
 router.use(multer({ dest : './public/uploads/',
 	         rename : function (fieldname, filename) {

@@ -60,15 +60,17 @@ var exec = require('child_process').exec;
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 //exec("ls ", puts);
 
+
+//load local data bases
 exec("bash ./lib/db/init-db.sh", puts);
 exec("echo running part 2 student enrollments, finish in 10 secs", puts);
 exec("bash ./lib/db/init-db-enrollment.sh", puts);
 
-///////////////////
-// EVERYTHING BELOW HELPS WITH MISSING ROUTES
-///////////////////
+/////////////////
+//EVERYTHING BELOW HELPS WITH MISSING ROUTES
+/////////////////
 
-// catch 404 and forward to error handler
+//catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
