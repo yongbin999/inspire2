@@ -62,9 +62,9 @@ function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 
 //load local data bases
-exec("bash ./lib/db/init-db.sh", puts);
-exec("echo running part 2 student enrollments, finish in 10 secs", puts);
-exec("bash ./lib/db/init-db-enrollment.sh", puts);
+//exec("bash ./lib/db/init-db.sh", puts);
+//exec("echo running part 2 student enrollments, finish in 10 secs", puts);
+//exec("bash ./lib/db/init-db-enrollment.sh", puts);
 
 /////////////////
 //EVERYTHING BELOW HELPS WITH MISSING ROUTES

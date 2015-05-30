@@ -1,7 +1,7 @@
 team-inspire
 ============
 http://team-inspire.herokuapp.com/
-
+live server and live prostgres sql!
 
 
 #Project Overview
@@ -20,7 +20,3 @@ Main folders:
 
 1. code:   
 2. docs:    
-
-
-everything works live online now! 
-posgres database is local, so will reset when server reboots.

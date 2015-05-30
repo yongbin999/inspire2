@@ -1,3 +1,4 @@
+
 insert into admins values ('timrichards', 'password', 'Tim', 'Richards', 'UMass Amherst');
 insert into admins values ('rodgrupen', 'password', 'Rod', 'Grupen', 'UMass Amherst');
 insert into admins values ('admin', 'admin', 'admin', 'admin', 'UMass Amherst');

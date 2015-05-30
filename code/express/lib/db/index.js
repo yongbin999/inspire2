@@ -1,8 +1,11 @@
 var pg = require('pg');
 var fs = require('fs');
 
-var connString = 'postgres://student:student@localhost/student';
 
+//new amazon aws prosgre db link
+var connString = 'postgres://sogfzsvsxfjdlo:14LQTlu3KDSDBeIRFu0XeKXMrf@ec2-54-83-25-238.compute-1.amazonaws.com:5432/dfob3ut0c73hu2';
+//local db
+//var connString = 'postgres://student:student@localhost/student';
 
 //Enrolls a student in a course for a given term
 exports.enroll = enroll;
