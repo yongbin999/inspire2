@@ -188,7 +188,7 @@ router.get('/info', function(req, res) {
 });
 
 router.get('/contact', function(req, res) {
-      	    res.render('frontpage/test', { title   : 'About us'',
+      	    res.render('frontpage/contact', { title   : 'About us'',
                                message : 'Team members page'
                                });
  
