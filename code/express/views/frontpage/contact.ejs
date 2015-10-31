@@ -1,0 +1,40 @@
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='/stylesheets/menubar_style.css' />
+	<link rel="import" href='../header.html'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../javascripts/content_fadein.js"></script>
+  </head>
+
+  <body>
+  
+<div id="header"></div>
+  <script>
+var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('#headerbanner');
+    document.body.appendChild(el.cloneNode(true));
+	
+	var el2 = content.querySelector('#front_menu');
+  	document.body.appendChild(el2.cloneNode(true));
+  </script>
+
+<div id = "content" class = "contentview">
+
+about us 
+https://github.com/yongbin999/team-inspire
+
+https://yongbin999.wordpress.com/2015/05/22/course-search-site-old-2014-project/
+
+ 
+</div>
+ 
+ 
+ 
+ </body>
+</html>
