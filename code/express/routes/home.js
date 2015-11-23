@@ -187,6 +187,13 @@ router.get('/info', function(req, res) {
  
 });
 
+router.get('/contact', function(req, res) {
+      	    res.render('frontpage/contact', { title   : 'About us',
+                               message : 'Team members page'
+                               });
+ 
+});
+
 
 // ## main
 // The main user view.
